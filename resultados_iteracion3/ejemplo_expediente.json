@@ -1,0 +1,86 @@
+{
+ "documentos": [
+  {
+   "tipo": "pasaporte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "campos": {
+    "numero": "2X4912647",
+    "apellidos": "PEREZ JOSEPH",
+    "nombres": "FABIOLA",
+    "vencimiento": "2024-11-24",
+    "controles": {
+     "numero": true,
+     "nacimiento": true,
+     "vencimiento": true,
+     "personal": true,
+     "compuesto": true
+    },
+    "confianza": 0.76
+   },
+   "hallazgos": [
+    {
+     "tipo": "REVISION_HUMANA",
+     "codigo": "VENCIDO_CON_EXCEPCION",
+     "mensaje": "Pasaporte vencido: aplicar criterio vigente para el país emisor"
+    }
+   ]
+  },
+  {
+   "tipo": "liquidacion",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "campos": {
+    "rut_empleador": {
+     "nombre": "rut_empleador",
+     "valor": "86.414.778-0",
+     "confianza": 0.92
+    },
+    "nombre": {
+     "nombre": "nombre",
+     "valor": "Guerline Pierre Ibáñez",
+     "confianza": 0.73
+    },
+    "periodo": {
+     "nombre": "periodo",
+     "valor": "08/2026",
+     "confianza": 0.96
+    },
+    "fecha_emision": {
+     "nombre": "fecha_emision",
+     "valor": "14/09/2026",
+     "confianza": 0.96
+    },
+    "liquido": {
+     "nombre": "liquido",
+     "valor": "$ 1324.376",
+     "confianza": 0.92
+    },
+    "firma": {
+     "integra": false,
+     "confiable": false,
+     "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+     "cubre_todo": true
+    }
+   },
+   "hallazgos": [
+    {
+     "tipo": "ALERTA",
+     "codigo": "FIRMA_INVALIDA",
+     "mensaje": "El documento fue modificado después de firmado"
+    },
+    {
+     "tipo": "ALERTA",
+     "codigo": "DOCUMENTO_ANTIGUO",
+     "mensaje": "Emitido hace 35 días (máximo 30)"
+    },
+    {
+     "tipo": "REVISION_HUMANA",
+     "codigo": "NOMBRE_DUDOSO",
+     "mensaje": "Nombre no leído con confianza"
+    }
+   ]
+  }
+ ],
+ "bitacora_integra": true
+}

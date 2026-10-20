@@ -1,0 +1,482 @@
+{
+ "corpus": {
+  "total": 330,
+  "calibracion": 165,
+  "prueba": 165,
+  "por_tipo": {
+   "pasaporte": 120,
+   "antecedentes_extranjero": 130,
+   "liquidacion": 40,
+   "certificado_publico_cl": 40
+  },
+  "fecha_presentacion": "2026-10-01"
+ },
+ "umbrales_calibrados": {
+  "es": 0.0,
+  "fr": 0.01
+ },
+ "campos_prueba_calibrado": {
+  "es": {
+   "campos": 292,
+   "aceptados": 292,
+   "correctos_aceptados": 292,
+   "precision": 1.0,
+   "ic95": [
+    0.9874463144333733,
+    1.0
+   ],
+   "lim_inf_unilateral": 0.9897930905897511,
+   "cobertura": 1.0,
+   "exactitud_global": 1.0
+  },
+  "fr": {
+   "campos": 48,
+   "aceptados": 47,
+   "correctos_aceptados": 46,
+   "precision": 0.9787234042553191,
+   "ic95": [
+    0.8870622828535999,
+    0.9994614682946577
+   ],
+   "lim_inf_unilateral": 0.9029990140861686,
+   "cobertura": 0.9791666666666666,
+   "exactitud_global": 0.9583333333333334
+  }
+ },
+ "campos_prueba_umbral_defecto_0_80": {
+  "es": {
+   "campos": 292,
+   "aceptados": 270,
+   "correctos_aceptados": 270,
+   "precision": 1.0,
+   "ic95": [
+    0.9864303920788415,
+    1.0
+   ],
+   "lim_inf_unilateral": 0.9889660211572051,
+   "cobertura": 0.9246575342465754,
+   "exactitud_global": 1.0
+  },
+  "fr": {
+   "campos": 48,
+   "aceptados": 46,
+   "correctos_aceptados": 46,
+   "precision": 1.0,
+   "ic95": [
+    0.9229381729480993,
+    1.0
+   ],
+   "lim_inf_unilateral": 0.9369506983259455,
+   "cobertura": 0.9583333333333334,
+   "exactitud_global": 0.9583333333333334
+  }
+ },
+ "exactitud_campos_por_degradacion": {
+  "limpio": 0.9887640449438202,
+  "escaner": 0.984375,
+  "celular": 1.0,
+  "baja_res": 1.0
+ },
+ "deteccion_por_codigo": {
+  "ANTECEDENTES_ANTIGUO": {
+   "vp": 10
+  },
+  "CODIGO_INEXISTENTE": {
+   "vp": 1
+  },
+  "DOCUMENTO_ANTIGUO": {
+   "vp": 7
+  },
+  "FIRMANTE_NO_ACREDITADO": {
+   "vp": 6
+  },
+  "FIRMA_INVALIDA": {
+   "vp": 4
+  },
+  "IDIOMA_NO_SOPORTADO": {
+   "vp": 5
+  },
+  "MRZ_ILEGIBLE": {
+   "fp": 1
+  },
+  "NOMBRE_NO_COINCIDE": {
+   "vp": 7
+  },
+  "NUMERO_NO_COINCIDE": {
+   "fp": 2
+  },
+  "PASAPORTE_VENCIDO": {
+   "vp": 14
+  },
+  "SIN_APOSTILLA": {
+   "vp": 12
+  },
+  "SIN_FEA": {
+   "vp": 5
+  },
+  "VENCIDO_CON_EXCEPCION": {
+   "vp": 3
+  }
+ },
+ "por_idioma": {
+  "es": {
+   "docs": 116,
+   "falsa_alerta": 2,
+   "derivacion_incertidumbre": 1,
+   "omision_silenciosa": 0,
+   "prevalidado_sin_derivar": 106
+  },
+  "fr": {
+   "docs": 24,
+   "falsa_alerta": 0,
+   "derivacion_incertidumbre": 0,
+   "omision_silenciosa": 0,
+   "prevalidado_sin_derivar": 24
+  },
+  "es (emisor)": {
+   "docs": 20,
+   "falsa_alerta": 0,
+   "derivacion_incertidumbre": 0,
+   "omision_silenciosa": 0,
+   "prevalidado_sin_derivar": 20
+  },
+  "ht": {
+   "docs": 5,
+   "falsa_alerta": 0,
+   "derivacion_incertidumbre": 0,
+   "omision_silenciosa": 0,
+   "prevalidado_sin_derivar": 0
+  }
+ },
+ "mrz_por_degradacion": {
+  "limpio": {
+   "n": 14,
+   "valida": 14,
+   "valida_exacta": 14
+  },
+  "celular": {
+   "n": 15,
+   "valida": 15,
+   "valida_exacta": 11
+  },
+  "baja_res": {
+   "n": 16,
+   "valida": 15,
+   "valida_exacta": 15
+  },
+  "escaner": {
+   "n": 15,
+   "valida": 15,
+   "valida_exacta": 14
+  }
+ },
+ "qr_por_degradacion": {
+  "celular": {
+   "n": 4,
+   "leido": 4
+  },
+  "limpio": {
+   "n": 6,
+   "leido": 6
+  },
+  "escaner": {
+   "n": 7,
+   "leido": 7
+  },
+  "baja_res": {
+   "n": 3,
+   "leido": 3
+  }
+ },
+ "fea": [
+  {
+   "id": "liq_016",
+   "variante": 0,
+   "firma": {
+    "integra": true,
+    "confiable": true,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "liq_026",
+   "variante": 2,
+   "firma": {
+    "integra": true,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (no_acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_027",
+   "variante": 3,
+   "firma": null,
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_012",
+   "variante": 0,
+   "firma": {
+    "integra": true,
+    "confiable": true,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "liq_007",
+   "variante": 3,
+   "firma": null,
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_028",
+   "variante": 0,
+   "firma": {
+    "integra": true,
+    "confiable": true,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "liq_006",
+   "variante": 2,
+   "firma": {
+    "integra": true,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (no_acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_024",
+   "variante": 0,
+   "firma": {
+    "integra": true,
+    "confiable": true,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "liq_029",
+   "variante": 1,
+   "firma": {
+    "integra": false,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_025",
+   "variante": 1,
+   "firma": {
+    "integra": false,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_019",
+   "variante": 3,
+   "firma": null,
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_035",
+   "variante": 3,
+   "firma": null,
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_021",
+   "variante": 1,
+   "firma": {
+    "integra": false,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_032",
+   "variante": 0,
+   "firma": {
+    "integra": true,
+    "confiable": true,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "liq_034",
+   "variante": 2,
+   "firma": {
+    "integra": true,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (no_acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_014",
+   "variante": 2,
+   "firma": {
+    "integra": true,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (no_acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_022",
+   "variante": 2,
+   "firma": {
+    "integra": true,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (no_acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_010",
+   "variante": 2,
+   "firma": {
+    "integra": true,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (no_acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_023",
+   "variante": 3,
+   "firma": null,
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_033",
+   "variante": 1,
+   "firma": {
+    "integra": false,
+    "confiable": false,
+    "firmante": "Common Name: Empleador Ficticio (acreditada), Country: CL",
+    "cubre_todo": true
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  }
+ ],
+ "latencia_ocr_s": {
+  "n": 220,
+  "mediana": 1.2948289670000577,
+  "p95": 1.6870243109997318,
+  "max": 1.8118776350002008
+ },
+ "latencia_prevalidacion_s": {
+  "mediana": 0.009312272500210383,
+  "p95": 1.091861210999923
+ },
+ "bitacora": {
+  "integra": true,
+  "alteracion_detectada": true
+ }
+}
