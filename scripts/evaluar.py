@@ -240,6 +240,8 @@ def main():
         grupos[g]["con_derivacion_no_esperada"] += bool(deriv - esp)
         grupos[g]["con_omision"] += bool(esp - prod)
         grupos[g]["omision_silenciosa"] += bool(esp - prod) and r.estado == "PREVALIDADO"
+        grupos[g]["omision_con_derivacion"] += bool(esp - prod) and r.estado == "REVISION_HUMANA"
+        grupos[g]["omision_con_alertas"] += bool(esp - prod) and r.estado == "CON_ALERTAS"
         grupos[g]["prevalidado"] += r.estado == "PREVALIDADO"
         if d["tipo"] == "pasaporte":
             ok = bool(r.campos.get("controles")) and all(r.campos["controles"].values())
@@ -289,6 +291,9 @@ def main():
             "documentos": n_docs,
             "documentos_con_omision": sum(v["con_omision"] for v in grupos.values()),
             "omisiones_silenciosas": sum(v["omision_silenciosa"] for v in grupos.values()),
+            "omisiones_con_derivacion": sum(v["omision_con_derivacion"] for v in grupos.values()),
+            "omisiones_con_alertas": sum(v["omision_con_alertas"] for v in grupos.values()),
+            "documentos_derivados": sum(1 for x in detalle if x["estado"] == "REVISION_HUMANA"),
             "documentos_con_alerta_injustificada": docs_alerta_injust,
             "ic95_doc_alerta_injustificada": cp(docs_alerta_injust, n_docs),
             "alertas": alertas_total, "alertas_injustificadas": alertas_injust,
