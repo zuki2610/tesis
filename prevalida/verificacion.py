@@ -3,14 +3,18 @@
 - QR: se decodifica el código y se consulta al emisor. En el prototipo, el emisor
   es un registro simulado; en producción, la consulta va por la red de
   interoperabilidad del Estado o por el servicio de verificación del emisor.
-- Firma electrónica avanzada (Ley 19.799): se valida la integridad del PDF y la
-  cadena de certificación contra los certificados raíz de prestadores acreditados.
+- Firma electrónica avanzada (Ley 19.799): se valida la integridad de lo firmado, que
+  no se haya agregado contenido después de la firma (actualizaciones incrementales),
+  la cadena de certificación contra los certificados raíz de prestadores acreditados
+  y la identidad del firmante (RUT del certificado). La revocación y el sello de tiempo
+  no se verifican en el prototipo (requieren consultar en línea al prestador).
 """
 from __future__ import annotations
 
 import io
 import json
 import logging
+import re
 from datetime import date
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -56,8 +60,15 @@ def verificar_qr(imagen: bytes, emisor: RegistroEmisor) -> dict:
     return {"qr_leido": True, "existe": True, "folio": folio, **r}
 
 
+def normalizar_rut(s: str | None) -> str:
+    return re.sub(r"[^0-9K]", "", (s or "").upper())
+
+
 def validar_fea(pdf: bytes, raices_acreditadas: list[bytes]) -> dict | None:
-    """Devuelve None si el PDF no tiene firma; si la tiene, integridad y confianza."""
+    """Devuelve None si el PDF no tiene firma; si la tiene, un diccionario con:
+    integra (lo firmado no fue alterado), modificado_tras_firma (se agregó contenido no
+    permitido después de firmar), confiable (cadena hasta un prestador acreditado),
+    firmante y rut_firmante (atributo serialNumber del certificado)."""
     from asn1crypto import pem, x509
     from pyhanko.pdf_utils.reader import PdfFileReader
     from pyhanko.sign.validation import validate_pdf_signature
@@ -73,9 +84,29 @@ def validar_fea(pdf: bytes, raices_acreditadas: list[bytes]) -> dict | None:
         raices.append(x509.Certificate.load(der))
     vc = ValidationContext(trust_roots=raices, allow_fetching=False)
     st = validate_pdf_signature(reader.embedded_signatures[0], vc)
+    cobertura = st.coverage.name if st.coverage else ""
+    nivel = st.modification_level.name if getattr(st, "modification_level", None) else ""
+    # Contenido agregado después de firmar: la firma no cubre todo el archivo y las
+    # modificaciones posteriores no son solo de preservación (LTA) ni nulas.
+    modificado = cobertura != "ENTIRE_FILE" and nivel not in ("NONE", "LTA_UPDATES")
+    rut = ""
+    if st.signing_cert is not None:
+        for k, v in st.signing_cert.subject.native.items():
+            if k == "serial_number":
+                rut = normalizar_rut(v)
     return {
         "integra": bool(st.intact and st.valid),
+        "modificado_tras_firma": bool(modificado),
         "confiable": bool(st.trusted),
+        "cobertura": cobertura,
+        "nivel_modificacion": nivel,
         "firmante": st.signing_cert.subject.human_friendly if st.signing_cert else "",
-        "cubre_todo": st.coverage.name == "ENTIRE_FILE" if st.coverage else False,
+        "rut_firmante": rut,
     }
+
+
+def texto_pdf(pdf: bytes) -> str:
+    """Texto del PDF. Se usa solo cuando la firma cubre el archivo completo, de modo que
+    lo extraído es exactamente lo firmado."""
+    from pypdf import PdfReader
+    return "\n".join((p.extract_text() or "") for p in PdfReader(io.BytesIO(pdf)).pages)

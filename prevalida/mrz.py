@@ -59,6 +59,11 @@ class ResultadoMRZ:
     controles: dict = field(default_factory=dict)
 
     @property
+    def nombre_truncado(self) -> bool:
+        """El campo de nombre ocupa toda la línea: el último nombre puede estar truncado."""
+        return self.linea1[43] != "<"
+
+    @property
     def valida(self) -> bool:
         return bool(self.controles) and all(self.controles.values())
 

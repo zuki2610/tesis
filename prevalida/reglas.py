@@ -1,8 +1,9 @@
 """Motor de reglas de prevalidación.
 
-Principio de diseño "advertir, nunca rechazar": cada regla produce solo
-ALERTA (se informa a la persona y al funcionario) o REVISION_HUMANA.
-La fecha de referencia es siempre la fecha de presentación de la solicitud.
+Principio "advertir, nunca rechazar": cada regla produce solo ALERTA (se informa a la
+persona y al funcionario) o REVISION_HUMANA. La fecha de referencia es siempre la fecha
+de presentación de la solicitud. Si una lectura no es confiable, las reglas que dependen
+de ella no se evalúan y el documento se deriva.
 """
 from __future__ import annotations
 
@@ -12,8 +13,9 @@ from pathlib import Path
 
 import yaml
 
-from .extraccion import Campo, similitud_nombres
+from .extraccion import Campo, casi_igual_numero, comparar_nombres
 from .mrz import ResultadoMRZ
+from .verificacion import normalizar_rut
 
 
 @dataclass
@@ -44,50 +46,79 @@ class MotorReglas:
     def umbral(self, campo: str, idioma: str) -> float:
         return self.umbrales.get((campo, idioma), self.cfg["umbrales"]["defecto"])
 
+    # ------------------------------------------------------------ auxiliares
+    @staticmethod
+    def _nombre(resultado: str, codigo_doc: str) -> list[Hallazgo]:
+        if resultado == "DISTINTO":
+            return [Hallazgo("ALERTA", "NOMBRE_NO_COINCIDE", f"El nombre del {codigo_doc} no coincide con el declarado")]
+        if resultado == "CASI":
+            return [Hallazgo("REVISION_HUMANA", "NOMBRE_CASI_COINCIDE",
+                             f"El nombre del {codigo_doc} difiere levemente del declarado: verificar")]
+        return []
+
+    def _fecha(self, campo: Campo | None, fecha: date | None, idioma: str, ctx: Contexto,
+               plazo: int) -> list[Hallazgo]:
+        if campo is None or campo.valor is None or campo.confianza < self.umbral("fecha_emision", idioma):
+            return [Hallazgo("REVISION_HUMANA", "FECHA_EMISION_DUDOSO", "Fecha de emisión no leída con confianza")]
+        if fecha is None:
+            return [Hallazgo("REVISION_HUMANA", "FECHA_NO_INTERPRETABLE",
+                             f"No se pudo interpretar la fecha '{campo.valor}'")]
+        dias = (ctx.fecha_presentacion - fecha).days
+        if dias < 0:
+            return [Hallazgo("REVISION_HUMANA", "FECHA_FUTURA", "La fecha de emisión es posterior a la presentación")]
+        if dias > plazo:
+            return [Hallazgo("ALERTA", "DOCUMENTO_ANTIGUO", f"Emitido hace {dias} días (máximo {plazo})")]
+        return []
+
     # ---------------------------------------------------------- pasaporte
     def pasaporte(self, m: ResultadoMRZ | None, conf: float, ctx: Contexto) -> list[Hallazgo]:
         if m is None:
             return [Hallazgo("REVISION_HUMANA", "MRZ_NO_ENCONTRADA", "No se encontró la zona de lectura mecánica")]
         fallidos = [k for k, v in m.controles.items() if not v]
         if fallidos:
-            # Si la MRZ no es confiable, no se evalúan sus fechas ni su número.
             return [Hallazgo("REVISION_HUMANA", "MRZ_ILEGIBLE",
                              "Dígitos de control no coinciden: " + ", ".join(fallidos))]
         h: list[Hallazgo] = []
         if m.vencimiento and m.vencimiento < ctx.fecha_presentacion:
-            exc = self.cfg.get("excepciones_pais", {}).get(m.pais_emisor, {}).get("pasaporte_vencido")
+            exc = (self.cfg.get("excepciones_pais") or {}).get(m.pais_emisor, {}).get("pasaporte_vencido")
             if exc == "revision_humana":
                 h.append(Hallazgo("REVISION_HUMANA", "VENCIDO_CON_EXCEPCION",
-                                  "Pasaporte vencido: aplicar criterio vigente para el país emisor"))
+                                  "Pasaporte vencido: aplicar el criterio vigente para el país emisor"))
             else:
                 h.append(Hallazgo("ALERTA", "PASAPORTE_VENCIDO", "El pasaporte está vencido"))
-        if ctx.numero_pasaporte_declarado and m.numero != ctx.numero_pasaporte_declarado:
-            h.append(Hallazgo("ALERTA", "NUMERO_NO_COINCIDE", "El número del pasaporte no coincide con el declarado"))
-        nombre_mrz = f"{m.apellidos} {m.nombres}"
-        if similitud_nombres(nombre_mrz, ctx.nombre_declarado) < self.cfg["umbrales"]["nombre_similitud"]:
-            h.append(Hallazgo("ALERTA", "NOMBRE_NO_COINCIDE", "El nombre del pasaporte no coincide con el declarado"))
+        decl = ctx.numero_pasaporte_declarado
+        if decl and m.numero != decl:
+            if casi_igual_numero(m.numero, decl):
+                # Confusiones que el dígito de control no detecta (p. ej., G y 6).
+                h.append(Hallazgo("REVISION_HUMANA", "NUMERO_CASI_COINCIDE",
+                                  "El número difiere en caracteres que el OCR suele confundir: verificar"))
+            else:
+                h.append(Hallazgo("ALERTA", "NUMERO_NO_COINCIDE", "El número del pasaporte no coincide con el declarado"))
+        h += self._nombre(comparar_nombres(f"{m.apellidos} {m.nombres}", ctx.nombre_declarado,
+                                           ultimo_truncado_a=m.nombre_truncado), "pasaporte")
         return h
 
     # ---------------------------------------- certificado de antecedentes
-    def antecedentes(self, campos: dict[str, Campo], apostilla: bool, idioma: str, ctx: Contexto,
-                     fecha_emision: date | None) -> list[Hallazgo]:
+    def antecedentes(self, campos: dict[str, Campo], autenticacion: dict, pais: str, idioma: str,
+                     ctx: Contexto, fecha_emision: date | None) -> list[Hallazgo]:
+        nombre, fecha = campos.get("nombre"), campos.get("fecha_emision")
+        if (nombre is None or nombre.valor is None) and (fecha is None or fecha.valor is None):
+            # No se reconoció la estructura del documento: no se evalúa ninguna otra regla.
+            return [Hallazgo("REVISION_HUMANA", "DOCUMENTO_NO_RECONOCIDO",
+                             "No se reconocieron los campos del documento")]
         h: list[Hallazgo] = []
-        for nombre in ("nombre", "fecha_emision"):
-            c = campos.get(nombre)
-            if c is None or c.valor is None or c.confianza < self.umbral(nombre, idioma):
-                h.append(Hallazgo("REVISION_HUMANA", f"{nombre.upper()}_DUDOSO",
-                                  f"Campo '{nombre}' no leído con confianza suficiente"))
-        if any(x.tipo == "REVISION_HUMANA" and x.codigo == "FECHA_EMISION_DUDOSO" for x in h) or fecha_emision is None:
-            pass
+        if nombre is None or nombre.valor is None or nombre.confianza < self.umbral("nombre", idioma):
+            h.append(Hallazgo("REVISION_HUMANA", "NOMBRE_DUDOSO", "Nombre no leído con confianza"))
         else:
-            dias = (ctx.fecha_presentacion - fecha_emision).days
-            if dias > self.cfg["plazos_dias"]["antecedentes"]:
-                h.append(Hallazgo("ALERTA", "ANTECEDENTES_ANTIGUO", f"Emitido hace {dias} días (máximo 60)"))
-        if not any(x.codigo == "NOMBRE_DUDOSO" for x in h):
-            if similitud_nombres(campos["nombre"].valor, ctx.nombre_declarado) < self.cfg["umbrales"]["nombre_similitud"]:
-                h.append(Hallazgo("ALERTA", "NOMBRE_NO_COINCIDE", "El nombre del certificado no coincide con el declarado"))
-        if not apostilla:
-            h.append(Hallazgo("ALERTA", "SIN_APOSTILLA", "No se detectó apostilla o legalización"))
+            h += self._nombre(comparar_nombres(nombre.valor, ctx.nombre_declarado), "certificado")
+        h += self._fecha(fecha, fecha_emision, idioma, ctx, self.cfg["plazos_dias"]["antecedentes"])
+        requerida = self.cfg.get("autenticacion_por_pais", {}).get(pais, "cualquiera")
+        if requerida == "apostilla" and not autenticacion["apostilla"]:
+            h.append(Hallazgo("ALERTA", "SIN_APOSTILLA", "No se detectó la apostilla"))
+        elif requerida == "legalizacion" and not autenticacion["legalizacion"]:
+            h.append(Hallazgo("ALERTA", "SIN_LEGALIZACION", "No se detectó la legalización consular"))
+        elif requerida == "cualquiera" and not (autenticacion["apostilla"] or autenticacion["legalizacion"]):
+            h.append(Hallazgo("ALERTA", "SIN_APOSTILLA_NI_LEGALIZACION", "No se detectó apostilla ni legalización"))
         return h
 
     def antecedentes_completitud(self, paises_presentados: set[str], ctx: Contexto) -> list[Hallazgo]:
@@ -99,26 +130,26 @@ class MotorReglas:
     def privado(self, firma: dict | None, campos: dict[str, Campo], idioma: str, ctx: Contexto,
                 fecha_emision: date | None) -> list[Hallazgo]:
         h: list[Hallazgo] = []
-        if firma is not None:
-            if not firma["integra"]:
-                h.append(Hallazgo("ALERTA", "FIRMA_INVALIDA", "El documento fue modificado después de firmado"))
-            elif not firma["confiable"]:
-                h.append(Hallazgo("REVISION_HUMANA", "FIRMANTE_NO_ACREDITADO",
-                                  "Firma íntegra, pero el certificado no proviene de un prestador acreditado"))
+        if firma is None:
+            h.append(Hallazgo("ALERTA", "SIN_FEA", "Documento privado sin firma electrónica avanzada"))
+        elif not firma["integra"]:
+            h.append(Hallazgo("ALERTA", "FIRMA_INVALIDA", "El contenido firmado fue alterado"))
+        elif firma["modificado_tras_firma"]:
+            h.append(Hallazgo("ALERTA", "MODIFICADO_TRAS_FIRMA", "Se agregó contenido después de la firma"))
+        elif not firma["confiable"]:
+            h.append(Hallazgo("REVISION_HUMANA", "FIRMANTE_NO_ACREDITADO",
+                              "Firma íntegra, pero el certificado no proviene de un prestador acreditado"))
         else:
-            h.append(Hallazgo("ALERTA", "SIN_FEA", "Documento privado sin firma electrónica avanzada ni verificación"))
-        c = campos.get("fecha_emision")
-        if c is None or c.valor is None or c.confianza < self.umbral("fecha_emision", idioma) or fecha_emision is None:
-            h.append(Hallazgo("REVISION_HUMANA", "FECHA_EMISION_DUDOSO", "Fecha de emisión no leída con confianza"))
-        else:
-            dias = (ctx.fecha_presentacion - fecha_emision).days
-            if dias > self.cfg["plazos_dias"]["privado"]:
-                h.append(Hallazgo("ALERTA", "DOCUMENTO_ANTIGUO", f"Emitido hace {dias} días (máximo 30)"))
-        n = campos.get("nombre")
-        if n is None or n.valor is None or n.confianza < self.umbral("nombre", idioma):
+            rut_doc = normalizar_rut(campos["rut_empleador"].valor if campos.get("rut_empleador") else "")
+            if not firma["rut_firmante"] or rut_doc != firma["rut_firmante"]:
+                h.append(Hallazgo("ALERTA", "FIRMANTE_NO_COINCIDE",
+                                  "La firma no corresponde al empleador indicado en el documento"))
+        nombre = campos.get("nombre")
+        if nombre is None or nombre.valor is None or nombre.confianza < self.umbral("nombre", idioma):
             h.append(Hallazgo("REVISION_HUMANA", "NOMBRE_DUDOSO", "Nombre no leído con confianza"))
-        elif similitud_nombres(n.valor, ctx.nombre_declarado) < self.cfg["umbrales"]["nombre_similitud"]:
-            h.append(Hallazgo("ALERTA", "NOMBRE_NO_COINCIDE", "El nombre no coincide con el declarado"))
+        else:
+            h += self._nombre(comparar_nombres(nombre.valor, ctx.nombre_declarado), "documento")
+        h += self._fecha(campos.get("fecha_emision"), fecha_emision, idioma, ctx, self.cfg["plazos_dias"]["privado"])
         return h
 
     # ----------------------------------------- documento público chileno
@@ -128,9 +159,12 @@ class MotorReglas:
         if not verificacion["existe"]:
             return [Hallazgo("ALERTA", "CODIGO_INEXISTENTE", "El código no existe en el registro del emisor")]
         h = []
-        if similitud_nombres(verificacion["titular"], ctx.nombre_declarado) < self.cfg["umbrales"]["nombre_similitud"]:
-            h.append(Hallazgo("ALERTA", "CODIGO_DE_OTRA_PERSONA",
-                              "El código de verificación corresponde a otra persona"))
+        r = comparar_nombres(verificacion["titular"], ctx.nombre_declarado)
+        if r == "DISTINTO":
+            h.append(Hallazgo("ALERTA", "CODIGO_DE_OTRA_PERSONA", "El código de verificación corresponde a otra persona"))
+        elif r == "CASI":
+            h.append(Hallazgo("REVISION_HUMANA", "NOMBRE_CASI_COINCIDE",
+                              "El titular registrado difiere levemente del declarado: verificar"))
         dias = (ctx.fecha_presentacion - verificacion["fecha_emision"]).days
         if dias > self.cfg["plazos_dias"]["publico"]:
             h.append(Hallazgo("ALERTA", "DOCUMENTO_ANTIGUO", f"Emitido hace {dias} días (máximo 60)"))

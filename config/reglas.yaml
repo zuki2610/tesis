@@ -2,37 +2,36 @@
 # Se modifican sin cambiar el código. Ninguna regla rechaza: solo ALERTA o REVISION_HUMANA.
 
 plazos_dias:
-  publico: 60        # documentos públicos (SERMIG: menos de 60 días)
-  privado: 30        # documentos privados (SERMIG: menos de 30 días)
-  antecedentes: 60
+  publico: 60        # documentos públicos chilenos
+  privado: 30        # documentos privados
+  antecedentes: 60   # certificado de antecedentes extranjero (documento público)
 
 umbrales:
-  # Confianza mínima del OCR por campo e idioma para aceptar sin revisión humana.
-  # Valores iniciales; se recalibran con la muestra de calibración (sección 10.3).
+  # Confianza mínima del OCR para aceptar un campo sin revisión humana.
+  # Valor por defecto; puede reemplazarse por umbrales calibrados por idioma.
   defecto: 0.80
-  nombre_similitud: 0.90
 
 idiomas_soportados: [es, fr, en]
 
-excepciones_pais:
-  # Chile, como firmante de la Declaración de Quito, aceptó documentos de viaje
-  # venezolanos vencidos como documentos de identidad (Res. Ex. 2.087/2019).
-  # El criterio vigente debe confirmarlo el funcionario: se deriva, no se alerta.
-  VEN:
-    pasaporte_vencido: revision_humana
+# Forma de autenticación exigible a documentos públicos extranjeros, según si el país
+# emisor es parte de la Convención de La Haya de 1961 (tabla de estado de la HCCH).
+autenticacion_por_pais:
+  VEN: apostilla     # parte desde 1999
+  PER: apostilla     # parte desde 2010
+  COL: apostilla     # parte desde 2001
+  BOL: apostilla     # parte desde 2018
+  HTI: legalizacion  # no es parte: legalización consular
+  # Países no listados: se acepta cualquiera de las dos.
+
+# Excepciones por país. Ejemplo histórico: la Res. Ex. 2.087/2019 y su prórroga
+# permitieron usar pasaportes venezolanos vencidos en trámites migratorios hasta 2023.
+# No hay excepción vigente, por lo que queda desactivada:
+excepciones_pais: {}
+#  VEN:
+#    pasaporte_vencido: revision_humana
 
 documentos:
-  pasaporte:
-    via: ocr_mrz
   antecedentes_extranjero:
-    via: ocr
-    tipo_plazo: antecedentes
-    requiere_apostilla: true
-    # Decreto 177: un certificado por cada país de residencia en los últimos 5 años.
+    # Decreto 177: certificado del país de origen o de cada país de residencia
+    # en los últimos cinco años.
     por_cada_pais_residencia_anios: 5
-  liquidacion:
-    via: firma_o_ocr
-    tipo_plazo: privado
-  certificado_publico_cl:
-    via: emisor
-    tipo_plazo: publico

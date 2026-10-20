@@ -45,14 +45,14 @@ def crear_solicitud(nombre: str = Form(...), numero_pasaporte: str = Form(""),
 
 
 @app.post("/solicitudes/{sid}/documentos")
-async def cargar_documento(sid: str, tipo: str = Form(...), idioma: str = Form("es"),
+async def cargar_documento(sid: str, tipo: str = Form(...), idioma: str = Form(...), pais: str = Form(""),
                            imagen: UploadFile = File(...), pdf: UploadFile | None = File(None)):
     if sid not in _solicitudes:
         raise HTTPException(404, "Solicitud no existe")
     s = _solicitudes[sid]
     img, doc_pdf = await imagen.read(), (await pdf.read() if pdf else None)
     # El OCR y la validación de firma son bloqueantes: se ejecutan fuera del bucle de eventos.
-    r = await run_in_threadpool(_prev.procesar, sid, tipo, idioma, img, s["ctx"], doc_pdf)
+    r = await run_in_threadpool(_prev.procesar, sid, tipo, idioma, img, s["ctx"], doc_pdf, pais)
     s["documentos"].append(r)
     # Respuesta inmediata al solicitante: nunca bloquea el envío (RF-09).
     return {"estado": r.estado, "via": r.via,
@@ -64,6 +64,18 @@ def expediente(sid: str):
     """Vista del funcionario: datos extraídos, hallazgos y estado de cada documento (RF-10)."""
     if sid not in _solicitudes:
         raise HTTPException(404, "Solicitud no existe")
+    s = _solicitudes[sid]
     return {"documentos": [{"tipo": d.tipo, "via": d.via, "estado": d.estado, "campos": d.campos,
-                            "hallazgos": [h.__dict__ for h in d.hallazgos]} for d in _solicitudes[sid]["documentos"]],
-            "bitacora_integra": _prev.bitacora.verificar()}
+                            "hallazgos": [h.__dict__ for h in d.hallazgos]} for d in s["documentos"]],
+            "expediente": [h.__dict__ for h in _prev.completitud(s["documentos"], s["ctx"])],
+            "bitacora_integra": _prev.bitacora.verificar(_ANCLAS[-1] if _ANCLAS else None)}
+
+
+# Anclas externas de la bitácora (en producción: sello de tiempo de un tercero o WORM).
+_ANCLAS: list[dict] = []
+
+
+@app.post("/bitacora/ancla")
+def anclar():
+    _ANCLAS.append(_prev.bitacora.ancla())
+    return _ANCLAS[-1]

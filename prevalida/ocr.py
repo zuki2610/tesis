@@ -104,18 +104,33 @@ class TesseractOCR:
 
 
 class TextractOCR:
-    """Amazon Textract. Pasaportes: DetectDocumentText; resto: AnalyzeDocument (FORMS)."""
+    """Amazon Textract. Documentos: AnalyzeDocument con FORMS; MRZ: DetectDocumentText.
+
+    La región es obligatoria y se toma de AWS_REGION: debe elegirse según la política de
+    localización de datos (RNF-09). Antes de usarlo, activar la política de exclusión de
+    servicios de IA en AWS Organizations."""
     nombre = "textract"
 
-    def __init__(self, region: str = "us-east-1"):
+    def __init__(self, region: str | None = None):
         import boto3
+        region = region or os.environ.get("AWS_REGION")
+        if not region:
+            raise ValueError("Defina AWS_REGION según la política de localización de datos")
         self._c = boto3.client("textract", region_name=region)
+
+    @staticmethod
+    def _lineas(r) -> list[Linea]:
+        return [Linea(b["Text"], b["Confidence"] / 100) for b in r["Blocks"] if b["BlockType"] == "LINE"]
 
     def leer(self, imagen: bytes, idioma: str) -> ResultadoOCR:
         t0 = time.perf_counter()
+        r = self._c.analyze_document(Document={"Bytes": imagen}, FeatureTypes=["FORMS"])
+        return ResultadoOCR(self.nombre, self._lineas(r), time.perf_counter() - t0)
+
+    def leer_mrz(self, imagen: bytes) -> ResultadoOCR:
+        t0 = time.perf_counter()
         r = self._c.detect_document_text(Document={"Bytes": imagen})
-        lineas = [Linea(b["Text"], b["Confidence"] / 100) for b in r["Blocks"] if b["BlockType"] == "LINE"]
-        return ResultadoOCR(self.nombre, lineas, time.perf_counter() - t0)
+        return ResultadoOCR(self.nombre + "-mrz", self._lineas(r), time.perf_counter() - t0)
 
 
 class AzureOCR:
