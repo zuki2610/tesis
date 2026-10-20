@@ -214,3 +214,43 @@ def test_bitacora_detecta_modificacion_truncamiento_y_reescritura():
     for i in range(3):
         b3.registrar("s1", "sistema", "evento", {"i": i + 10})  # cadena reescrita y recalculada
     assert b3.verificar() and not b3.verificar(a3)
+
+
+# ------------------------------------------------- iteración 5 (etiquetas)
+from prevalida.extraccion import extraer_etiquetados  # noqa: E402
+
+
+@pytest.mark.parametrize("texto,nombre", [
+    ("Nombre del padre: Luis Rojas\nNombre: Ana Pérez", "Ana Pérez"),   # trampa
+    ("NOMBRE\nANA PÉREZ\nFECHA DE EMISIÓN\n3/9/2026", "ANA PÉREZ"),     # etiqueta y valor en líneas separadas
+    ("NOMBRE COMPLETO: Ana Pérez", "Ana Pérez"),
+    ("Nom et prénoms : Wisly Dorvil", "Wisly Dorvil"),
+])
+def test_etiquetas(texto, nombre):
+    assert extraer_etiquetados(desde_texto(texto), "antecedentes")["nombre"].valor == nombre
+
+
+def test_nom_no_confunde_nombre():
+    c = extraer_etiquetados(desde_texto("NOMBREE: x\nNombres y apellidos"), "antecedentes")["nombre"]
+    assert c.valor is None
+
+
+def test_etiqueta_sin_valor_es_none():
+    c = extraer_etiquetados(desde_texto("Trabajador:\nFecha de emisión:"), "liquidacion")
+    assert c["nombre"].valor is None
+
+
+@pytest.mark.parametrize("s,esperado", [("3 de agosto, 2026", date(2026, 8, 3)),
+                                         ("Septiembre 16 de 2026", date(2026, 9, 16)),
+                                         ("16/09/26", None)])
+def test_fechas_iteracion5(s, esperado):
+    assert parsear_fecha(s) == esperado
+
+
+def test_rut_no_leido_deriva(pki):
+    pdf, raiz = pki
+    f = validar_fea(pdf, [raiz])
+    campos = {"nombre": Campo("nombre", "Ana Rojas", 1.0), "fecha_emision": Campo("fecha_emision", "20/09/2026", 1.0),
+              "rut_empleador": Campo("rut_empleador", None, 0.0)}
+    h = MotorReglas(CFG).privado(f, campos, "es", Contexto(HOY, "Ana Rojas"), date(2026, 9, 20))
+    assert [x.codigo for x in h] == ["RUT_NO_LEIDO"]

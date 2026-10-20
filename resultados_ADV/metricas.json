@@ -1,0 +1,4161 @@
+{
+ "motor": {
+  "tesseract": "5.3.4",
+  "modelo_mrz": "mrz"
+ },
+ "corpus": {
+  "total": 246,
+  "calibracion": 123,
+  "prueba": 246,
+  "semilla": 20261023,
+  "generador": "adversarial",
+  "por_tipo": {
+   "pasaporte": 80,
+   "antecedentes_extranjero": 88,
+   "liquidacion": 48,
+   "certificado_publico_cl": 30
+  }
+ },
+ "umbrales_calibrados": {
+  "es": 1.01,
+  "fr": 1.01
+ },
+ "umbral_defecto": 0.8,
+ "campos_umbral_calibrado": {
+  "es": {
+   "campos": 272,
+   "documentos": 112,
+   "aceptados": 0,
+   "correctos_aceptados_estricto": 0,
+   "correctos_aceptados_funcional": 0,
+   "precision": null,
+   "ic95_cp": [
+    NaN,
+    NaN
+   ],
+   "lim_inf_unilateral": 0.0,
+   "ic95_bootstrap_documentos": [
+    NaN,
+    NaN
+   ],
+   "cobertura": 0.0,
+   "exactitud_estricta_global": 0.3235294117647059,
+   "exactitud_funcional_global": 0.33088235294117646,
+   "errores_aceptados": []
+  },
+  "fr": {
+   "campos": 32,
+   "documentos": 16,
+   "aceptados": 0,
+   "correctos_aceptados_estricto": 0,
+   "correctos_aceptados_funcional": 0,
+   "precision": null,
+   "ic95_cp": [
+    NaN,
+    NaN
+   ],
+   "lim_inf_unilateral": 0.0,
+   "ic95_bootstrap_documentos": [
+    NaN,
+    NaN
+   ],
+   "cobertura": 0.0,
+   "exactitud_estricta_global": 0.3125,
+   "exactitud_funcional_global": 0.3125,
+   "errores_aceptados": []
+  }
+ },
+ "campos_umbral_defecto": {
+  "es": {
+   "campos": 272,
+   "documentos": 112,
+   "aceptados": 131,
+   "correctos_aceptados_estricto": 82,
+   "correctos_aceptados_funcional": 84,
+   "precision": 0.6259541984732825,
+   "ic95_cp": [
+    0.5371788667411377,
+    0.7088988469941462
+   ],
+   "lim_inf_unilateral": 0.5509566262919459,
+   "ic95_bootstrap_documentos": [
+    0.5433070866141733,
+    0.7045454545454546
+   ],
+   "cobertura": 0.48161764705882354,
+   "exactitud_estricta_global": 0.3235294117647059,
+   "exactitud_funcional_global": 0.33088235294117646,
+   "errores_aceptados": [
+    {
+     "id": "ant_VEN_001",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_VEN_001",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_VEN_003",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_VEN_004",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_VEN_004",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_VEN_011",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_VEN_013",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_VEN_013",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_VEN_014",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_000",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_001",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_002",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_004",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_005",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_PER_008",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_012",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_012",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_PER_013",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_PER_015",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_COL_005",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_COL_006",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_COL_006",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_COL_008",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_COL_011",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_COL_015",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_000",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_BOL_005",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_010",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_BOL_011",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_BOL_011",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_012",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_BOL_013",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_014",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_BOL_014",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_015",
+     "campo": "nombre"
+    },
+    {
+     "id": "liq_006",
+     "campo": "nombre"
+    },
+    {
+     "id": "liq_008",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_010",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_012",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_014",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_016",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_020",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_022",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_026",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_030",
+     "campo": "nombre"
+    },
+    {
+     "id": "liq_034",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_040",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_042",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_046",
+     "campo": "fecha_emision"
+    }
+   ]
+  },
+  "fr": {
+   "campos": 32,
+   "documentos": 16,
+   "aceptados": 26,
+   "correctos_aceptados_estricto": 10,
+   "correctos_aceptados_funcional": 10,
+   "precision": 0.38461538461538464,
+   "ic95_cp": [
+    0.20226024365502038,
+    0.5942924647014085
+   ],
+   "lim_inf_unilateral": 0.22569988222323717,
+   "ic95_bootstrap_documentos": [
+    0.2,
+    0.5652173913043478
+   ],
+   "cobertura": 0.8125,
+   "exactitud_estricta_global": 0.3125,
+   "exactitud_funcional_global": 0.3125,
+   "errores_aceptados": [
+    {
+     "id": "ant_HTI_000",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_000",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_HTI_001",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_001",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_HTI_002",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_HTI_003",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_004",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_005",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_005",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_HTI_006",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_007",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_008",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_009",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_011",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_HTI_013",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_014",
+     "campo": "nombre"
+    }
+   ]
+  }
+ },
+ "exactitud_estricta_por_degradacion": {
+  "limpio": 0.5263157894736842,
+  "escaner": null,
+  "celular": null,
+  "baja_res": null
+ },
+ "deteccion_por_codigo": {
+  "CODIGO_DE_OTRA_PERSONA": {
+   "fn": 2,
+   "vp": 2
+  },
+  "CODIGO_INEXISTENTE": {
+   "vp": 4
+  },
+  "DOCUMENTO_ANTIGUO": {
+   "fn": 25,
+   "vp": 8
+  },
+  "DOCUMENTO_NO_RECONOCIDO": {
+   "fp": 15,
+   "vp": 8
+  },
+  "FECHA_EMISION_DUDOSO": {
+   "fp": 61
+  },
+  "FECHA_NO_INTERPRETABLE": {
+   "fp": 31
+  },
+  "FIRMANTE_NO_ACREDITADO": {
+   "vp": 8
+  },
+  "FIRMANTE_NO_COINCIDE": {
+   "vp": 8,
+   "fp": 8
+  },
+  "FIRMA_INVALIDA": {
+   "vp": 8
+  },
+  "MODIFICADO_TRAS_FIRMA": {
+   "vp": 8
+  },
+  "MRZ_ILEGIBLE": {
+   "fp": 1
+  },
+  "MRZ_NO_ENCONTRADA": {
+   "fp": 30
+  },
+  "NOMBRE_CASI_COINCIDE": {
+   "fn": 6,
+   "vp": 5,
+   "fp": 4
+  },
+  "NOMBRE_DUDOSO": {
+   "fp": 29
+  },
+  "NOMBRE_NO_COINCIDE": {
+   "fp": 32,
+   "vp": 13,
+   "fn": 3
+  },
+  "PASAPORTE_VENCIDO": {
+   "vp": 6,
+   "fn": 6
+  },
+  "QR_ILEGIBLE": {
+   "fp": 3
+  },
+  "SIN_APOSTILLA": {
+   "vp": 7,
+   "fn": 5,
+   "fp": 3
+  },
+  "SIN_FEA": {
+   "vp": 8
+  },
+  "SIN_LEGALIZACION": {
+   "vp": 3
+  }
+ },
+ "totales": {
+  "esperados": 143,
+  "detectados": 96,
+  "omitidos": 47,
+  "hallazgos_no_esperados": 217,
+  "documentos": 246,
+  "documentos_con_omision": 42,
+  "omisiones_silenciosas": 0,
+  "omisiones_con_derivacion": 42,
+  "omisiones_con_alertas": 0,
+  "documentos_derivados": 159,
+  "documentos_con_alerta_injustificada": 37,
+  "ic95_doc_alerta_injustificada": [
+   0.10816353833868052,
+   0.2013064471252846
+  ],
+  "alertas": 118,
+  "alertas_injustificadas": 43,
+  "documentos_con_derivacion_no_esperada": 145,
+  "prevalidados": 55
+ },
+ "por_tipo_y_pais": {
+  "antecedentes_extranjero|BOL": {
+   "docs": 16,
+   "con_alerta_injustificada": 6,
+   "con_derivacion_no_esperada": 15,
+   "con_omision": 7,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 7,
+   "omision_con_alertas": 0,
+   "prevalidado": 0
+  },
+  "antecedentes_extranjero|COL": {
+   "docs": 16,
+   "con_alerta_injustificada": 3,
+   "con_derivacion_no_esperada": 16,
+   "con_omision": 5,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 5,
+   "omision_con_alertas": 0,
+   "prevalidado": 0
+  },
+  "antecedentes_extranjero|HTI": {
+   "docs": 24,
+   "con_alerta_injustificada": 5,
+   "con_derivacion_no_esperada": 14,
+   "con_omision": 3,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 3,
+   "omision_con_alertas": 0,
+   "prevalidado": 1
+  },
+  "antecedentes_extranjero|PER": {
+   "docs": 16,
+   "con_alerta_injustificada": 5,
+   "con_derivacion_no_esperada": 13,
+   "con_omision": 2,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 2,
+   "omision_con_alertas": 0,
+   "prevalidado": 0
+  },
+  "antecedentes_extranjero|VEN": {
+   "docs": 16,
+   "con_alerta_injustificada": 5,
+   "con_derivacion_no_esperada": 14,
+   "con_omision": 5,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 5,
+   "omision_con_alertas": 0,
+   "prevalidado": 0
+  },
+  "certificado_publico_cl|CHL": {
+   "docs": 30,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 3,
+   "con_omision": 2,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 2,
+   "omision_con_alertas": 0,
+   "prevalidado": 18
+  },
+  "liquidacion|CHL": {
+   "docs": 48,
+   "con_alerta_injustificada": 12,
+   "con_derivacion_no_esperada": 39,
+   "con_omision": 9,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 9,
+   "omision_con_alertas": 0,
+   "prevalidado": 0
+  },
+  "pasaporte|BOL": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 6,
+   "con_omision": 2,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 2,
+   "omision_con_alertas": 0,
+   "prevalidado": 6
+  },
+  "pasaporte|COL": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 8,
+   "con_omision": 2,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 2,
+   "omision_con_alertas": 0,
+   "prevalidado": 6
+  },
+  "pasaporte|HTI": {
+   "docs": 16,
+   "con_alerta_injustificada": 1,
+   "con_derivacion_no_esperada": 4,
+   "con_omision": 0,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
+   "prevalidado": 10
+  },
+  "pasaporte|PER": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 4,
+   "con_omision": 0,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
+   "prevalidado": 9
+  },
+  "pasaporte|VEN": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 9,
+   "con_omision": 5,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 5,
+   "omision_con_alertas": 0,
+   "prevalidado": 5
+  }
+ },
+ "mrz": {
+  "BOL": {
+   "n": 16,
+   "valida": 10,
+   "exacta": 10
+  },
+  "COL": {
+   "n": 16,
+   "valida": 8,
+   "exacta": 8
+  },
+  "HTI": {
+   "n": 16,
+   "valida": 12,
+   "exacta": 9
+  },
+  "PER": {
+   "n": 16,
+   "valida": 12,
+   "exacta": 12
+  },
+  "VEN": {
+   "n": 16,
+   "valida": 7,
+   "exacta": 5
+  },
+  "deg_celular_fuerte": {
+   "n": 20,
+   "valida": 6
+  },
+  "deg_fotocopia": {
+   "n": 20,
+   "valida": 13
+  },
+  "deg_limpio": {
+   "n": 20,
+   "valida": 15
+  },
+  "deg_sombra": {
+   "n": 20,
+   "valida": 15
+  }
+ },
+ "qr": {
+  "n": 30,
+  "leido": 27
+ },
+ "firma_por_variante": {
+  "alterada": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_y_ocr": 8
+  },
+  "incremental": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_y_ocr": 8
+  },
+  "no_acreditada": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_y_ocr": 8
+  },
+  "otro_firmante": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_pdf": 8
+  },
+  "sin_firma": {
+   "n": 8,
+   "correcta": 8,
+   "via_ocr": 8
+  },
+  "valida": {
+   "n": 8,
+   "correcta": 0,
+   "via_firma_pdf": 8
+  }
+ },
+ "latencia_documentos_ocr_prueba_s": {
+  "n": 200,
+  "mediana": 1.6379149524996137,
+  "p95": 3.2982573200001752
+ },
+ "bitacora": {
+  "integra_con_ancla": true,
+  "truncamiento_detectado": true
+ },
+ "detalle": [
+  {
+   "id": "pas_VEN_000",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_VEN_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_VEN_001",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_002",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_VEN_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_VEN_003",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_VEN_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_VEN_004",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_005",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_VEN_006",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_VEN_007",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE",
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_VEN_008",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_009",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "MRZ_ILEGIBLE"
+   ]
+  },
+  {
+   "id": "ant_VEN_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_VEN_010",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_VEN_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_VEN_011",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_VEN_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_012",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_VEN_013",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_VEN_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_014",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_VEN_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_015",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_VEN_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_PER_000",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_PER_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_PER_001",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_PER_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_PER_002",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_PER_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_PER_003",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_PER_004",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_PER_005",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE"
+   ]
+  },
+  {
+   "id": "pas_PER_006",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_PER_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_PER_007",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_PER_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_PER_008",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_PER_009",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_PER_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_PER_010",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_PER_011",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_PER_012",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_PER_013",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_PER_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_PER_014",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_PER_015",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_PER_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_COL_000",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_COL_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_COL_001",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_COL_002",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_COL_003",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_COL_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_COL_004",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_COL_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_COL_005",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_COL_006",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_COL_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_COL_007",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_COL_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_COL_008",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_COL_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_COL_009",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE",
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_COL_010",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_COL_011",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_COL_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_COL_012",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_COL_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_COL_013",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_COL_014",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_COL_015",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_COL_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE"
+   ]
+  },
+  {
+   "id": "pas_BOL_000",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_BOL_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_BOL_001",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_BOL_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_BOL_002",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_BOL_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_BOL_003",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_BOL_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_BOL_004",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_BOL_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_BOL_005",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_BOL_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_BOL_006",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_BOL_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_BOL_007",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_BOL_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_BOL_008",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_BOL_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "pas_BOL_009",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_BOL_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_BOL_010",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_BOL_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [],
+   "producidos": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_BOL_011",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_BOL_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_BOL_012",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_BOL_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_BOL_013",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_BOL_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE"
+   ]
+  },
+  {
+   "id": "pas_BOL_014",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_BOL_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_BOL_015",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_BOL_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "SIN_APOSTILLA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_HTI_000",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_001",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_HTI_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_002",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_LEGALIZACION"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "SIN_LEGALIZACION"
+   ]
+  },
+  {
+   "id": "pas_HTI_003",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_004",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_005",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_006",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_HTI_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_LEGALIZACION"
+   ],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE",
+    "SIN_LEGALIZACION"
+   ]
+  },
+  {
+   "id": "pas_HTI_007",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_HTI_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_008",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [],
+   "producidos": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_HTI_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_009",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_010",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_HTI_011",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_012",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO"
+   ]
+  },
+  {
+   "id": "pas_HTI_013",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr_mrz",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ant_HTI_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_LEGALIZACION"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE",
+    "SIN_LEGALIZACION"
+   ]
+  },
+  {
+   "id": "pas_HTI_014",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr_mrz",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_HTI_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "NOMBRE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_015",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr_mrz",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "MRZ_NO_ENCONTRADA"
+   ]
+  },
+  {
+   "id": "ant_HTI_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "liq_000",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO",
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_001",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "MODIFICADO_TRAS_FIRMA",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_002",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_003",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "MODIFICADO_TRAS_FIRMA",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_004",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_y_ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "MODIFICADO_TRAS_FIRMA"
+   ]
+  },
+  {
+   "id": "liq_005",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_ACREDITADO",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_006",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_007",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_ACREDITADO",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_008",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_009",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO",
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_010",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_011",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "MODIFICADO_TRAS_FIRMA",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_012",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_013",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_014",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_015",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO",
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_016",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_017",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_018",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_019",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO",
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_020",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_021",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMA_INVALIDA",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_022",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_023",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_024",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO",
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_025",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_026",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "liq_027",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_028",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_y_ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_029",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO",
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_030",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_031",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "NOMBRE_DUDOSO",
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_032",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_y_ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_033",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "MODIFICADO_TRAS_FIRMA",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_034",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "SIN_FEA"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "liq_035",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "MODIFICADO_TRAS_FIRMA",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_036",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_y_ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO",
+    "MODIFICADO_TRAS_FIRMA"
+   ]
+  },
+  {
+   "id": "liq_037",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_038",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_y_ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_039",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "MODIFICADO_TRAS_FIRMA"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "MODIFICADO_TRAS_FIRMA",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_040",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_041",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_ACREDITADO",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_042",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO",
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_043",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_ACREDITADO",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_044",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "firma_y_ocr",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ],
+   "producidos": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "liq_045",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "liq_046",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "firma_pdf",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_COINCIDE"
+   ],
+   "producidos": [
+    "FECHA_NO_INTERPRETABLE",
+    "FIRMANTE_NO_COINCIDE",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "liq_047",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "firma_y_ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ],
+   "producidos": [
+    "FECHA_EMISION_DUDOSO",
+    "FIRMANTE_NO_ACREDITADO",
+    "NOMBRE_DUDOSO"
+   ]
+  },
+  {
+   "id": "cl_000",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_001",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ],
+   "producidos": [
+    "QR_ILEGIBLE"
+   ]
+  },
+  {
+   "id": "cl_002",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_003",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "emisor",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "NOMBRE_CASI_COINCIDE"
+   ],
+   "producidos": [
+    "NOMBRE_CASI_COINCIDE"
+   ]
+  },
+  {
+   "id": "cl_004",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_005",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_006",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "CODIGO_INEXISTENTE"
+   ],
+   "producidos": [
+    "CODIGO_INEXISTENTE"
+   ]
+  },
+  {
+   "id": "cl_007",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "CODIGO_INEXISTENTE"
+   ],
+   "producidos": [
+    "CODIGO_INEXISTENTE"
+   ]
+  },
+  {
+   "id": "cl_008",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "CODIGO_INEXISTENTE"
+   ],
+   "producidos": [
+    "CODIGO_INEXISTENTE"
+   ]
+  },
+  {
+   "id": "cl_009",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_010",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "emisor",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ],
+   "producidos": [
+    "QR_ILEGIBLE"
+   ]
+  },
+  {
+   "id": "cl_011",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ],
+   "producidos": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ]
+  },
+  {
+   "id": "cl_012",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_013",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_014",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ],
+   "producidos": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ]
+  },
+  {
+   "id": "cl_015",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_016",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_017",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_018",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_019",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "cl_020",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_021",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "REVISION_HUMANA",
+   "esperados": [],
+   "producidos": [
+    "QR_ILEGIBLE"
+   ]
+  },
+  {
+   "id": "cl_022",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ],
+   "producidos": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "cl_023",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_024",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_025",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_026",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "fotocopia",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_027",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "sombra",
+   "via": "emisor",
+   "estado": "CON_ALERTAS",
+   "esperados": [
+    "CODIGO_INEXISTENTE"
+   ],
+   "producidos": [
+    "CODIGO_INEXISTENTE"
+   ]
+  },
+  {
+   "id": "cl_028",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "cl_029",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular_fuerte",
+   "via": "emisor",
+   "estado": "PREVALIDADO",
+   "esperados": [],
+   "producidos": []
+  },
+  {
+   "id": "ht_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "ht_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "ht_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "ht_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "ht_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "ht_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular_fuerte",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "ht_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "fotocopia",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  },
+  {
+   "id": "ht_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "sombra",
+   "via": "ocr",
+   "estado": "REVISION_HUMANA",
+   "esperados": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ],
+   "producidos": [
+    "DOCUMENTO_NO_RECONOCIDO"
+   ]
+  }
+ ]
+}

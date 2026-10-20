@@ -81,18 +81,31 @@ class TesseractOCR:
 
 
     def leer_mrz(self, imagen: bytes) -> ResultadoOCR:
-        """Lectura especializada de la franja inferior con alfabeto restringido a la MRZ.
+        """Lectura especializada de la MRZ con alfabeto restringido y modelo para OCR-B.
 
-        Se hacen dos pasadas (escala original y ampliada x2); el extractor elige la
-        primera MRZ cuyos dígitos de control sean válidos."""
+        Primero se lee la franja inferior en dos escalas; si no aparece una MRZ con dígitos
+        de control válidos, se lee la imagen completa. El extractor elige la primera MRZ
+        válida."""
         t0 = time.perf_counter()
         img = preprocesar(Image.open(io.BytesIO(imagen)))
         w, h = img.size
-        base = img.crop((0, int(h * 0.70), w, h))
+        lineas = self._pasadas_mrz(img.crop((0, int(h * 0.70), w, h)), (1, 2))
+        if not self._hay_mrz_valida(lineas):
+            # La MRZ no está en la franja inferior (p. ej., fotografía con márgenes): imagen completa.
+            lineas += self._pasadas_mrz(img, (1, 2))
+        return ResultadoOCR(self.nombre + "-mrz", lineas, time.perf_counter() - t0)
+
+    @staticmethod
+    def _hay_mrz_valida(lineas: list[Linea]) -> bool:
+        from .extraccion import extraer_mrz
+        r, _ = extraer_mrz(ResultadoOCR("tmp", lineas))
+        return bool(r and r.valida)
+
+    def _pasadas_mrz(self, base: Image.Image, escalas) -> list[Linea]:
         cfg = self._cfg + " -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<"
         lineas: list[Linea] = []
-        for escala in (1, 2):
-            franja = base if escala == 1 else base.resize((base.width * 2, base.height * 2), Image.LANCZOS)
+        for escala in escalas:
+            franja = base if escala == 1 else base.resize((base.width * escala, base.height * escala), Image.LANCZOS)
             d = self._pt.image_to_data(franja, lang=self.modelo_mrz, config=cfg, output_type=self._pt.Output.DICT)
             grupos: dict[tuple, list[int]] = {}
             for i, txt in enumerate(d["text"]):
@@ -105,7 +118,7 @@ class TesseractOCR:
                 pas.append(Linea(txt, conf, (min(d["left"][i] for i in idx), min(d["top"][i] for i in idx), 0, 0)))
             pas.sort(key=lambda l: (l.caja[1], l.caja[0]))
             lineas += pas + [Linea("", 0.0)]
-        return ResultadoOCR(self.nombre + "-mrz", lineas, time.perf_counter() - t0)
+        return lineas
 
 
 class TextractOCR:

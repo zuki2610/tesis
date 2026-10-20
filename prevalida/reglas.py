@@ -141,7 +141,11 @@ class MotorReglas:
                               "Firma íntegra, pero el certificado no proviene de un prestador acreditado"))
         else:
             rut_doc = normalizar_rut(campos["rut_empleador"].valor if campos.get("rut_empleador") else "")
-            if not firma["rut_firmante"] or rut_doc != firma["rut_firmante"]:
+            if not rut_doc or not firma["rut_firmante"]:
+                # Sin RUT legible no se puede comparar: se deriva, no se alerta.
+                h.append(Hallazgo("REVISION_HUMANA", "RUT_NO_LEIDO",
+                                  "No se pudo comparar el firmante con el empleador"))
+            elif rut_doc != firma["rut_firmante"]:
                 h.append(Hallazgo("ALERTA", "FIRMANTE_NO_COINCIDE",
                                   "La firma no corresponde al empleador indicado en el documento"))
         nombre = campos.get("nombre")

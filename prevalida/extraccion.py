@@ -49,12 +49,28 @@ def _sin_tildes(s: str) -> str:
 
 
 def buscar_campo(ocr: ResultadoOCR, patrones: list[str]) -> Campo | None:
-    for l in ocr.lineas:
+    """Busca una etiqueta al inicio de una línea.
+
+    La etiqueta debe terminar en un límite de palabra y estar seguida de un separador
+    (":" o ";"), de dos o más espacios o del fin de la línea; así "Nombre del padre:" no
+    se confunde con "Nombre:" ni "NOMBRE" con la etiqueta francesa "Nom". Si la línea de
+    la etiqueta no tiene valor, se toma la línea siguiente (etiqueta y valor en líneas
+    separadas), salvo que esta sea a su vez otra etiqueta."""
+    lineas = ocr.lineas
+    for i, l in enumerate(lineas):
         t = l.texto.strip()
         for p in patrones:
-            m = re.search(rf"^\s*{p}\s*[:;.\-]?\s*(.+)$", t, flags=re.I)
-            if m and m.group(1).strip():
-                return Campo("", m.group(1).strip(" :;.-"), l.confianza)
+            m = re.match(rf"^\s*{p}\b\s*(?:[:;]|\s{{2,}}|$)\s*(.*)$", t, flags=re.I)
+            if not m:
+                continue
+            valor = m.group(1).strip(" :;.-")
+            if valor:
+                return Campo("", valor, l.confianza)
+            if i + 1 < len(lineas):
+                sig = lineas[i + 1].texto.strip()
+                if sig and not sig.endswith(":"):
+                    return Campo("", sig.strip(" :;.-"), min(l.confianza, lineas[i + 1].confianza))
+            return None
     return None
 
 
@@ -62,7 +78,7 @@ def extraer_etiquetados(ocr: ResultadoOCR, tipo: str) -> dict[str, Campo]:
     out = {}
     for campo, pats in ETIQUETAS[tipo].items():
         c = buscar_campo(ocr, pats)
-        out[campo] = Campo(campo, c.valor if c else None, c.confianza if c else 0.0)
+        out[campo] = Campo(campo, c.valor if c and c.valor else None, c.confianza if c and c.valor else 0.0)
     return out
 
 
@@ -88,7 +104,7 @@ def _fecha(y: int, m: int, d: int) -> date | None:
 def parsear_fecha(s: str | None) -> date | None:
     """Interpreta fechas numéricas (dd/mm/aaaa, dd-mm-aaaa, dd.mm.aaaa, aaaa-mm-dd) y
     textuales en español y francés ("1 de marzo de 2026", "01 de marzo del 2026",
-    "1er mars 2026", "1° de marzo de 2026"). Devuelve None si no puede interpretarla:
+    "1er mars 2026", "1° de marzo de 2026", "3 de agosto, 2026", "Septiembre 16 de 2026"). Devuelve None si no puede interpretarla:
     las reglas tratan ese caso como lectura no confiable y derivan a revisión humana."""
     if not s:
         return None
@@ -100,10 +116,13 @@ def parsear_fecha(s: str | None) -> date | None:
     m = re.search(r"\b(\d{1,2})\s*[/\-.]\s*(\d{1,2})\s*[/\-.]\s*(\d{4})\b", t)
     if m:
         return _fecha(int(m.group(3)), int(m.group(2)), int(m.group(1)))
-    m = re.search(r"\b(\d{1,2})\s*(?:er|°|º|o)?\s+(?:de\s+)?([a-z]+)\s+(?:de\s+|del\s+)?(\d{4})\b", t)
+    m = re.search(r"\b(\d{1,2})\s*(?:er|°|º|o)?\s+(?:de\s+)?([a-z]+)\s*,?\s+(?:de\s+|del\s+)?(\d{4})\b", t)
     if m and m.group(2) in _MESES:
         return _fecha(int(m.group(3)), _MESES[m.group(2)], int(m.group(1)))
-    return None
+    m = re.search(r"\b([a-z]+)\s+(\d{1,2})\s*(?:de\s+|,\s*)(\d{4})\b", t)  # "Septiembre 16 de 2026"
+    if m and m.group(1) in _MESES:
+        return _fecha(int(m.group(3)), _MESES[m.group(1)], int(m.group(2)))
+    return None  # incluye años de dos dígitos: ambiguos, se derivan a revisión humana
 
 
 # ------------------------------------------------------------------ nombres
