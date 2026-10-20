@@ -1,0 +1,507 @@
+{
+ "motor": {
+  "tesseract": "5.3.4",
+  "modelo_mrz": "mrz"
+ },
+ "corpus": {
+  "total": 246,
+  "calibracion": 123,
+  "prueba": 246,
+  "semilla": 20261024,
+  "generador": "adversarial",
+  "por_tipo": {
+   "pasaporte": 80,
+   "antecedentes_extranjero": 88,
+   "liquidacion": 48,
+   "certificado_publico_cl": 30
+  }
+ },
+ "umbrales_calibrados": {
+  "es": 1.01,
+  "fr": 0.93
+ },
+ "umbral_defecto": 0.8,
+ "campos_umbral_calibrado": {
+  "es": {
+   "campos": 272,
+   "documentos": 112,
+   "aceptados": 0,
+   "correctos_aceptados_estricto": 0,
+   "correctos_aceptados_funcional": 0,
+   "precision": null,
+   "ic95_cp": [
+    NaN,
+    NaN
+   ],
+   "lim_inf_unilateral": 0.0,
+   "ic95_bootstrap_documentos": [
+    NaN,
+    NaN
+   ],
+   "cobertura": 0.0,
+   "exactitud_estricta_global": 0.5220588235294118,
+   "exactitud_funcional_global": 0.5294117647058824,
+   "errores_aceptados": []
+  },
+  "fr": {
+   "campos": 32,
+   "documentos": 16,
+   "aceptados": 4,
+   "correctos_aceptados_estricto": 4,
+   "correctos_aceptados_funcional": 4,
+   "precision": 1.0,
+   "ic95_cp": [
+    0.3976353643835253,
+    1.0
+   ],
+   "lim_inf_unilateral": 0.4728708045015879,
+   "ic95_bootstrap_documentos": [
+    1.0,
+    1.0
+   ],
+   "cobertura": 0.125,
+   "exactitud_estricta_global": 0.625,
+   "exactitud_funcional_global": 0.625,
+   "errores_aceptados": []
+  }
+ },
+ "campos_umbral_defecto": {
+  "es": {
+   "campos": 272,
+   "documentos": 112,
+   "aceptados": 155,
+   "correctos_aceptados_estricto": 139,
+   "correctos_aceptados_funcional": 141,
+   "precision": 0.896774193548387,
+   "ic95_cp": [
+    0.8377835729765254,
+    0.9398366180147142
+   ],
+   "lim_inf_unilateral": 0.8474441033102127,
+   "ic95_bootstrap_documentos": [
+    0.8506493506493507,
+    0.9426751592356688
+   ],
+   "cobertura": 0.5698529411764706,
+   "exactitud_estricta_global": 0.5220588235294118,
+   "exactitud_funcional_global": 0.5294117647058824,
+   "errores_aceptados": [
+    {
+     "id": "ant_VEN_001",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_VEN_008",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_VEN_013",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_PER_003",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_PER_004",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_COL_001",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_COL_005",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_COL_012",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_004",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_BOL_012",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_014",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_BOL_015",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_006",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_028",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "liq_038",
+     "campo": "nombre"
+    },
+    {
+     "id": "liq_040",
+     "campo": "fecha_emision"
+    }
+   ]
+  },
+  "fr": {
+   "campos": 32,
+   "documentos": 16,
+   "aceptados": 24,
+   "correctos_aceptados_estricto": 20,
+   "correctos_aceptados_funcional": 20,
+   "precision": 0.8333333333333334,
+   "ic95_cp": [
+    0.6261582865113173,
+    0.9526463733927428
+   ],
+   "lim_inf_unilateral": 0.6581926505958837,
+   "ic95_bootstrap_documentos": [
+    0.68,
+    0.9615384615384616
+   ],
+   "cobertura": 0.75,
+   "exactitud_estricta_global": 0.625,
+   "exactitud_funcional_global": 0.625,
+   "errores_aceptados": [
+    {
+     "id": "ant_HTI_004",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_HTI_008",
+     "campo": "nombre"
+    },
+    {
+     "id": "ant_HTI_009",
+     "campo": "fecha_emision"
+    },
+    {
+     "id": "ant_HTI_015",
+     "campo": "fecha_emision"
+    }
+   ]
+  }
+ },
+ "exactitud_estricta_por_degradacion": {
+  "limpio": 0.7763157894736842,
+  "escaner": null,
+  "celular": null,
+  "baja_res": null
+ },
+ "deteccion_por_codigo": {
+  "CODIGO_DE_OTRA_PERSONA": {
+   "vp": 4,
+   "fn": 1
+  },
+  "CODIGO_INEXISTENTE": {
+   "vp": 2,
+   "fn": 1
+  },
+  "DOCUMENTO_ANTIGUO": {
+   "fn": 13,
+   "vp": 19
+  },
+  "DOCUMENTO_NO_RECONOCIDO": {
+   "fp": 15,
+   "vp": 8
+  },
+  "FECHA_EMISION_DUDOSO": {
+   "fp": 40
+  },
+  "FECHA_NO_INTERPRETABLE": {
+   "fp": 16
+  },
+  "FIRMANTE_NO_ACREDITADO": {
+   "vp": 8
+  },
+  "FIRMANTE_NO_COINCIDE": {
+   "fn": 4,
+   "vp": 4
+  },
+  "FIRMA_INVALIDA": {
+   "vp": 8
+  },
+  "MODIFICADO_TRAS_FIRMA": {
+   "vp": 8
+  },
+  "MRZ_ILEGIBLE": {
+   "fp": 5
+  },
+  "MRZ_NO_ENCONTRADA": {
+   "fp": 9
+  },
+  "NOMBRE_CASI_COINCIDE": {
+   "vp": 7,
+   "fp": 5,
+   "fn": 2
+  },
+  "NOMBRE_DUDOSO": {
+   "fp": 31
+  },
+  "NOMBRE_NO_COINCIDE": {
+   "fn": 2,
+   "vp": 17
+  },
+  "PASAPORTE_VENCIDO": {
+   "fn": 4,
+   "vp": 10
+  },
+  "QR_ILEGIBLE": {
+   "fp": 5
+  },
+  "RUT_NO_LEIDO": {
+   "fp": 8
+  },
+  "SIN_APOSTILLA": {
+   "fn": 5,
+   "vp": 5,
+   "fp": 1
+  },
+  "SIN_FEA": {
+   "vp": 8
+  },
+  "SIN_LEGALIZACION": {
+   "vp": 2
+  }
+ },
+ "totales": {
+  "esperados": 142,
+  "detectados": 110,
+  "omitidos": 32,
+  "hallazgos_no_esperados": 135,
+  "documentos": 246,
+  "documentos_con_omision": 30,
+  "omisiones_silenciosas": 0,
+  "omisiones_con_derivacion": 30,
+  "omisiones_con_alertas": 0,
+  "documentos_derivados": 117,
+  "documentos_con_alerta_injustificada": 1,
+  "ic95_doc_alerta_injustificada": [
+   0.00010291262276801803,
+   0.02243962036574274
+  ],
+  "alertas": 88,
+  "alertas_injustificadas": 1,
+  "documentos_con_derivacion_no_esperada": 99,
+  "prevalidados": 77
+ },
+ "por_tipo_y_pais": {
+  "antecedentes_extranjero|BOL": {
+   "docs": 16,
+   "con_alerta_injustificada": 1,
+   "con_derivacion_no_esperada": 7,
+   "con_omision": 1,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 1,
+   "omision_con_alertas": 0,
+   "prevalidado": 4
+  },
+  "antecedentes_extranjero|COL": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 10,
+   "con_omision": 4,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 4,
+   "omision_con_alertas": 0,
+   "prevalidado": 2
+  },
+  "antecedentes_extranjero|HTI": {
+   "docs": 24,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 10,
+   "con_omision": 3,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 3,
+   "omision_con_alertas": 0,
+   "prevalidado": 4
+  },
+  "antecedentes_extranjero|PER": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 8,
+   "con_omision": 0,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
+   "prevalidado": 3
+  },
+  "antecedentes_extranjero|VEN": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 14,
+   "con_omision": 5,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 5,
+   "omision_con_alertas": 0,
+   "prevalidado": 1
+  },
+  "certificado_publico_cl|CHL": {
+   "docs": 30,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 5,
+   "con_omision": 3,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 3,
+   "omision_con_alertas": 0,
+   "prevalidado": 16
+  },
+  "liquidacion|CHL": {
+   "docs": 48,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 28,
+   "con_omision": 8,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 8,
+   "omision_con_alertas": 0,
+   "prevalidado": 4
+  },
+  "pasaporte|BOL": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 3,
+   "con_omision": 1,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 1,
+   "omision_con_alertas": 0,
+   "prevalidado": 7
+  },
+  "pasaporte|COL": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 3,
+   "con_omision": 1,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 1,
+   "omision_con_alertas": 0,
+   "prevalidado": 8
+  },
+  "pasaporte|HTI": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 5,
+   "con_omision": 1,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 1,
+   "omision_con_alertas": 0,
+   "prevalidado": 8
+  },
+  "pasaporte|PER": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 3,
+   "con_omision": 1,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 1,
+   "omision_con_alertas": 0,
+   "prevalidado": 10
+  },
+  "pasaporte|VEN": {
+   "docs": 16,
+   "con_alerta_injustificada": 0,
+   "con_derivacion_no_esperada": 3,
+   "con_omision": 2,
+   "omision_silenciosa": 0,
+   "omision_con_derivacion": 2,
+   "omision_con_alertas": 0,
+   "prevalidado": 10
+  }
+ },
+ "mrz": {
+  "BOL": {
+   "n": 16,
+   "valida": 13,
+   "exacta": 13
+  },
+  "COL": {
+   "n": 16,
+   "valida": 13,
+   "exacta": 12
+  },
+  "HTI": {
+   "n": 16,
+   "valida": 13,
+   "exacta": 9
+  },
+  "PER": {
+   "n": 16,
+   "valida": 14,
+   "exacta": 13
+  },
+  "VEN": {
+   "n": 16,
+   "valida": 13,
+   "exacta": 13
+  },
+  "deg_celular_fuerte": {
+   "n": 20,
+   "valida": 9
+  },
+  "deg_fotocopia": {
+   "n": 20,
+   "valida": 17
+  },
+  "deg_limpio": {
+   "n": 20,
+   "valida": 20
+  },
+  "deg_sombra": {
+   "n": 20,
+   "valida": 20
+  }
+ },
+ "qr": {
+  "n": 30,
+  "leido": 25
+ },
+ "firma_por_variante": {
+  "alterada": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_y_ocr": 8
+  },
+  "incremental": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_y_ocr": 8
+  },
+  "no_acreditada": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_y_ocr": 8
+  },
+  "otro_firmante": {
+   "n": 8,
+   "correcta": 4,
+   "via_firma_pdf": 8
+  },
+  "sin_firma": {
+   "n": 8,
+   "correcta": 8,
+   "via_ocr": 8
+  },
+  "valida": {
+   "n": 8,
+   "correcta": 8,
+   "via_firma_pdf": 8
+  }
+ },
+ "latencia_documentos_ocr_prueba_s": {
+  "n": 200,
+  "mediana": 1.7223118194999643,
+  "p95": 11.644560232000003
+ },
+ "bitacora": {
+  "integra_con_ancla": true,
+  "truncamiento_detectado": true
+ }
+}

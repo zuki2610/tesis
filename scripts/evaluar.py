@@ -135,6 +135,8 @@ def campos_ocr(docs, motor):
             c = campos[k]
             filas.append({"id": d["id"], "idioma": d["idioma"], "campo": k, "conf": c.confianza,
                           "encontrado": c.valor is not None,
+                          # Una fecha que no se puede interpretar no se acepta: la regla la deriva.
+                          "interpretable": k != "fecha_emision" or ex.parsear_fecha(c.valor) is not None,
                           "estricto": correcto(k, c.valor, d["verdad"], "estricto"),
                           "funcional": correcto(k, c.valor, d["verdad"], "funcional"),
                           "degradacion": d["degradacion"], "pais": d["pais"]})
@@ -147,7 +149,7 @@ def calibrar(filas, objetivo=0.99, metrica="estricto"):
         fs = [f for f in filas if f["idioma"] == idioma]
         curva, elegido = [], None
         for t in [x / 100 for x in range(0, 101)]:
-            acc = [f for f in fs if f["conf"] >= t and f["encontrado"]]
+            acc = [f for f in fs if f["conf"] >= t and f["encontrado"] and f["interpretable"]]
             prec = sum(f[metrica] for f in acc) / len(acc) if acc else float("nan")
             curva.append((t, prec, len(acc) / len(fs)))
             if acc and prec >= objetivo and elegido is None:
@@ -179,12 +181,13 @@ def metricas_campos(filas, umbrales):
     out = {}
     for idioma in sorted({f["idioma"] for f in filas}):
         fs = [f for f in filas if f["idioma"] == idioma]
-        acc = [f for f in fs if f["encontrado"] and f["conf"] >= umbrales[idioma]]
+        acc = [f for f in fs if f["encontrado"] and f["interpretable"] and f["conf"] >= umbrales[idioma]]
         k = sum(f["estricto"] for f in acc)
         out[idioma] = {"campos": len(fs), "documentos": len({f["id"] for f in fs}), "aceptados": len(acc),
                        "correctos_aceptados_estricto": k,
                        "correctos_aceptados_funcional": sum(f["funcional"] for f in acc),
                        "precision": k / len(acc) if acc else None, "ic95_cp": cp(k, len(acc)),
+                       "precision_funcional": sum(f["funcional"] for f in acc) / len(acc) if acc else None,
                        "lim_inf_unilateral": cp_inferior(k, len(acc)),
                        "ic95_bootstrap_documentos": bootstrap_precision(acc),
                        "cobertura": len(acc) / len(fs) if fs else None,
@@ -215,7 +218,7 @@ def main():
     m_cal = metricas_campos(filas_pru, umbrales)
     m_def = metricas_campos(filas_pru, defecto)
     exact_deg = {deg: (lambda fs: sum(f["estricto"] for f in fs) / len(fs) if fs else None)(
-        [f for f in filas_pru if f["degradacion"] == deg]) for deg in ("limpio", "escaner", "celular", "baja_res")}
+        [f for f in filas_pru if f["degradacion"] == deg]) for deg in sorted({f["degradacion"] for f in filas_pru})}
 
     # Prevalidación completa con el umbral por defecto (configuración entregada).
     bit = Bitacora()
