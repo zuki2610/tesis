@@ -91,8 +91,9 @@ CORPUS_DIR=corpus_ADV  SEED=20261023 python scripts/generar_corpus_adversarial.p
 CORPUS_DIR=corpus_ADV2 SEED=20261024 python scripts/generar_corpus_adversarial.py
 ```
 
-Las claves de la infraestructura de firma de prueba se generan en cada ejecución, por lo que los
-PDF firmados no son idénticos byte a byte entre regeneraciones; la verdad de referencia sí lo es.
+Las imágenes, el registro del emisor simulado y la verdad de referencia se regeneran idénticos
+(verificado para `corpus_ADV2`). Las claves de la infraestructura de firma de prueba se generan en
+cada ejecución, por lo que los PDF firmados cambian byte a byte, sin alterar su clasificación esperada.
 
 ### Reproducir las evaluaciones
 
