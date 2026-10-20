@@ -1,16 +1,24 @@
-"""Evaluación del prototipo sobre el corpus sintético (demostración DSR).
+"""Evaluación del prototipo sobre un corpus sintético (versión 2).
 
-1. Ejecuta el OCR una vez por documento (resultados en caché).
-2. Divide el corpus en calibración y prueba (50/50, estratificado por tipo e idioma).
-3. Calibra el umbral de confianza por idioma con la muestra de calibración.
-4. Mide en la muestra de prueba: precisión de lo aceptado (con intervalos de
-   Clopper-Pearson), cobertura, falsas alertas, detección de hallazgos,
-   derivaciones a revisión humana, validez de la MRZ, firma, QR y latencia.
+1. Divide el corpus en calibración y prueba (50/50, estratificado por tipo e idioma,
+   con una semilla derivada de la del corpus).
+2. Calibra el umbral de confianza por idioma (muestra de calibración) y lo compara con
+   el umbral por defecto (0,80).
+3. Mide en la muestra de prueba, solo sobre los campos que usan las reglas:
+   exactitud estricta (texto idéntico salvo mayúsculas y espacios) y funcional (forma
+   normalizada que usan las reglas), precisión de lo aceptado con intervalos de
+   Clopper-Pearson y bootstrap por documento, y cobertura.
+4. Ejecuta la prevalidación completa y mide: detección por tipo de hallazgo, omisiones,
+   alertas injustificadas (por documento y por alerta), derivaciones por incertidumbre,
+   desglose por país e idioma, MRZ, QR, firma, latencia y bitácora.
+
+Uso: CORPUS_DIR=corpus_D OUT_DIR=resultados_D python scripts/evaluar.py
 """
 from __future__ import annotations
 
 import hashlib
 import json
+import os
 import pickle
 import random
 import re
@@ -31,15 +39,12 @@ from prevalida.pipeline import Prevalidador  # noqa: E402
 from prevalida.reglas import Contexto, MotorReglas, cargar_config  # noqa: E402
 from prevalida.verificacion import RegistroEmisor  # noqa: E402
 
-import os
 CORPUS = Path(os.environ.get("CORPUS_DIR", BASE / "corpus"))
 OUT = Path(os.environ.get("OUT_DIR", BASE / "resultados"))
-OUT.mkdir(exist_ok=True)
-SEED = 7
+OUT.mkdir(parents=True, exist_ok=True)
 
 
 def cp(k: int, n: int, alfa: float = 0.05) -> tuple[float, float]:
-    """Intervalo exacto de Clopper-Pearson (bilateral, 95 %)."""
     if n == 0:
         return (float("nan"), float("nan"))
     lo = 0.0 if k == 0 else beta.ppf(alfa / 2, k, n - k + 1)
@@ -48,16 +53,21 @@ def cp(k: int, n: int, alfa: float = 0.05) -> tuple[float, float]:
 
 
 def cp_inferior(k: int, n: int, alfa: float = 0.05) -> float:
-    """Límite inferior unilateral (95 %) de Clopper-Pearson."""
     return 0.0 if k == 0 or n == 0 else float(beta.ppf(alfa, k, n - k + 1))
 
 
+def cp_superior(k: int, n: int, alfa: float = 0.05) -> float:
+    return 1.0 if n == 0 or k == n else float(beta.ppf(1 - alfa, k + 1, n - k))
+
+
 class MotorEnCache:
-    """Envuelve el motor real y guarda cada lectura para no repetir el OCR."""
+    """Guarda cada lectura para no repetir el OCR. `ultimo_segundos` conserva el tiempo de
+    OCR de la lectura original, para medir la latencia real aunque se lea de la caché."""
 
     def __init__(self, motor, ruta: Path):
         self.m, self.ruta, self.nombre = motor, ruta, motor.nombre
         self.c = pickle.loads(ruta.read_bytes()) if ruta.exists() else {}
+        self.ultimo_segundos = 0.0
 
     def _k(self, img, sufijo):
         return hashlib.sha256(img).hexdigest() + sufijo
@@ -66,40 +76,42 @@ class MotorEnCache:
         k = self._k(img, idioma)
         if k not in self.c:
             self.c[k] = self.m.leer(img, idioma)
+        self.ultimo_segundos = self.c[k].segundos
         return self.c[k]
 
     def leer_mrz(self, img):
-        k = self._k(img, "mrz")
+        k = self._k(img, "mrz:" + self.m.modelo_mrz)
         if k not in self.c:
             self.c[k] = self.m.leer_mrz(img)
+        self.ultimo_segundos = self.c[k].segundos
         return self.c[k]
 
     def guardar(self):
         self.ruta.write_bytes(pickle.dumps(self.c))
 
 
-def norm_digitos(s):
-    return re.sub(r"\D", "", s or "")
+def _estricto(s: str | None) -> str:
+    return re.sub(r"\s+", " ", (s or "").strip().upper())
 
 
-def correcto(campo: str, valor, verdad: dict) -> bool:
+def correcto(campo: str, valor, verdad: dict, modo: str) -> bool:
     if valor is None:
         return False
     if campo == "nombre":
+        if modo == "estricto":
+            return _estricto(valor) == _estricto(verdad["nombre"])
         return ex.normalizar_nombre(valor) == ex.normalizar_nombre(verdad["nombre"])
     if campo == "fecha_emision":
+        if modo == "estricto":
+            return ex.parsear_fecha(valor) == date.fromisoformat(verdad["fecha_emision"])
         return ex.parsear_fecha(valor) == date.fromisoformat(verdad["fecha_emision"])
-    if campo in ("documento", "folio", "liquido"):
-        return norm_digitos(valor) == norm_digitos(verdad[campo])
     if campo == "rut_empleador":
         return re.sub(r"[^0-9K]", "", valor.upper()) == re.sub(r"[^0-9K]", "", verdad[campo].upper())
-    if campo == "periodo":
-        return re.sub(r"\s", "", valor) == verdad[campo]
     return False
 
 
-def dividir(docs):
-    rng = random.Random(SEED)
+def dividir(docs, semilla):
+    rng = random.Random(semilla)
     grupos = defaultdict(list)
     for d in docs:
         grupos[(d["tipo"], d["idioma"])].append(d)
@@ -111,49 +123,74 @@ def dividir(docs):
 
 
 def campos_ocr(docs, motor):
-    """Pares (idioma, campo, confianza, correcto) de los documentos procesados con OCR."""
+    """Campos usados por las reglas, leídos con OCR desde la imagen."""
     filas = []
     for d in docs:
-        if d["tipo"] not in ("antecedentes_extranjero", "liquidacion") or d["idioma"] == "ht":
+        if d["tipo"] not in ("antecedentes_extranjero", "liquidacion") or not d["verdad"]:
             continue
-        img = (CORPUS / d["imagen"]).read_bytes()
-        o = motor.leer(img, d["idioma"])
+        o = motor.leer((CORPUS / d["imagen"]).read_bytes(), d["idioma"])
         tipo = "antecedentes" if d["tipo"] == "antecedentes_extranjero" else "liquidacion"
-        for k, c in ex.extraer_etiquetados(o, tipo).items():
+        campos = ex.extraer_etiquetados(o, tipo)
+        for k in ex.CAMPOS_USADOS[tipo]:
+            c = campos[k]
             filas.append({"id": d["id"], "idioma": d["idioma"], "campo": k, "conf": c.confianza,
-                          "correcto": correcto(k, c.valor, d["verdad"]), "degradacion": d["degradacion"]})
+                          "encontrado": c.valor is not None,
+                          "estricto": correcto(k, c.valor, d["verdad"], "estricto"),
+                          "funcional": correcto(k, c.valor, d["verdad"], "funcional"),
+                          "degradacion": d["degradacion"], "pais": d["pais"]})
     return filas
 
 
-def calibrar(filas, objetivo=0.99):
-    """Umbral más bajo cuya precisión empírica de lo aceptado alcanza el objetivo."""
+def calibrar(filas, objetivo=0.99, metrica="estricto"):
     umbrales, curvas = {}, {}
     for idioma in sorted({f["idioma"] for f in filas}):
         fs = [f for f in filas if f["idioma"] == idioma]
-        curva = []
-        elegido = 1.01
-        for t in [x / 100 for x in range(0, 100)]:
-            acc = [f for f in fs if f["conf"] >= t]
-            prec = sum(f["correcto"] for f in acc) / len(acc) if acc else float("nan")
+        curva, elegido = [], None
+        for t in [x / 100 for x in range(0, 101)]:
+            acc = [f for f in fs if f["conf"] >= t and f["encontrado"]]
+            prec = sum(f[metrica] for f in acc) / len(acc) if acc else float("nan")
             curva.append((t, prec, len(acc) / len(fs)))
-            if acc and prec >= objetivo and elegido > 1:
+            if acc and prec >= objetivo and elegido is None:
                 elegido = t
-        umbrales[idioma] = elegido
+        umbrales[idioma] = elegido if elegido is not None else 1.01
         curvas[idioma] = curva
     return umbrales, curvas
+
+
+def bootstrap_precision(fs, reps=2000, semilla=1):
+    """IC 95 % de la precisión de lo aceptado remuestreando documentos (no campos)."""
+    por_doc = defaultdict(list)
+    for f in fs:
+        por_doc[f["id"]].append(f)
+    ids = list(por_doc)
+    if not ids:
+        return (float("nan"), float("nan"))
+    rng = random.Random(semilla)
+    vals = []
+    for _ in range(reps):
+        m = [f for i in (rng.choice(ids) for _ in ids) for f in por_doc[i]]
+        if m:
+            vals.append(sum(f["estricto"] for f in m) / len(m))
+    vals.sort()
+    return vals[int(0.025 * len(vals))], vals[int(0.975 * len(vals)) - 1]
 
 
 def metricas_campos(filas, umbrales):
     out = {}
     for idioma in sorted({f["idioma"] for f in filas}):
         fs = [f for f in filas if f["idioma"] == idioma]
-        acc = [f for f in fs if f["conf"] >= umbrales[idioma]]
-        k = sum(f["correcto"] for f in acc)
-        out[idioma] = {"campos": len(fs), "aceptados": len(acc), "correctos_aceptados": k,
-                       "precision": k / len(acc) if acc else None, "ic95": cp(k, len(acc)),
+        acc = [f for f in fs if f["encontrado"] and f["conf"] >= umbrales[idioma]]
+        k = sum(f["estricto"] for f in acc)
+        out[idioma] = {"campos": len(fs), "documentos": len({f["id"] for f in fs}), "aceptados": len(acc),
+                       "correctos_aceptados_estricto": k,
+                       "correctos_aceptados_funcional": sum(f["funcional"] for f in acc),
+                       "precision": k / len(acc) if acc else None, "ic95_cp": cp(k, len(acc)),
                        "lim_inf_unilateral": cp_inferior(k, len(acc)),
+                       "ic95_bootstrap_documentos": bootstrap_precision(acc),
                        "cobertura": len(acc) / len(fs) if fs else None,
-                       "exactitud_global": sum(f["correcto"] for f in fs) / len(fs)}
+                       "exactitud_estricta_global": sum(f["estricto"] for f in fs) / len(fs),
+                       "exactitud_funcional_global": sum(f["funcional"] for f in fs) / len(fs),
+                       "errores_aceptados": [{"id": f["id"], "campo": f["campo"]} for f in acc if not f["estricto"]]}
     return out
 
 
@@ -166,114 +203,108 @@ def main():
     raices = [(CORPUS / "certs" / "raiz_acreditada.pem").read_bytes()]
     emisor = RegistroEmisor(CORPUS / "emisor_simulado.json")
 
-    cal, pru = dividir(docs)
-    # 1) Calibración del umbral por idioma (solo muestra de calibración)
-    filas_cal = campos_ocr(cal, motor)
+    cal, pru = dividir(docs, meta["semilla"])
+    filas_cal = campos_ocr(cal, motor); motor.guardar()
     umbrales, curvas = calibrar(filas_cal)
-    motor.guardar()
-    # 2) Campos en la muestra de prueba
-    filas_pru = campos_ocr(pru, motor)
-    m_campos = metricas_campos(filas_pru, umbrales)
-    m_campos_defecto = metricas_campos(filas_pru, {k: cfg["umbrales"]["defecto"] for k in umbrales})
-    exact_deg = {}
-    for deg in ("limpio", "escaner", "celular", "baja_res"):
-        fs = [f for f in filas_pru if f["degradacion"] == deg]
-        exact_deg[deg] = sum(f["correcto"] for f in fs) / len(fs)
-    motor.guardar()
+    filas_pru = campos_ocr(pru, motor); motor.guardar()
+    defecto = {k: cfg["umbrales"]["defecto"] for k in umbrales}
+    m_cal = metricas_campos(filas_pru, umbrales)
+    m_def = metricas_campos(filas_pru, defecto)
+    exact_deg = {deg: (lambda fs: sum(f["estricto"] for f in fs) / len(fs) if fs else None)(
+        [f for f in filas_pru if f["degradacion"] == deg]) for deg in ("limpio", "escaner", "celular", "baja_res")}
 
-    # 3) Prevalidación completa de cada documento de prueba
-    reglas = MotorReglas(cfg, {(c, i): t for i, t in umbrales.items() for c in ("nombre", "fecha_emision")})
+    # Prevalidación completa con el umbral por defecto (configuración entregada).
     bit = Bitacora()
-    prev = Prevalidador(motor, reglas, emisor, raices, bit)
+    prev = Prevalidador(motor, MotorReglas(cfg), emisor, raices, bit)
     det = defaultdict(Counter)
-    por_idioma = defaultdict(Counter)
-    tiempos, mrz_deg, qr_deg, fea = [], defaultdict(Counter), defaultdict(Counter), []
-    detalle = []
+    grupos = defaultdict(Counter)
+    mrz = defaultdict(Counter); qr = Counter(); firma = defaultdict(Counter)
+    tiempos, detalle = [], []
+    alertas_total = alertas_injust = 0
     for d in pru:
         ctx = Contexto(fp, d["ctx"]["nombre_declarado"], d["ctx"].get("numero_pasaporte_declarado", ""))
         img = (CORPUS / d["imagen"]).read_bytes()
         pdf = (CORPUS / d["pdf"]).read_bytes() if d.get("pdf") else None
-        r = prev.procesar(d["id"], d["tipo"], d["idioma"], img, ctx, pdf)
+        motor.ultimo_segundos = 0.0
+        r = prev.procesar(d["id"], d["tipo"], d["idioma"], img, ctx, pdf, d["pais"])
         prod = {h.codigo for h in r.hallazgos}
         alertas = {h.codigo for h in r.hallazgos if h.tipo == "ALERTA"}
         deriv = {h.codigo for h in r.hallazgos if h.tipo == "REVISION_HUMANA"}
         esp = set(d["esperados"])
         for c in esp | prod:
             det[c]["vp" if c in esp and c in prod else ("fn" if c in esp else "fp")] += 1
-        # Problemas esperados no detectados en documentos marcados como prevalidados = omisión silenciosa
-        omision_silenciosa = bool(esp - prod) and r.estado == "PREVALIDADO"
-        derivacion_incierta = bool(deriv - esp)
-        g = d["idioma"] if d["tipo"] != "certificado_publico_cl" else "es (emisor)"
-        por_idioma[g]["docs"] += 1
-        por_idioma[g]["falsa_alerta"] += bool(alertas - esp)
-        por_idioma[g]["derivacion_incertidumbre"] += derivacion_incierta
-        por_idioma[g]["omision_silenciosa"] += omision_silenciosa
-        por_idioma[g]["prevalidado_sin_derivar"] += r.estado != "REVISION_HUMANA"
+        alertas_total += len(alertas); alertas_injust += len(alertas - esp)
+        g = (d["tipo"], d["pais"])
+        grupos[g]["docs"] += 1
+        grupos[g]["con_alerta_injustificada"] += bool(alertas - esp)
+        grupos[g]["con_derivacion_no_esperada"] += bool(deriv - esp)
+        grupos[g]["con_omision"] += bool(esp - prod)
+        grupos[g]["omision_silenciosa"] += bool(esp - prod) and r.estado == "PREVALIDADO"
+        grupos[g]["prevalidado"] += r.estado == "PREVALIDADO"
         if d["tipo"] == "pasaporte":
-            ok = r.campos.get("controles") and all(r.campos["controles"].values())
-            mrz_deg[d["degradacion"]]["n"] += 1
-            mrz_deg[d["degradacion"]]["valida"] += bool(ok)
+            ok = bool(r.campos.get("controles")) and all(r.campos["controles"].values())
+            mrz[d["pais"]]["n"] += 1; mrz[d["pais"]]["valida"] += ok
+            mrz["deg_" + d["degradacion"]]["n"] += 1; mrz["deg_" + d["degradacion"]]["valida"] += ok
             if ok:
                 v = d["verdad"]
-                exacto = (r.campos["numero"] == v["numero"] and r.campos["vencimiento"] == v["vencimiento"]
-                          and ex.normalizar_nombre(r.campos["apellidos"] + " " + r.campos["nombres"])
-                          == ex.normalizar_nombre(v["apellidos"] + " " + v["nombres"]))
-                mrz_deg[d["degradacion"]]["valida_exacta"] += exacto
+                mrz[d["pais"]]["exacta"] += (r.campos["numero"] == v["numero"] and r.campos["vencimiento"] == v["vencimiento"]
+                                             and ex.normalizar_nombre(r.campos["apellidos"] + " " + r.campos["nombres"])
+                                             == ex.normalizar_nombre(v["apellidos"] + " " + v["nombres"]))
         if d["tipo"] == "certificado_publico_cl":
-            qr_deg[d["degradacion"]]["n"] += 1
-            qr_deg[d["degradacion"]]["leido"] += r.campos.get("qr_leido") == "True"
+            qr["n"] += 1; qr["leido"] += r.campos.get("qr_leido") == "True"
         if d["tipo"] == "liquidacion":
-            fea.append({"id": d["id"], "variante": int(d["id"][-3:]) % 4, "firma": r.campos.get("firma"),
-                        "esperados": sorted(esp & {"FIRMA_INVALIDA", "FIRMANTE_NO_ACREDITADO", "SIN_FEA"}),
-                        "producidos": sorted(prod & {"FIRMA_INVALIDA", "FIRMANTE_NO_ACREDITADO", "SIN_FEA"})})
-        if r.via not in ("emisor", "directo_humano"):
-            tiempos.append(r.segundos)
-        detalle.append({"id": d["id"], "tipo": d["tipo"], "idioma": d["idioma"], "degradacion": d["degradacion"],
-                        "estado": r.estado, "esperados": sorted(esp), "producidos": sorted(prod)})
+            v = d["variante_firma"]
+            firma[v]["n"] += 1
+            firma[v]["correcta"] += (esp & {"FIRMA_INVALIDA", "MODIFICADO_TRAS_FIRMA", "FIRMANTE_NO_ACREDITADO",
+                                            "FIRMANTE_NO_COINCIDE", "SIN_FEA"}) == (prod & {
+                "FIRMA_INVALIDA", "MODIFICADO_TRAS_FIRMA", "FIRMANTE_NO_ACREDITADO", "FIRMANTE_NO_COINCIDE", "SIN_FEA"})
+            firma[v]["via_" + r.via] += 1
+        if r.via in ("ocr", "ocr_mrz", "firma_y_ocr"):
+            tiempos.append(r.segundos + motor.ultimo_segundos)  # reglas + OCR original
+        detalle.append({"id": d["id"], "tipo": d["tipo"], "pais": d["pais"], "idioma": d["idioma"],
+                        "degradacion": d["degradacion"], "via": r.via, "estado": r.estado,
+                        "esperados": sorted(esp), "producidos": sorted(prod)})
     motor.guardar()
 
-    # Latencia real de OCR (primera ejecución, desde la caché)
-    ocr_t = [v.segundos for v in motor.c.values()]
-    # 4) Integridad de la bitácora y detección de alteraciones
-    integra = bit.verificar()
-    bit.db.execute("UPDATE eventos SET datos = '{\"estado\": \"PREVALIDADO\"}' WHERE id = 3"); bit.db.commit()
-    alteracion_detectada = not bit.verificar()
+    ancla = bit.ancla()
+    integra = bit.verificar(ancla)
+    bit.db.execute("DELETE FROM eventos WHERE id = (SELECT MAX(id) FROM eventos)"); bit.db.commit()
+    truncamiento_detectado = not bit.verificar(ancla)
 
+    n_docs = len(pru)
+    docs_alerta_injust = sum(v["con_alerta_injustificada"] for v in grupos.values())
     res = {
-        "corpus": {"total": len(docs), "calibracion": len(cal), "prueba": len(pru),
-                   "por_tipo": Counter(d["tipo"] for d in docs), "fecha_presentacion": meta["fecha_presentacion"]},
-        "umbrales_calibrados": umbrales,
-        "campos_prueba_calibrado": m_campos, "campos_prueba_umbral_defecto_0_80": m_campos_defecto,
-        "exactitud_campos_por_degradacion": exact_deg,
+        "motor": {"tesseract": __import__("pytesseract").get_tesseract_version().public, "modelo_mrz": motor.m.modelo_mrz},
+        "corpus": {"total": len(docs), "calibracion": len(cal), "prueba": n_docs, "semilla": meta["semilla"],
+                   "generador": meta.get("generador", "v1"), "por_tipo": Counter(d["tipo"] for d in docs)},
+        "umbrales_calibrados": umbrales, "umbral_defecto": cfg["umbrales"]["defecto"],
+        "campos_umbral_calibrado": m_cal, "campos_umbral_defecto": m_def,
+        "exactitud_estricta_por_degradacion": exact_deg,
         "deteccion_por_codigo": {k: dict(v) for k, v in sorted(det.items())},
-        "por_idioma": {k: dict(v) for k, v in por_idioma.items()},
-        "mrz_por_degradacion": {k: dict(v) for k, v in mrz_deg.items()},
-        "qr_por_degradacion": {k: dict(v) for k, v in qr_deg.items()},
-        "fea": fea,
-        "latencia_ocr_s": {"n": len(ocr_t), "mediana": statistics.median(ocr_t),
-                           "p95": sorted(ocr_t)[int(0.95 * (len(ocr_t) - 1))], "max": max(ocr_t)},
-        "latencia_prevalidacion_s": {"mediana": statistics.median(tiempos),
-                                     "p95": sorted(tiempos)[int(0.95 * (len(tiempos) - 1))]},
-        "bitacora": {"integra": integra, "alteracion_detectada": alteracion_detectada},
+        "totales": {
+            "esperados": sum(v.get("vp", 0) + v.get("fn", 0) for v in det.values()),
+            "detectados": sum(v.get("vp", 0) for v in det.values()),
+            "omitidos": sum(v.get("fn", 0) for v in det.values()),
+            "hallazgos_no_esperados": sum(v.get("fp", 0) for v in det.values()),
+            "documentos": n_docs,
+            "documentos_con_omision": sum(v["con_omision"] for v in grupos.values()),
+            "omisiones_silenciosas": sum(v["omision_silenciosa"] for v in grupos.values()),
+            "documentos_con_alerta_injustificada": docs_alerta_injust,
+            "ic95_doc_alerta_injustificada": cp(docs_alerta_injust, n_docs),
+            "alertas": alertas_total, "alertas_injustificadas": alertas_injust,
+            "documentos_con_derivacion_no_esperada": sum(v["con_derivacion_no_esperada"] for v in grupos.values()),
+            "prevalidados": sum(v["prevalidado"] for v in grupos.values()),
+        },
+        "por_tipo_y_pais": {f"{k[0]}|{k[1]}": dict(v) for k, v in sorted(grupos.items())},
+        "mrz": {k: dict(v) for k, v in sorted(mrz.items())},
+        "qr": dict(qr), "firma_por_variante": {k: dict(v) for k, v in sorted(firma.items())},
+        "latencia_documentos_ocr_prueba_s": {"n": len(tiempos), "mediana": statistics.median(tiempos),
+                                             "p95": sorted(tiempos)[int(0.95 * (len(tiempos) - 1))]},
+        "bitacora": {"integra_con_ancla": integra, "truncamiento_detectado": truncamiento_detectado},
         "detalle": detalle,
     }
     (OUT / "metricas.json").write_text(json.dumps(res, ensure_ascii=False, indent=1, default=str), encoding="utf-8")
     (OUT / "curvas_umbral.json").write_text(json.dumps(curvas), encoding="utf-8")
-
-    import matplotlib
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-    fig, ax = plt.subplots(1, len(curvas), figsize=(9, 3.2), sharey=True)
-    for a, (idioma, c) in zip(ax, curvas.items()):
-        t = [x[0] for x in c]
-        a.plot(t, [x[1] for x in c], label="Precisión de lo aceptado", color="#1f4e79")
-        a.plot(t, [x[2] for x in c], label="Cobertura", color="#c55a11", linestyle="--")
-        a.axvline(umbrales[idioma], color="gray", linestyle=":", linewidth=1)
-        a.axhline(0.99, color="gray", linewidth=0.5)
-        a.set_title({"es": "Español", "fr": "Francés"}.get(idioma, idioma))
-        a.set_xlabel("Umbral de confianza"); a.set_ylim(0, 1.02)
-    ax[0].set_ylabel("Proporción"); ax[0].legend(loc="lower left", fontsize=8)
-    fig.tight_layout(); fig.savefig(OUT / "curva_umbral.pdf"); fig.savefig(OUT / "curva_umbral.png", dpi=150)
     print(json.dumps({k: v for k, v in res.items() if k != "detalle"}, ensure_ascii=False, indent=1, default=str))
 
 

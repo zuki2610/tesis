@@ -50,10 +50,15 @@ IDIOMAS_TESS = {"es": "spa", "fr": "fra", "en": "eng"}
 class TesseractOCR:
     nombre = "tesseract"
 
-    def __init__(self, tessdata: str | None = None):
+    def __init__(self, tessdata: str | None = None, modelo_mrz: str = "mrz"):
+        """`modelo_mrz`: modelo de Tesseract para la MRZ. Por defecto, el modelo `mrz`
+        de DoubangoTelecom/tesseractMRZ (licencia BSD-3, entrenado con imágenes de MRZ en
+        OCR-B); si no está disponible, se usa `eng`."""
         import pytesseract
         self._pt = pytesseract
         self._cfg = f'--tessdata-dir "{tessdata}" --psm 6' if tessdata else "--psm 6"
+        disponibles = set(pytesseract.get_languages(config=self._cfg))
+        self.modelo_mrz = modelo_mrz if modelo_mrz in disponibles else "eng"
 
     def leer(self, imagen: bytes, idioma: str) -> ResultadoOCR:
         t0 = time.perf_counter()
@@ -88,7 +93,7 @@ class TesseractOCR:
         lineas: list[Linea] = []
         for escala in (1, 2):
             franja = base if escala == 1 else base.resize((base.width * 2, base.height * 2), Image.LANCZOS)
-            d = self._pt.image_to_data(franja, lang="eng", config=cfg, output_type=self._pt.Output.DICT)
+            d = self._pt.image_to_data(franja, lang=self.modelo_mrz, config=cfg, output_type=self._pt.Output.DICT)
             grupos: dict[tuple, list[int]] = {}
             for i, txt in enumerate(d["text"]):
                 if txt.strip() and float(d["conf"][i]) >= 0:
