@@ -33,6 +33,7 @@
     0.980362688736023,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.9840229219936318,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -54,6 +55,7 @@
     0.8765638814997362,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.8985342644272752,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -77,6 +79,7 @@
     0.980362688736023,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.9840229219936318,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -98,6 +101,7 @@
     0.8765638814997362,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.8985342644272752,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -110,10 +114,10 @@
   }
  },
  "exactitud_estricta_por_degradacion": {
-  "limpio": 1.0,
-  "escaner": 1.0,
+  "baja_res": 1.0,
   "celular": 1.0,
-  "baja_res": 1.0
+  "escaner": 1.0,
+  "limpio": 1.0
  },
  "deteccion_por_codigo": {
   "CODIGO_DE_OTRA_PERSONA": {
@@ -389,8 +393,8 @@
  },
  "latencia_documentos_ocr_prueba_s": {
   "n": 145,
-  "mediana": 1.8412290830001439,
-  "p95": 2.7892249460010134
+  "mediana": 1.3686398459994962,
+  "p95": 1.881522385999233
  },
  "bitacora": {
   "integra_con_ancla": true,

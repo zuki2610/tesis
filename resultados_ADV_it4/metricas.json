@@ -33,6 +33,7 @@
     NaN,
     NaN
    ],
+   "precision_funcional": null,
    "lim_inf_unilateral": 0.0,
    "ic95_bootstrap_documentos": [
     NaN,
@@ -54,6 +55,7 @@
     NaN,
     NaN
    ],
+   "precision_funcional": null,
    "lim_inf_unilateral": 0.0,
    "ic95_bootstrap_documentos": [
     NaN,
@@ -69,20 +71,21 @@
   "es": {
    "campos": 272,
    "documentos": 112,
-   "aceptados": 131,
+   "aceptados": 107,
    "correctos_aceptados_estricto": 82,
    "correctos_aceptados_funcional": 84,
-   "precision": 0.6259541984732825,
+   "precision": 0.7663551401869159,
    "ic95_cp": [
-    0.5371788667411377,
-    0.7088988469941462
+    0.6747068327129246,
+    0.8427331314992081
    ],
-   "lim_inf_unilateral": 0.5509566262919459,
+   "precision_funcional": 0.7850467289719626,
+   "lim_inf_unilateral": 0.6892271035896482,
    "ic95_bootstrap_documentos": [
-    0.5433070866141733,
-    0.7045454545454546
+    0.6826923076923077,
+    0.8461538461538461
    ],
-   "cobertura": 0.48161764705882354,
+   "cobertura": 0.39338235294117646,
    "exactitud_estricta_global": 0.3235294117647059,
    "exactitud_funcional_global": 0.33088235294117646,
    "errores_aceptados": [
@@ -91,20 +94,8 @@
      "campo": "nombre"
     },
     {
-     "id": "ant_VEN_001",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_VEN_003",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_VEN_004",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_VEN_004",
-     "campo": "fecha_emision"
     },
     {
      "id": "ant_VEN_011",
@@ -139,20 +130,12 @@
      "campo": "nombre"
     },
     {
-     "id": "ant_PER_005",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_PER_008",
      "campo": "nombre"
     },
     {
      "id": "ant_PER_012",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_PER_012",
-     "campo": "fecha_emision"
     },
     {
      "id": "ant_PER_013",
@@ -171,28 +154,12 @@
      "campo": "nombre"
     },
     {
-     "id": "ant_COL_006",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_COL_008",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_COL_011",
      "campo": "nombre"
     },
     {
-     "id": "ant_COL_015",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_BOL_000",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_BOL_005",
-     "campo": "fecha_emision"
     },
     {
      "id": "ant_BOL_010",
@@ -203,24 +170,12 @@
      "campo": "nombre"
     },
     {
-     "id": "ant_BOL_011",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_BOL_012",
      "campo": "nombre"
     },
     {
-     "id": "ant_BOL_013",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_BOL_014",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_BOL_014",
-     "campo": "fecha_emision"
     },
     {
      "id": "ant_BOL_015",
@@ -231,76 +186,29 @@
      "campo": "nombre"
     },
     {
-     "id": "liq_008",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_010",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_012",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_014",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_016",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_020",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_022",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_026",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "liq_030",
      "campo": "nombre"
-    },
-    {
-     "id": "liq_034",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_040",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_042",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_046",
-     "campo": "fecha_emision"
     }
    ]
   },
   "fr": {
    "campos": 32,
    "documentos": 16,
-   "aceptados": 26,
+   "aceptados": 21,
    "correctos_aceptados_estricto": 10,
    "correctos_aceptados_funcional": 10,
-   "precision": 0.38461538461538464,
+   "precision": 0.47619047619047616,
    "ic95_cp": [
-    0.20226024365502038,
-    0.5942924647014085
+    0.25713062640640744,
+    0.7021931612163559
    ],
-   "lim_inf_unilateral": 0.22569988222323717,
+   "precision_funcional": 0.47619047619047616,
+   "lim_inf_unilateral": 0.2858004780871762,
    "ic95_bootstrap_documentos": [
-    0.2,
-    0.5652173913043478
+    0.2631578947368421,
+    0.68
    ],
-   "cobertura": 0.8125,
+   "cobertura": 0.65625,
    "exactitud_estricta_global": 0.3125,
    "exactitud_funcional_global": 0.3125,
    "errores_aceptados": [
@@ -309,20 +217,8 @@
      "campo": "nombre"
     },
     {
-     "id": "ant_HTI_000",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_HTI_001",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_HTI_001",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_HTI_002",
-     "campo": "fecha_emision"
     },
     {
      "id": "ant_HTI_003",
@@ -335,10 +231,6 @@
     {
      "id": "ant_HTI_005",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_HTI_005",
-     "campo": "fecha_emision"
     },
     {
      "id": "ant_HTI_006",
@@ -357,10 +249,6 @@
      "campo": "nombre"
     },
     {
-     "id": "ant_HTI_011",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_HTI_013",
      "campo": "nombre"
     },
@@ -372,10 +260,10 @@
   }
  },
  "exactitud_estricta_por_degradacion": {
+  "celular_fuerte": 0.07894736842105263,
+  "fotocopia": 0.5394736842105263,
   "limpio": 0.5263157894736842,
-  "escaner": null,
-  "celular": null,
-  "baja_res": null
+  "sombra": 0.14473684210526316
  },
  "deteccion_por_codigo": {
   "CODIGO_DE_OTRA_PERSONA": {
@@ -674,8 +562,8 @@
  },
  "latencia_documentos_ocr_prueba_s": {
   "n": 200,
-  "mediana": 1.6379149524996137,
-  "p95": 3.2982573200001752
+  "mediana": 1.2649495875002685,
+  "p95": 1.9976454659999945
  },
  "bitacora": {
   "integra_con_ancla": true,

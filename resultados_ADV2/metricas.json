@@ -17,28 +17,29 @@
   }
  },
  "umbrales_calibrados": {
-  "es": 1.01,
-  "fr": 0.93
+  "es": 0.96,
+  "fr": 0.91
  },
  "umbral_defecto": 0.8,
  "campos_umbral_calibrado": {
   "es": {
    "campos": 272,
    "documentos": 112,
-   "aceptados": 0,
-   "correctos_aceptados_estricto": 0,
-   "correctos_aceptados_funcional": 0,
-   "precision": null,
+   "aceptados": 59,
+   "correctos_aceptados_estricto": 59,
+   "correctos_aceptados_funcional": 59,
+   "precision": 1.0,
    "ic95_cp": [
-    NaN,
-    NaN
+    0.9393910990496601,
+    1.0
    ],
-   "lim_inf_unilateral": 0.0,
+   "precision_funcional": 1.0,
+   "lim_inf_unilateral": 0.950492390111773,
    "ic95_bootstrap_documentos": [
-    NaN,
-    NaN
+    1.0,
+    1.0
    ],
-   "cobertura": 0.0,
+   "cobertura": 0.21691176470588236,
    "exactitud_estricta_global": 0.5220588235294118,
    "exactitud_funcional_global": 0.5294117647058824,
    "errores_aceptados": []
@@ -46,20 +47,21 @@
   "fr": {
    "campos": 32,
    "documentos": 16,
-   "aceptados": 4,
-   "correctos_aceptados_estricto": 4,
-   "correctos_aceptados_funcional": 4,
+   "aceptados": 15,
+   "correctos_aceptados_estricto": 15,
+   "correctos_aceptados_funcional": 15,
    "precision": 1.0,
    "ic95_cp": [
-    0.3976353643835253,
+    0.7819806390894659,
     1.0
    ],
-   "lim_inf_unilateral": 0.4728708045015879,
+   "precision_funcional": 1.0,
+   "lim_inf_unilateral": 0.8189637274779153,
    "ic95_bootstrap_documentos": [
     1.0,
     1.0
    ],
-   "cobertura": 0.125,
+   "cobertura": 0.46875,
    "exactitud_estricta_global": 0.625,
    "exactitud_funcional_global": 0.625,
    "errores_aceptados": []
@@ -69,133 +71,71 @@
   "es": {
    "campos": 272,
    "documentos": 112,
-   "aceptados": 155,
+   "aceptados": 142,
    "correctos_aceptados_estricto": 139,
    "correctos_aceptados_funcional": 141,
-   "precision": 0.896774193548387,
+   "precision": 0.9788732394366197,
    "ic95_cp": [
-    0.8377835729765254,
-    0.9398366180147142
+    0.9395014087494357,
+    0.9956217819630457
    ],
-   "lim_inf_unilateral": 0.8474441033102127,
+   "precision_funcional": 0.9929577464788732,
+   "lim_inf_unilateral": 0.9463047416323989,
    "ic95_bootstrap_documentos": [
-    0.8506493506493507,
-    0.9426751592356688
+    0.9541984732824428,
+    1.0
    ],
-   "cobertura": 0.5698529411764706,
+   "cobertura": 0.5220588235294118,
    "exactitud_estricta_global": 0.5220588235294118,
    "exactitud_funcional_global": 0.5294117647058824,
    "errores_aceptados": [
     {
-     "id": "ant_VEN_001",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_VEN_008",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_VEN_013",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_PER_003",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_PER_004",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_COL_001",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_COL_005",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_COL_012",
-     "campo": "fecha_emision"
     },
     {
      "id": "ant_BOL_004",
      "campo": "nombre"
     },
     {
-     "id": "ant_BOL_012",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_BOL_014",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_BOL_015",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_006",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "liq_028",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "liq_038",
      "campo": "nombre"
-    },
-    {
-     "id": "liq_040",
-     "campo": "fecha_emision"
     }
    ]
   },
   "fr": {
    "campos": 32,
    "documentos": 16,
-   "aceptados": 24,
+   "aceptados": 21,
    "correctos_aceptados_estricto": 20,
    "correctos_aceptados_funcional": 20,
-   "precision": 0.8333333333333334,
+   "precision": 0.9523809523809523,
    "ic95_cp": [
-    0.6261582865113173,
-    0.9526463733927428
+    0.761840090063179,
+    0.9987951165516364
    ],
-   "lim_inf_unilateral": 0.6581926505958837,
+   "precision_funcional": 0.9523809523809523,
+   "lim_inf_unilateral": 0.79327462099193,
    "ic95_bootstrap_documentos": [
-    0.68,
-    0.9615384615384616
+    0.85,
+    1.0
    ],
-   "cobertura": 0.75,
+   "cobertura": 0.65625,
    "exactitud_estricta_global": 0.625,
    "exactitud_funcional_global": 0.625,
    "errores_aceptados": [
     {
-     "id": "ant_HTI_004",
-     "campo": "fecha_emision"
-    },
-    {
      "id": "ant_HTI_008",
      "campo": "nombre"
-    },
-    {
-     "id": "ant_HTI_009",
-     "campo": "fecha_emision"
-    },
-    {
-     "id": "ant_HTI_015",
-     "campo": "fecha_emision"
     }
    ]
   }
  },
  "exactitud_estricta_por_degradacion": {
+  "celular_fuerte": 0.19736842105263158,
+  "fotocopia": 0.8421052631578947,
   "limpio": 0.7763157894736842,
-  "escaner": null,
-  "celular": null,
-  "baja_res": null
+  "sombra": 0.3157894736842105
  },
  "deteccion_por_codigo": {
   "CODIGO_DE_OTRA_PERSONA": {
@@ -497,8 +437,8 @@
  },
  "latencia_documentos_ocr_prueba_s": {
   "n": 200,
-  "mediana": 1.7223118194999643,
-  "p95": 11.644560232000003
+  "mediana": 1.3606446345002041,
+  "p95": 5.822394071999497
  },
  "bitacora": {
   "integra_con_ancla": true,

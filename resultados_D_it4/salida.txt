@@ -33,6 +33,7 @@
     0.980362688736023,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.9840229219936318,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -54,6 +55,7 @@
     0.8765638814997362,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.8985342644272752,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -77,6 +79,7 @@
     0.980362688736023,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.9840229219936318,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -98,6 +101,7 @@
     0.8765638814997362,
     1.0
    ],
+   "precision_funcional": 1.0,
    "lim_inf_unilateral": 0.8985342644272752,
    "ic95_bootstrap_documentos": [
     1.0,
@@ -110,10 +114,10 @@
   }
  },
  "exactitud_estricta_por_degradacion": {
-  "limpio": 1.0,
-  "escaner": 1.0,
+  "baja_res": 1.0,
   "celular": 1.0,
-  "baja_res": 1.0
+  "escaner": 1.0,
+  "limpio": 1.0
  },
  "deteccion_por_codigo": {
   "CODIGO_DE_OTRA_PERSONA": {
@@ -173,6 +177,9 @@
   "documentos": 176,
   "documentos_con_omision": 0,
   "omisiones_silenciosas": 0,
+  "omisiones_con_derivacion": 0,
+  "omisiones_con_alertas": 0,
+  "documentos_derivados": 24,
   "documentos_con_alerta_injustificada": 0,
   "ic95_doc_alerta_injustificada": [
    0.0,
@@ -190,6 +197,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 7
   },
   "antecedentes_extranjero|COL": {
@@ -198,6 +207,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 6
   },
   "antecedentes_extranjero|HTI": {
@@ -206,6 +217,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 6
   },
   "antecedentes_extranjero|PER": {
@@ -214,6 +227,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 7
   },
   "antecedentes_extranjero|VEN": {
@@ -222,6 +237,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 6
   },
   "certificado_publico_cl|CHL": {
@@ -230,6 +247,8 @@
    "con_derivacion_no_esperada": 1,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 9
   },
   "liquidacion|CHL": {
@@ -238,6 +257,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 2
   },
   "pasaporte|BOL": {
@@ -246,6 +267,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 11
   },
   "pasaporte|COL": {
@@ -254,6 +277,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 6
   },
   "pasaporte|HTI": {
@@ -262,6 +287,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 5
   },
   "pasaporte|PER": {
@@ -270,6 +297,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 10
   },
   "pasaporte|VEN": {
@@ -278,6 +307,8 @@
    "con_derivacion_no_esperada": 0,
    "con_omision": 0,
    "omision_silenciosa": 0,
+   "omision_con_derivacion": 0,
+   "omision_con_alertas": 0,
    "prevalidado": 9
   }
  },
@@ -362,8 +393,8 @@
  },
  "latencia_documentos_ocr_prueba_s": {
   "n": 145,
-  "mediana": 1.699712055999953,
-  "p95": 2.898096813000393
+  "mediana": 1.379482461999487,
+  "p95": 1.7309488060000149
  },
  "bitacora": {
   "integra_con_ancla": true,
