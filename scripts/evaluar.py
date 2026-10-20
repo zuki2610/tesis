@@ -204,6 +204,10 @@ def main():
     emisor = RegistroEmisor(CORPUS / "emisor_simulado.json")
 
     cal, pru = dividir(docs, meta["semilla"])
+    if os.environ.get("PRUEBA_TODO"):
+        # Corpus adversarial: no se ajusta nada con él, así que se evalúa completo.
+        # La calibración se calcula igual sobre una mitad, solo para informar.
+        pru = list(docs)
     filas_cal = campos_ocr(cal, motor); motor.guardar()
     umbrales, curvas = calibrar(filas_cal)
     filas_pru = campos_ocr(pru, motor); motor.guardar()
