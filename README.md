@@ -11,7 +11,10 @@ Implementa los tres principios de diseño de la tesis:
    si la firma es válida, su texto se toma del PDF firmado; solo el resto pasa por OCR.
 2. **Advertir, nunca rechazar; ante la duda, derivar**: las reglas solo generan `ALERTA` o
    `REVISION_HUMANA`, y no se evalúan sobre lecturas no confiables.
-3. **Equidad calibrada**: las métricas se reportan por idioma y país.
+3. **Duda verificable y equidad medida**: se deriva cuando falla una señal estructural (etiqueta no
+   encontrada, fecha no interpretable, dígito de control) y las métricas se reportan por idioma y
+   país. El diseño inicial proponía calibrar la confianza del OCR por idioma ("equidad calibrada");
+   ese mecanismo no funcionó y el principio se reformuló a partir de la evaluación.
 
 > Todos los documentos de los corpus son **ficticios** y generados por programa.
 > No se usa ningún dato personal real.
@@ -141,6 +144,10 @@ reproducen con el código actual.
 - Si el nombre de la MRZ está truncado y el nombre declarado omite un segundo nombre, la
   comparación no aplica el prefijo truncado y puede alertar o derivar.
 - El ordinal francés "1er" leído por el OCR como "ler" impide interpretar la fecha (se deriva).
+- **Omisión silenciosa posible**: `parsear_fecha("1º de agosto de 2026")` devuelve el 10 de agosto,
+  porque la normalización convierte "º" en "o" y la regla de corrección O→0 la cambia por un cero.
+  Un certificado vencido con esa fecha quedaría prevalidado sin hallazgos. Ningún corpus contiene
+  ese formato.
 - Un nombre con dos palabras unidas por un error de tipeo ("JeanmBaptiste") se compara como el
   nombre de otra persona.
 - Firma electrónica: solo se valida la primera firma del PDF (una segunda firma se interpreta como
