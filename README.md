@@ -130,6 +130,11 @@ reproducen con el código actual.
   el sistema alerta que falta.
 - Si el nombre de la MRZ está truncado y el nombre declarado omite un segundo nombre, la
   comparación no aplica el prefijo truncado y puede alertar o derivar.
+- Un nombre con dos palabras unidas por un error de tipeo ("JeanmBaptiste") se compara como el
+  nombre de otra persona.
+- Firma electrónica: solo se valida la primera firma del PDF (una segunda firma se interpreta como
+  contenido agregado tras firmar); se exige que el RUT del certificado sea el del empleador, lo que
+  falla si firma un representante; no se verifican revocación ni sello de tiempo.
 
 No se corrigieron para no alterar el código evaluado; cualquier corrección debe reevaluarse con
 un corpus nuevo.
