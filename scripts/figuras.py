@@ -2,8 +2,9 @@
 tesis a partir de los metricas.json y de los verdad.json de los corpus.
 
 Uso: python scripts/figuras.py
-Escribe resultados_resumen.json, figuras/*.pdf|png, figuras/tabla_condiciones.tex y
-figuras/tabla_deteccion.tex.
+Escribe resultados_resumen.json, figuras/*.pdf|png, figuras/tabla_condiciones.tex,
+figuras/tabla_deteccion.tex y figuras/tabla_linea_base.tex. Requiere antes scripts/razon_correcta.py
+en cada directorio de resultados (detecciones con evidencia correcta).
 """
 from __future__ import annotations
 
@@ -170,14 +171,18 @@ def deteccion(r: dict) -> dict:
 
 def tabla_deteccion(resumen: dict) -> str:
     def celda(v):
-        return f"{v['detectados']}/{v['n']}" if v["n"] else "--"
+        # Detecciones con evidencia correcta; entre paréntesis, con cualquier evidencia, si difieren.
+        if not v["n"]:
+            return "--"
+        extra = f" ({v['detectados']})" if v["detectados"] != v["razon_correcta"] else ""
+        return f"{v['razon_correcta']}/{v['n']}{extra}"
 
     def suma(et, filtro):
         n = d = 0
         for tipo, cod, _, lectura in DETECCION:
-            v = resumen[et]["deteccion"].get(f"{tipo}|{cod}", {"n": 0, "detectados": 0})
+            v = resumen[et]["deteccion"].get(f"{tipo}|{cod}", {"n": 0, "detectados": 0, "razon_correcta": 0})
             if filtro(lectura):
-                n += v["n"]; d += v["detectados"]
+                n += v["n"]; d += v["razon_correcta"]
         pct = f" ({100 * d / n:.0f}\\,\\%)" if n else ""
         return f"{d}/{n}{pct}"
 
@@ -186,13 +191,36 @@ def tabla_deteccion(resumen: dict) -> str:
         if tipo != tipo_ant:
             filas.append(f"\\multicolumn{{4}}{{l}}{{\\textit{{{NOMBRE_TIPO[tipo]}}}}} \\\\")
             tipo_ant = tipo
-        celdas = [celda(resumen[et]["deteccion"].get(f"{tipo}|{cod}", {"n": 0, "detectados": 0}))
+        celdas = [celda(resumen[et]["deteccion"].get(f"{tipo}|{cod}", {"n": 0, "detectados": 0, "razon_correcta": 0}))
                   for et in EVAL_DETECCION]
         filas.append(f"\\quad {desc} & " + " & ".join(celdas) + " \\\\")
     filas.append("\\midrule")
     filas.append("Dependen de la lectura del contenido & " + " & ".join(suma(e, lambda l: l) for e in EVAL_DETECCION) + " \\\\")
     filas.append("Detectados por firma o por el emisor & " + " & ".join(suma(e, lambda l: not l) for e in EVAL_DETECCION) + " \\\\")
     filas.append("\\textbf{Total} & " + " & ".join(suma(e, lambda l: True) for e in EVAL_DETECCION) + " \\\\")
+    return "\n".join(filas) + "\n"
+
+
+def pct(k, n, dec=0):
+    v = 100 * k / n
+    txt = f"{v:.{dec}f}".replace(".", ",")
+    return f"{k}/{n} ({txt}\\,\\%)"
+
+
+def tabla_linea_base(resumen: dict) -> str:
+    """El sistema frente a la línea base de derivar todo a revisión humana (el proceso actual)."""
+    filas = []
+    def fila(nombre, celdas, base):
+        filas.append(f"{nombre} & " + " & ".join(celdas) + f" & {base} \\\\")
+    fila("Documentos que no requieren revisión completa",
+         [pct(resumen[e]["documentos"] - resumen[e]["derivados"], resumen[e]["documentos"]) for e in EVAL_DETECCION],
+         "0\\,\\%")
+    fila("Problemas informados con evidencia correcta",
+         [pct(resumen[e]["razon_correcta"], resumen[e]["esperados"]) for e in EVAL_DETECCION], "0\\,\\%")
+    fila("Documentos con alerta injustificada",
+         [pct(resumen[e]["docs_alerta_injustificada"], resumen[e]["documentos"], 1) for e in EVAL_DETECCION],
+         "0\\,\\%")
+    fila("Omisiones silenciosas", [str(resumen[e]["omisiones_silenciosas"]) for e in EVAL_DETECCION], "0")
     return "\n".join(filas) + "\n"
 
 
@@ -221,6 +249,12 @@ def main():
             "deteccion": deteccion(r),
             "bitacora": r["bitacora"],
         }
+        rc = json.loads((BASE / d / "razon_correcta.json").read_text(encoding="utf-8"))
+        assert rc["esperados"] == t["esperados"] and rc["detectados"] == t["detectados"], (et, "razon_correcta")
+        for k, v in resumen[et]["deteccion"].items():
+            assert rc["por_tipo_y_codigo"][k].get("detectados", 0) == v["detectados"], (et, k)
+            v["razon_correcta"] = rc["por_tipo_y_codigo"][k].get("razon_correcta", 0)
+        resumen[et]["razon_correcta"] = rc["razon_correcta"]
         if et in CORPUS:
             resumen[et]["por_condicion"] = por_condicion(CORPUS[et], r)
             todos = sum(1 for x in r["detalle"] if (set(x["producidos"]) & ALERTAS) - set(x["esperados"]))
@@ -231,6 +265,7 @@ def main():
     out = BASE / "figuras"; out.mkdir(exist_ok=True)
     (out / "tabla_condiciones.tex").write_text(tabla_condiciones(resumen), encoding="utf-8")
     (out / "tabla_deteccion.tex").write_text(tabla_deteccion(resumen), encoding="utf-8")
+    (out / "tabla_linea_base.tex").write_text(tabla_linea_base(resumen), encoding="utf-8")
     for et in resumen:  # la tabla de detección cubre todos los códigos esperados
         cubiertos = {f"{t}|{c}" for t, c, _, _ in DETECCION}
         assert set(resumen[et]["deteccion"]) <= cubiertos, (et, set(resumen[et]["deteccion"]) - cubiertos)
@@ -241,13 +276,13 @@ def main():
     # Figura A: comparación de evaluaciones
     ets = ["D (it. 4)", "ADV (it. 4)", "ADV2 (it. 5)"]  # D (it. 5) es idéntico a D (it. 4)
     etiquetas = ["Desarrollo D\n(it. 4)", "Adversarial ADV\n(it. 4, código congelado)", "Adversarial ADV2\n(it. 5)"]
-    det = [100 * resumen[e]["detectados"] / resumen[e]["esperados"] for e in ets]
+    det = [100 * resumen[e]["razon_correcta"] / resumen[e]["esperados"] for e in ets]
     der = [100 * resumen[e]["derivados"] / resumen[e]["documentos"] for e in ets]
     inj = [100 * resumen[e]["docs_alerta_injustificada"] / resumen[e]["documentos"] for e in ets]
     sil = [100 * resumen[e]["omisiones_silenciosas"] / resumen[e]["documentos"] for e in ets]
     x = np.arange(len(ets)); w = 0.2
     fig, ax = plt.subplots(figsize=(7.2, 3.3))
-    for k, (vals, lab, col) in enumerate([(det, "Problemas detectados", "#1f4e79"),
+    for k, (vals, lab, col) in enumerate([(det, "Problemas detectados (evidencia correcta)", "#1f4e79"),
                                           (der, "Documentos derivados", "#9dc3e6"),
                                           (inj, "Documentos con alerta injustificada", "#c55a11"),
                                           (sil, "Omisiones silenciosas", "#404040")]):

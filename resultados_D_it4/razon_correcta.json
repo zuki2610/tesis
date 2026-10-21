@@ -1,0 +1,105 @@
+{
+ "codigo": "/tmp/claude-0/-home-claude/ffdc3371-0dab-56ee-8c9c-918fd1cf5ef7/scratchpad/wt_it4",
+ "corpus": "corpus_D",
+ "esperados": 108,
+ "detectados": 108,
+ "razon_correcta": 108,
+ "por_tipo_y_codigo": {
+  "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+   "n": 10,
+   "detectados": 10,
+   "razon_correcta": 10
+  },
+  "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+   "n": 1,
+   "detectados": 1,
+   "razon_correcta": 1
+  },
+  "antecedentes_extranjero|IDIOMA_NO_SOPORTADO": {
+   "n": 3,
+   "detectados": 3,
+   "razon_correcta": 3
+  },
+  "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+   "n": 8,
+   "detectados": 8,
+   "razon_correcta": 8
+  },
+  "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+   "n": 6,
+   "detectados": 6,
+   "razon_correcta": 6
+  },
+  "antecedentes_extranjero|SIN_APOSTILLA": {
+   "n": 11,
+   "detectados": 11,
+   "razon_correcta": 11
+  },
+  "antecedentes_extranjero|SIN_LEGALIZACION": {
+   "n": 3,
+   "detectados": 3,
+   "razon_correcta": 3
+  },
+  "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+   "n": 1,
+   "detectados": 1,
+   "razon_correcta": 1
+  },
+  "certificado_publico_cl|CODIGO_INEXISTENTE": {
+   "n": 5,
+   "detectados": 5,
+   "razon_correcta": 5
+  },
+  "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+   "n": 4,
+   "detectados": 4,
+   "razon_correcta": 4
+  },
+  "liquidacion|DOCUMENTO_ANTIGUO": {
+   "n": 10,
+   "detectados": 10,
+   "razon_correcta": 10
+  },
+  "liquidacion|FIRMANTE_NO_ACREDITADO": {
+   "n": 6,
+   "detectados": 6,
+   "razon_correcta": 6
+  },
+  "liquidacion|FIRMANTE_NO_COINCIDE": {
+   "n": 3,
+   "detectados": 3,
+   "razon_correcta": 3
+  },
+  "liquidacion|FIRMA_INVALIDA": {
+   "n": 5,
+   "detectados": 5,
+   "razon_correcta": 5
+  },
+  "liquidacion|MODIFICADO_TRAS_FIRMA": {
+   "n": 6,
+   "detectados": 6,
+   "razon_correcta": 6
+  },
+  "liquidacion|SIN_FEA": {
+   "n": 5,
+   "detectados": 5,
+   "razon_correcta": 5
+  },
+  "pasaporte|NOMBRE_CASI_COINCIDE": {
+   "n": 5,
+   "detectados": 5,
+   "razon_correcta": 5
+  },
+  "pasaporte|NOMBRE_NO_COINCIDE": {
+   "n": 7,
+   "detectados": 7,
+   "razon_correcta": 7
+  },
+  "pasaporte|PASAPORTE_VENCIDO": {
+   "n": 9,
+   "detectados": 9,
+   "razon_correcta": 9
+  }
+ },
+ "detecciones_con_evidencia_incorrecta": []
+}

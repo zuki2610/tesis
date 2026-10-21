@@ -1,0 +1,169 @@
+{
+ "codigo": "/tmp/claude-0/-home-claude/ffdc3371-0dab-56ee-8c9c-918fd1cf5ef7/scratchpad/wt_it4",
+ "corpus": "corpus_ADV",
+ "esperados": 143,
+ "detectados": 96,
+ "razon_correcta": 80,
+ "por_tipo_y_codigo": {
+  "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+   "n": 19,
+   "detectados": 3,
+   "razon_correcta": 2
+  },
+  "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+   "n": 8,
+   "detectados": 8,
+   "razon_correcta": 8
+  },
+  "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+   "n": 5,
+   "detectados": 1,
+   "razon_correcta": 1
+  },
+  "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+   "n": 11,
+   "detectados": 10,
+   "razon_correcta": 3
+  },
+  "antecedentes_extranjero|SIN_APOSTILLA": {
+   "n": 12,
+   "detectados": 7,
+   "razon_correcta": 7
+  },
+  "antecedentes_extranjero|SIN_LEGALIZACION": {
+   "n": 3,
+   "detectados": 3,
+   "razon_correcta": 3
+  },
+  "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+   "n": 4,
+   "detectados": 2,
+   "razon_correcta": 2
+  },
+  "certificado_publico_cl|CODIGO_INEXISTENTE": {
+   "n": 4,
+   "detectados": 4,
+   "razon_correcta": 4
+  },
+  "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+   "n": 2,
+   "detectados": 2,
+   "razon_correcta": 2
+  },
+  "certificado_publico_cl|NOMBRE_CASI_COINCIDE": {
+   "n": 1,
+   "detectados": 1,
+   "razon_correcta": 1
+  },
+  "liquidacion|DOCUMENTO_ANTIGUO": {
+   "n": 12,
+   "detectados": 3,
+   "razon_correcta": 3
+  },
+  "liquidacion|FIRMANTE_NO_ACREDITADO": {
+   "n": 8,
+   "detectados": 8,
+   "razon_correcta": 8
+  },
+  "liquidacion|FIRMANTE_NO_COINCIDE": {
+   "n": 8,
+   "detectados": 8
+  },
+  "liquidacion|FIRMA_INVALIDA": {
+   "n": 8,
+   "detectados": 8,
+   "razon_correcta": 8
+  },
+  "liquidacion|MODIFICADO_TRAS_FIRMA": {
+   "n": 8,
+   "detectados": 8,
+   "razon_correcta": 8
+  },
+  "liquidacion|SIN_FEA": {
+   "n": 8,
+   "detectados": 8,
+   "razon_correcta": 8
+  },
+  "pasaporte|NOMBRE_CASI_COINCIDE": {
+   "n": 5,
+   "detectados": 3,
+   "razon_correcta": 3
+  },
+  "pasaporte|NOMBRE_NO_COINCIDE": {
+   "n": 5,
+   "detectados": 3,
+   "razon_correcta": 3
+  },
+  "pasaporte|PASAPORTE_VENCIDO": {
+   "n": 12,
+   "detectados": 6,
+   "razon_correcta": 6
+  }
+ },
+ "detecciones_con_evidencia_incorrecta": [
+  {
+   "id": "ant_VEN_013",
+   "codigo": "DOCUMENTO_ANTIGUO"
+  },
+  {
+   "id": "ant_PER_001",
+   "codigo": "NOMBRE_NO_COINCIDE"
+  },
+  {
+   "id": "ant_PER_004",
+   "codigo": "NOMBRE_NO_COINCIDE"
+  },
+  {
+   "id": "ant_PER_008",
+   "codigo": "NOMBRE_NO_COINCIDE"
+  },
+  {
+   "id": "ant_PER_015",
+   "codigo": "NOMBRE_NO_COINCIDE"
+  },
+  {
+   "id": "ant_BOL_014",
+   "codigo": "NOMBRE_NO_COINCIDE"
+  },
+  {
+   "id": "ant_HTI_000",
+   "codigo": "NOMBRE_NO_COINCIDE"
+  },
+  {
+   "id": "ant_HTI_014",
+   "codigo": "NOMBRE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_006",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_012",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_013",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_022",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_023",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_027",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_037",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  },
+  {
+   "id": "liq_046",
+   "codigo": "FIRMANTE_NO_COINCIDE"
+  }
+ ]
+}

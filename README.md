@@ -42,7 +42,8 @@ scripts/
   evaluar.py                     Evaluación: campos, detección, omisiones, alertas, MRZ, QR, firma,
                                  latencia, bitácora
   comparar_modelo_mrz.py         Modelo `eng` frente al modelo para OCR-B en la MRZ
-  figuras.py                     Resumen, figuras y tabla por condición de la tesis
+  razon_correcta.py              Detecciones con la evidencia correcta (nombre, fecha o RUT leídos)
+  figuras.py                     Resumen, figuras y tablas de la tesis
 tests/             40 pruebas automatizadas (incluye el espécimen de MRZ del Doc 9303)
 ```
 
@@ -82,6 +83,7 @@ Si falta `mrz.traineddata`, el adaptador usa `eng` para la MRZ, con resultados m
 | `corpus_D` (desarrollo, 350 doc.) | `generar_corpus.py` | 20261022 | `resultados_D_it4` (iteración 4), `resultados_D5` (iteración 5) |
 | `corpus_ADV` (adversarial, 246 doc.) | `generar_corpus_adversarial.py` | 20261023 | `resultados_ADV_it4` (código congelado) |
 | `corpus_ADV2` (adversarial, 246 doc.) | `generar_corpus_adversarial.py` | 20261024 | `resultados_ADV2` (iteración 5) |
+| `corpus_P` (muestra planificada, 410 doc.) | `generar_corpus.py` con tamaños | 20261025 | `resultados_P` (iteración 5) |
 
 Los corpus no se incluyen en el repositorio por su tamaño; se regeneran así:
 
@@ -89,6 +91,8 @@ Los corpus no se incluyen en el repositorio por su tamaño; se regeneran así:
 CORPUS_DIR=corpus_D    SEED=20261022 python scripts/generar_corpus.py
 CORPUS_DIR=corpus_ADV  SEED=20261023 python scripts/generar_corpus_adversarial.py
 CORPUS_DIR=corpus_ADV2 SEED=20261024 python scripts/generar_corpus_adversarial.py
+CORPUS_DIR=corpus_P SEED=20261025 N_PASAPORTES=0 N_ANTECEDENTES=45 N_ANTECEDENTES_HTI=170 \
+  N_LIQ_POR_VARIANTE=10 N_QR=0 N_CRIOLLO=0 python scripts/generar_corpus.py
 ```
 
 Las imágenes, el registro del emisor simulado y la verdad de referencia se regeneran idénticos
@@ -101,12 +105,18 @@ cada ejecución, por lo que los PDF firmados cambian byte a byte, sin alterar su
 # Iteración 5 (código actual)
 CORPUS_DIR=corpus_D    OUT_DIR=resultados_D5   python scripts/evaluar.py
 CORPUS_DIR=corpus_ADV2 OUT_DIR=resultados_ADV2 PRUEBA_TODO=1 python scripts/evaluar.py
+CORPUS_DIR=corpus_P    OUT_DIR=resultados_P    PRUEBA_TODO=1 python scripts/evaluar.py
+for c in D:D5 ADV2:ADV2 P:P; do
+  CORPUS_DIR=corpus_${c%%:*} OUT_DIR=resultados_${c##*:} python scripts/razon_correcta.py
+done
 
 # Iteración 4 (código congelado) con el mismo script de evaluación
 git worktree add ../prevalida_it4 congelado-evaluacion
 cp scripts/evaluar.py ../prevalida_it4/scripts/ && ln -s "$PWD/tessdata" ../prevalida_it4/tessdata
 (cd ../prevalida_it4 && CORPUS_DIR=$OLDPWD/corpus_D   OUT_DIR=$OLDPWD/resultados_D_it4 python scripts/evaluar.py)
 (cd ../prevalida_it4 && CORPUS_DIR=$OLDPWD/corpus_ADV OUT_DIR=$OLDPWD/resultados_ADV_it4 PRUEBA_TODO=1 python scripts/evaluar.py)
+CODE_DIR=../prevalida_it4 CORPUS_DIR=corpus_D   OUT_DIR=resultados_D_it4   python scripts/razon_correcta.py
+CODE_DIR=../prevalida_it4 CORPUS_DIR=corpus_ADV OUT_DIR=resultados_ADV_it4 python scripts/razon_correcta.py
 git worktree remove ../prevalida_it4
 
 # Comparación de modelos de la MRZ, figuras y tablas de la tesis, pruebas
@@ -130,6 +140,7 @@ reproducen con el código actual.
   el sistema alerta que falta.
 - Si el nombre de la MRZ está truncado y el nombre declarado omite un segundo nombre, la
   comparación no aplica el prefijo truncado y puede alertar o derivar.
+- El ordinal francés "1er" leído por el OCR como "ler" impide interpretar la fecha (se deriva).
 - Un nombre con dos palabras unidas por un error de tipeo ("JeanmBaptiste") se compara como el
   nombre de otra persona.
 - Firma electrónica: solo se valida la primera firma del PDF (una segunda firma se interpreta como

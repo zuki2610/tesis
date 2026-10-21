@@ -33,6 +33,14 @@ from prevalida.mrz import generar_td3  # noqa: E402
 RAIZ = Path(os.environ.get("CORPUS_DIR", Path(__file__).resolve().parent.parent / "corpus"))
 FECHA_PRESENTACION = date(2026, 10, 1)
 SEED = int(os.environ.get("SEED", "20261022"))
+# Tamaños del corpus (por defecto, los del corpus de desarrollo D). Permiten generar corpus con
+# una muestra planificada, por ejemplo para medir RNF-04 con al menos 299 campos por idioma.
+N_PASAPORTES = int(os.environ.get("N_PASAPORTES", "24"))          # por país
+N_ANTECEDENTES = int(os.environ.get("N_ANTECEDENTES", "24"))      # por país de habla hispana
+N_ANTECEDENTES_HTI = int(os.environ.get("N_ANTECEDENTES_HTI", os.environ.get("N_ANTECEDENTES", "24")))
+N_LIQ_POR_VARIANTE = int(os.environ.get("N_LIQ_POR_VARIANTE", "10"))
+N_QR = int(os.environ.get("N_QR", "40"))
+N_CRIOLLO = int(os.environ.get("N_CRIOLLO", "10"))
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 FONT_B = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 OCRB = "/usr/share/fonts/opentype/ocr-b/OCRB.otf"
@@ -444,19 +452,25 @@ def main():
     dir_ca = RAIZ / "certs"; crear_pki(dir_ca, empleadores)
     docs, registro = [], {}
     for pais in PAISES:
-        for i in range(24):
-            docs.append(pasaporte(i, pais))
-            docs.append(antecedentes(i, pais))
-    variantes = VARIANTES_FIRMA * 10
+        n_ant = N_ANTECEDENTES_HTI if pais == "HTI" else N_ANTECEDENTES
+        for i in range(max(N_PASAPORTES, n_ant)):  # con los valores por defecto, el orden original
+            if i < N_PASAPORTES:
+                docs.append(pasaporte(i, pais))
+            if i < n_ant:
+                docs.append(antecedentes(i, pais))
+    variantes = VARIANTES_FIRMA * N_LIQ_POR_VARIANTE
     rng.shuffle(variantes)
     for i, v in enumerate(variantes):
         docs.append(liquidacion(i, v, empleadores, dir_ca))
-    for i in range(40):
+    for i in range(N_QR):
         docs.append(certificado_cl(i, registro))
-    for i in range(10):
+    for i in range(N_CRIOLLO):
         docs.append(criollo(i, "ht" if i % 2 == 0 else "fr"))
     (RAIZ / "emisor_simulado.json").write_text(json.dumps(registro, ensure_ascii=False, indent=1), encoding="utf-8")
     meta = {"generador": "v2", "fecha_presentacion": FECHA_PRESENTACION.isoformat(), "semilla": SEED,
+            "tamanos": {"pasaportes": N_PASAPORTES, "antecedentes": N_ANTECEDENTES,
+                        "antecedentes_hti": N_ANTECEDENTES_HTI, "liq_por_variante": N_LIQ_POR_VARIANTE,
+                        "qr": N_QR, "criollo": N_CRIOLLO},
             "documentos": docs}
     (RAIZ / "verdad.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(docs)} documentos generados en {RAIZ}")
