@@ -146,6 +146,84 @@
     "alerta_injustificada": 0
    }
   },
+  "deteccion": {
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 7,
+    "detectados": 7
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 9,
+    "detectados": 9
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 5
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 8,
+    "detectados": 8
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 11,
+    "detectados": 11
+   },
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 6,
+    "detectados": 6
+   },
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 3,
+    "detectados": 3
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 1,
+    "detectados": 1
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 5,
+    "detectados": 5
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 3,
+    "detectados": 3
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 6,
+    "detectados": 6
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 6,
+    "detectados": 6
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 5,
+    "detectados": 5
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 5,
+    "detectados": 5
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 4,
+    "detectados": 4
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 1,
+    "detectados": 1
+   },
+   "antecedentes_extranjero|IDIOMA_NO_SOPORTADO": {
+    "n": 3,
+    "detectados": 3
+   }
+  },
   "bitacora": {
    "integra_con_ancla": true,
    "truncamiento_detectado": true
@@ -298,6 +376,84 @@
     "alerta_injustificada": 0
    }
   },
+  "deteccion": {
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 7,
+    "detectados": 7
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 9,
+    "detectados": 9
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 5
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 8,
+    "detectados": 8
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 11,
+    "detectados": 11
+   },
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 6,
+    "detectados": 6
+   },
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 3,
+    "detectados": 3
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 1,
+    "detectados": 1
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 5,
+    "detectados": 5
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 3,
+    "detectados": 3
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 6,
+    "detectados": 6
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 6,
+    "detectados": 6
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 5,
+    "detectados": 5
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 5,
+    "detectados": 5
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 4,
+    "detectados": 4
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 1,
+    "detectados": 1
+   },
+   "antecedentes_extranjero|IDIOMA_NO_SOPORTADO": {
+    "n": 3,
+    "detectados": 3
+   }
+  },
   "bitacora": {
    "integra_con_ancla": true,
    "truncamiento_detectado": true
@@ -448,6 +604,84 @@
      0.7363618755890153
     ],
     "alerta_injustificada": 6
+   }
+  },
+  "deteccion": {
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 19,
+    "detectados": 3
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 12,
+    "detectados": 6
+   },
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 11,
+    "detectados": 10
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 12,
+    "detectados": 7
+   },
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 5,
+    "detectados": 3
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 3
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 1
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 3,
+    "detectados": 3
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 12,
+    "detectados": 3
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 8,
+    "detectados": 8
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 8,
+    "detectados": 8
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 8,
+    "detectados": 8
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 8,
+    "detectados": 8
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 8,
+    "detectados": 8
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 4,
+    "detectados": 2
+   },
+   "certificado_publico_cl|NOMBRE_CASI_COINCIDE": {
+    "n": 1,
+    "detectados": 1
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 4,
+    "detectados": 4
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 2,
+    "detectados": 2
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 8,
+    "detectados": 8
    }
   },
   "bitacora": {
@@ -734,6 +968,84 @@
      0.6525631907136071
     ],
     "alerta_injustificada": 0
+   }
+  },
+  "deteccion": {
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 11,
+    "detectados": 10
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 10,
+    "detectados": 5
+   },
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 16,
+    "detectados": 10
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 14,
+    "detectados": 10
+   },
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 8,
+    "detectados": 7
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 6,
+    "detectados": 5
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 2,
+    "detectados": 1
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 2,
+    "detectados": 2
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 8,
+    "detectados": 8
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 8,
+    "detectados": 4
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 12,
+    "detectados": 7
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 8,
+    "detectados": 8
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 8,
+    "detectados": 8
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 8,
+    "detectados": 8
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 4,
+    "detectados": 2
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 5,
+    "detectados": 4
+   },
+   "certificado_publico_cl|NOMBRE_CASI_COINCIDE": {
+    "n": 1,
+    "detectados": 1
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 3,
+    "detectados": 2
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 8,
+    "detectados": 8
    }
   },
   "bitacora": {

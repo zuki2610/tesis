@@ -2,7 +2,8 @@
 tesis a partir de los metricas.json y de los verdad.json de los corpus.
 
 Uso: python scripts/figuras.py
-Escribe resultados_resumen.json, figuras/*.pdf|png y figuras/tabla_condiciones.tex.
+Escribe resultados_resumen.json, figuras/*.pdf|png, figuras/tabla_condiciones.tex y
+figuras/tabla_deteccion.tex.
 """
 from __future__ import annotations
 
@@ -130,6 +131,71 @@ def tabla_condiciones(resumen: dict) -> str:
     return "\n".join(filas) + "\n"
 
 
+DETECCION = [  # (tipo de documento, código, descripción, depende de la lectura del contenido)
+    ("pasaporte", "PASAPORTE_VENCIDO", "Vencido", True),
+    ("pasaporte", "NOMBRE_NO_COINCIDE", "Nombre de otra persona", True),
+    ("pasaporte", "NOMBRE_CASI_COINCIDE", "Nombre casi igual", True),
+    ("antecedentes_extranjero", "DOCUMENTO_ANTIGUO", "Más de 60 días", True),
+    ("antecedentes_extranjero", "SIN_APOSTILLA", "Sin apostilla", True),
+    ("antecedentes_extranjero", "SIN_LEGALIZACION", "Sin legalización", True),
+    ("antecedentes_extranjero", "NOMBRE_NO_COINCIDE", "Nombre de otra persona", True),
+    ("antecedentes_extranjero", "NOMBRE_CASI_COINCIDE", "Nombre casi igual", True),
+    ("antecedentes_extranjero", "IDIOMA_NO_SOPORTADO", "Criollo declarado como criollo", True),
+    ("antecedentes_extranjero", "DOCUMENTO_NO_RECONOCIDO", "Criollo declarado como francés", True),
+    ("liquidacion", "DOCUMENTO_ANTIGUO", "Más de 30 días", True),
+    ("liquidacion", "FIRMA_INVALIDA", "Contenido firmado alterado", False),
+    ("liquidacion", "MODIFICADO_TRAS_FIRMA", "Contenido agregado tras firmar", False),
+    ("liquidacion", "FIRMANTE_NO_ACREDITADO", "Prestador no acreditado", False),
+    ("liquidacion", "FIRMANTE_NO_COINCIDE", "Firmada por otro empleador", False),
+    ("liquidacion", "SIN_FEA", "Sin firma", False),
+    ("certificado_publico_cl", "CODIGO_INEXISTENTE", "Código inexistente", False),
+    ("certificado_publico_cl", "CODIGO_DE_OTRA_PERSONA", "Código de otra persona", False),
+    ("certificado_publico_cl", "NOMBRE_CASI_COINCIDE", "Titular casi igual", False),
+    ("certificado_publico_cl", "DOCUMENTO_ANTIGUO", "Más de 60 días", False),
+]
+NOMBRE_TIPO = {"pasaporte": "Pasaportes", "antecedentes_extranjero": "Certificados de antecedentes",
+               "liquidacion": "Liquidaciones de sueldo", "certificado_publico_cl": "Certificados chilenos con QR"}
+EVAL_DETECCION = ["D (it. 4)", "ADV (it. 4)", "ADV2 (it. 5)"]
+
+
+def deteccion(r: dict) -> dict:
+    """Problemas introducidos y detectados, por tipo de documento y código."""
+    out = defaultdict(Counter)
+    for x in r["detalle"]:
+        for c in x["esperados"]:
+            out[f"{x['tipo']}|{c}"]["n"] += 1
+            out[f"{x['tipo']}|{c}"]["detectados"] += c in x["producidos"]
+    return {k: dict(v) for k, v in out.items()}
+
+
+def tabla_deteccion(resumen: dict) -> str:
+    def celda(v):
+        return f"{v['detectados']}/{v['n']}" if v["n"] else "--"
+
+    def suma(et, filtro):
+        n = d = 0
+        for tipo, cod, _, lectura in DETECCION:
+            v = resumen[et]["deteccion"].get(f"{tipo}|{cod}", {"n": 0, "detectados": 0})
+            if filtro(lectura):
+                n += v["n"]; d += v["detectados"]
+        pct = f" ({100 * d / n:.0f}\\,\\%)" if n else ""
+        return f"{d}/{n}{pct}"
+
+    filas, tipo_ant = [], None
+    for tipo, cod, desc, _ in DETECCION:
+        if tipo != tipo_ant:
+            filas.append(f"\\multicolumn{{4}}{{l}}{{\\textit{{{NOMBRE_TIPO[tipo]}}}}} \\\\")
+            tipo_ant = tipo
+        celdas = [celda(resumen[et]["deteccion"].get(f"{tipo}|{cod}", {"n": 0, "detectados": 0}))
+                  for et in EVAL_DETECCION]
+        filas.append(f"\\quad {desc} & " + " & ".join(celdas) + " \\\\")
+    filas.append("\\midrule")
+    filas.append("Dependen de la lectura del contenido & " + " & ".join(suma(e, lambda l: l) for e in EVAL_DETECCION) + " \\\\")
+    filas.append("Detectados por firma o por el emisor & " + " & ".join(suma(e, lambda l: not l) for e in EVAL_DETECCION) + " \\\\")
+    filas.append("\\textbf{Total} & " + " & ".join(suma(e, lambda l: True) for e in EVAL_DETECCION) + " \\\\")
+    return "\n".join(filas) + "\n"
+
+
 def main():
     resumen = {}
     for et, d in EVAL.items():
@@ -152,6 +218,7 @@ def main():
             "umbrales_calibrados": r["umbrales_calibrados"],
             "latencia": r["latencia_documentos_ocr_prueba_s"],
             "por_pais": por_pais(r),
+            "deteccion": deteccion(r),
             "bitacora": r["bitacora"],
         }
         if et in CORPUS:
@@ -163,6 +230,12 @@ def main():
     (BASE / "resultados_resumen.json").write_text(json.dumps(resumen, ensure_ascii=False, indent=1), encoding="utf-8")
     out = BASE / "figuras"; out.mkdir(exist_ok=True)
     (out / "tabla_condiciones.tex").write_text(tabla_condiciones(resumen), encoding="utf-8")
+    (out / "tabla_deteccion.tex").write_text(tabla_deteccion(resumen), encoding="utf-8")
+    for et in resumen:  # la tabla de detección cubre todos los códigos esperados
+        cubiertos = {f"{t}|{c}" for t, c, _, _ in DETECCION}
+        assert set(resumen[et]["deteccion"]) <= cubiertos, (et, set(resumen[et]["deteccion"]) - cubiertos)
+        tot = sum(v["n"] for v in resumen[et]["deteccion"].values())
+        assert tot == resumen[et]["esperados"], (et, tot)
     plt.rcParams.update({"font.size": 9.5, "axes.labelsize": 9.5, "xtick.labelsize": 9.5, "ytick.labelsize": 9})
 
     # Figura A: comparación de evaluaciones
