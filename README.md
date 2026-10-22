@@ -146,8 +146,8 @@ reproducen con el código actual.
 - El ordinal francés "1er" leído por el OCR como "ler" impide interpretar la fecha (se deriva).
 - **Omisión silenciosa posible**: `parsear_fecha("1º de agosto de 2026")` devuelve el 10 de agosto,
   porque la normalización convierte "º" en "o" y la regla de corrección O→0 la cambia por un cero.
-  Un certificado vencido con esa fecha quedaría prevalidado sin hallazgos. Ningún corpus contiene
-  ese formato.
+  Un certificado emitido un día 1 que exceda la antigüedad máxima por menos de nueve días quedaría
+  prevalidado sin hallazgos. Ningún corpus contiene ese formato.
 - Un nombre con dos palabras unidas por un error de tipeo ("JeanmBaptiste") se compara como el
   nombre de otra persona.
 - Firma electrónica: solo se valida la primera firma del PDF (una segunda firma se interpreta como
