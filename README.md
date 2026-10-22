@@ -19,6 +19,40 @@ Implementa los tres principios de diseño de la tesis:
 > Todos los documentos de los corpus son **ficticios** y generados por programa.
 > No se usa ningún dato personal real.
 
+## Ver la maqueta funcionando desde GitHub
+
+**Opción 1 — GitHub Actions (sin instalar nada).** En la pestaña *Actions*, elige
+*Demostración de la maqueta* → *Run workflow*. En unos minutos corre las 40 pruebas
+automatizadas y carga dos expedientes ficticios en la API. La tabla con las respuestas aparece
+en el resumen de la ejecución, y el reporte completo (`reporte.html`, con las imágenes, la vista
+de la persona solicitante y la del funcionario) se descarga desde el artefacto `demo-prevalida`.
+También corre solo con cada `push` a `main`.
+
+**Opción 2 — GitHub Codespaces (interactivo, en el navegador).** En la página del repositorio:
+*Code* → *Codespaces* → *Create codespace on main*. La primera vez instala Tesseract, los
+modelos y las dependencias, corre las pruebas y genera la demostración (unos minutos). Luego
+inicia el servidor y abre el puerto 8000:
+
+- `/demo/reporte.html`: la demostración con los dos expedientes.
+- `/docs`: la API. Crea una solicitud (`POST /solicitudes`), carga documentos
+  (`POST /solicitudes/{id}/documentos`; hay documentos ficticios en `demo/documentos/`) y revisa
+  el expediente del funcionario (`GET /solicitudes/{id}`).
+
+Si el servidor no se inició solo: `python scripts/servidor_demo.py`.
+
+**Opción 3 — GitHub Pages (opcional).** Para tener el reporte como página web: *Settings* →
+*Pages* → *Source: GitHub Actions*, y luego en *Actions* ejecutar *Publicar la demostración en
+GitHub Pages*.
+
+**En un computador propio** (Linux o macOS, con Python 3.11 o superior y Tesseract 5):
+
+```bash
+pip install -r requirements.txt
+bash scripts/descargar_modelos.sh
+python scripts/demo_expediente.py      # genera demo/reporte.html
+python scripts/servidor_demo.py        # http://localhost:8000
+```
+
 ## Estructura
 
 ```
@@ -47,6 +81,11 @@ scripts/
   comparar_modelo_mrz.py         Modelo `eng` frente al modelo para OCR-B en la MRZ
   razon_correcta.py              Detecciones con la evidencia correcta (nombre, fecha o RUT leídos)
   figuras.py                     Resumen, figuras y tablas de la tesis
+  demo_expediente.py             Demostración: dos expedientes ficticios cargados en la API
+  servidor_demo.py               API y reporte de la demostración en el puerto 8000
+  descargar_modelos.sh           Modelos de Tesseract (tessdata_fast y modelo OCR-B de la MRZ)
+.devcontainer/     Entorno para GitHub Codespaces
+.github/workflows/ Demostración en GitHub Actions y publicación opcional en GitHub Pages
 tests/             40 pruebas automatizadas (incluye el espécimen de MRZ del Doc 9303)
 ```
 

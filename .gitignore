@@ -3,3 +3,5 @@ __pycache__/
 *.pkl
 corpus_*/
 tessdata/
+demo/
+sitio/
