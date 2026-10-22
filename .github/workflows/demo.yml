@@ -10,6 +10,10 @@ on:
 permissions:
   contents: read
 
+defaults:
+  run:
+    working-directory: maqueta
+
 jobs:
   demo:
     runs-on: ubuntu-24.04
@@ -20,6 +24,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: maqueta/requirements.txt
 
       - name: Instalar Tesseract y tipografías
         run: |
@@ -30,7 +35,7 @@ jobs:
       - name: Recuperar modelos de Tesseract
         uses: actions/cache@v4
         with:
-          path: tessdata
+          path: maqueta/tessdata
           key: tessdata-fast-mrz-v1
 
       - name: Descargar modelos de Tesseract
@@ -50,6 +55,6 @@ jobs:
         with:
           name: demo-prevalida
           path: |
-            demo/reporte.html
-            demo/resultado.json
-            demo/documentos/
+            maqueta/demo/reporte.html
+            maqueta/demo/resultado.json
+            maqueta/demo/documentos/

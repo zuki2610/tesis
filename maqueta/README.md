@@ -38,7 +38,7 @@ inicia el servidor y abre el puerto 8000:
   (`POST /solicitudes/{id}/documentos`; hay documentos ficticios en `demo/documentos/`) y revisa
   el expediente del funcionario (`GET /solicitudes/{id}`).
 
-Si el servidor no se inició solo: `python scripts/servidor_demo.py`.
+Si el servidor no se inició solo: `cd maqueta && python scripts/servidor_demo.py`.
 
 **Opción 3 — GitHub Pages (opcional).** Para tener el reporte como página web: *Settings* →
 *Pages* → *Source: GitHub Actions*, y luego en *Actions* ejecutar *Publicar la demostración en
@@ -84,8 +84,8 @@ scripts/
   demo_expediente.py             Demostración: dos expedientes ficticios cargados en la API
   servidor_demo.py               API y reporte de la demostración en el puerto 8000
   descargar_modelos.sh           Modelos de Tesseract (tessdata_fast y modelo OCR-B de la MRZ)
-.devcontainer/     Entorno para GitHub Codespaces
-.github/workflows/ Demostración en GitHub Actions y publicación opcional en GitHub Pages
+../.devcontainer/  Entorno para GitHub Codespaces (en la raíz del repositorio tesis)
+../.github/        Demostración en GitHub Actions y publicación opcional en GitHub Pages
 tests/             40 pruebas automatizadas (incluye el espécimen de MRZ del Doc 9303)
 ```
 
@@ -93,12 +93,12 @@ tests/             40 pruebas automatizadas (incluye el espécimen de MRZ del Do
 
 - Python 3.11 o superior y Tesseract 5 (se usó 5.3.4: `apt install tesseract-ocr`).
 - `pip install -r requirements.txt`
-- Modelos de Tesseract en `./tessdata`:
+- Modelos de Tesseract en `./tessdata`: `bash scripts/descargar_modelos.sh` los descarga y verifica. A mano:
 
 ```bash
 mkdir -p tessdata && cd tessdata
 for m in spa fra eng osd; do
-  curl -LO https://github.com/tesseract-ocr/tessdata_fast/raw/main/$m.traineddata
+  curl -LO https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/$m.traineddata
 done
 # Modelo para la tipografía OCR-B de la MRZ (DoubangoTelecom, licencia BSD-3)
 curl -L -o mrz.traineddata \

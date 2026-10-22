@@ -5,7 +5,7 @@
     "ghcr.io/devcontainers/features/python:1": { "version": "3.12" }
   },
   "postCreateCommand": "bash .devcontainer/instalar.sh",
-  "postAttachCommand": { "servidor": "python scripts/servidor_demo.py" },
+  "postAttachCommand": { "servidor": "cd maqueta && python scripts/servidor_demo.py" },
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": { "label": "Prevalida", "onAutoForward": "openBrowser" }
