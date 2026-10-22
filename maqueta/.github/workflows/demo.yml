@@ -1,0 +1,55 @@
+name: Demostración de la maqueta
+
+# Corre las pruebas automatizadas y la demostración con dos expedientes ficticios.
+# El resultado queda en el resumen de la ejecución y en el artefacto "demo-prevalida".
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  demo:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar Tesseract y tipografías
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends tesseract-ocr fonts-dejavu-core fonts-ocr-b
+          tesseract --version | head -1
+
+      - name: Recuperar modelos de Tesseract
+        uses: actions/cache@v4
+        with:
+          path: tessdata
+          key: tessdata-fast-mrz-v1
+
+      - name: Descargar modelos de Tesseract
+        run: bash scripts/descargar_modelos.sh
+
+      - name: Instalar dependencias
+        run: python -m pip install -r requirements.txt
+
+      - name: Pruebas automatizadas
+        run: python -m pytest -q tests
+
+      - name: Demostración con dos expedientes ficticios
+        run: python scripts/demo_expediente.py
+
+      - name: Guardar el reporte
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-prevalida
+          path: |
+            demo/reporte.html
+            demo/resultado.json
+            demo/documentos/

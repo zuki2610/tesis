@@ -1,0 +1,37 @@
+# Reglas de prevalidación configurables (RF-08).
+# Se modifican sin cambiar el código. Ninguna regla rechaza: solo ALERTA o REVISION_HUMANA.
+
+plazos_dias:
+  publico: 60        # documentos públicos chilenos
+  privado: 30        # documentos privados
+  antecedentes: 60   # certificado de antecedentes extranjero (documento público)
+
+umbrales:
+  # Confianza mínima del OCR para aceptar un campo sin revisión humana.
+  # Valor por defecto; puede reemplazarse por umbrales calibrados por idioma.
+  defecto: 0.80
+
+idiomas_soportados: [es, fr, en]
+
+# Forma de autenticación exigible a documentos públicos extranjeros, según si el país
+# emisor es parte de la Convención de La Haya de 1961 (tabla de estado de la HCCH).
+autenticacion_por_pais:
+  VEN: apostilla     # parte desde 1999
+  PER: apostilla     # parte desde 2010
+  COL: apostilla     # parte desde 2001
+  BOL: apostilla     # parte desde 2018
+  HTI: legalizacion  # no es parte: legalización consular
+  # Países no listados: se acepta cualquiera de las dos.
+
+# Excepciones por país. Ejemplo histórico: la Res. Ex. 2.087/2019 y su prórroga
+# permitieron usar pasaportes venezolanos vencidos en trámites migratorios hasta 2023.
+# No hay excepción vigente, por lo que queda desactivada:
+excepciones_pais: {}
+#  VEN:
+#    pasaporte_vencido: revision_humana
+
+documentos:
+  antecedentes_extranjero:
+    # Decreto 177: certificado del país de origen o de cada país de residencia
+    # en los últimos cinco años.
+    por_cada_pais_residencia_anios: 5

@@ -1,0 +1,6563 @@
+{
+ "fecha_presentacion": "2026-10-01",
+ "semilla": 20261019,
+ "documentos": [
+  {
+   "id": "pas_VEN_000",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_VEN_000.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Muñoz Jean-Baptiste",
+    "numero_pasaporte_declarado": "7V5476336"
+   },
+   "verdad": {
+    "numero": "7V5476336",
+    "apellidos": "Muñoz Jean-Baptiste",
+    "nombres": "Yohana",
+    "vencimiento": "2025-10-24",
+    "mrz1": "P<VENMUNOZ<JEAN<BAPTISTE<<YOHANA<<<<<<<<<<<<",
+    "mrz2": "7V54763368VEN6106052M2510240<<<<<<<<<<<<<<<8"
+   },
+   "esperados": [
+    "VENCIDO_CON_EXCEPCION"
+   ]
+  },
+  {
+   "id": "ant_VEN_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_VEN_000.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Ibáñez Pérez"
+   },
+   "verdad": {
+    "nombre": "Yohana Rodríguez Rodríguez",
+    "documento": "75370741",
+    "fecha_emision": "2026-09-12",
+    "folio": "5732784"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_001",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_VEN_001.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Muñoz Castañeda",
+    "numero_pasaporte_declarado": "C11000056"
+   },
+   "verdad": {
+    "numero": "C11000056",
+    "apellidos": "Muñoz Castañeda",
+    "nombres": "Jean Pierre",
+    "vencimiento": "2030-04-14",
+    "mrz1": "P<VENMUNOZ<CASTANEDA<<JEAN<PIERRE<<<<<<<<<<<",
+    "mrz2": "C110000569VEN8206163M3004146<<<<<<<<<<<<<<<0"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_VEN_001.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Hernández Pierre"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Gutiérrez Gutiérrez",
+    "documento": "6521664",
+    "fecha_emision": "2026-01-14",
+    "folio": "4133153"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_002",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_VEN_002.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Muñoz Ibáñez",
+    "numero_pasaporte_declarado": "B23760408"
+   },
+   "verdad": {
+    "numero": "B23760408",
+    "apellidos": "Muñoz Ibáñez",
+    "nombres": "Daniela",
+    "vencimiento": "2028-01-09",
+    "mrz1": "P<VENMUNOZ<IBANEZ<<DANIELA<<<<<<<<<<<<<<<<<<",
+    "mrz2": "B237604089VEN9710094M2801094<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_VEN_002.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Mamani Hernández"
+   },
+   "verdad": {
+    "nombre": "Yohana Mamani Hernández",
+    "documento": "82861037",
+    "fecha_emision": "2026-08-07",
+    "folio": "6479091"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_003",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_VEN_003.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Ibáñez González",
+    "numero_pasaporte_declarado": "X53503344"
+   },
+   "verdad": {
+    "numero": "X53503344",
+    "apellidos": "Ibáñez González",
+    "nombres": "Luis Alberto",
+    "vencimiento": "2032-05-25",
+    "mrz1": "P<VENIBANEZ<GONZALEZ<<LUIS<ALBERTO<<<<<<<<<<",
+    "mrz2": "X535033444VEN9302143F3205253383942200<<<<<98"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_VEN_003.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Rodríguez Pérez"
+   },
+   "verdad": {
+    "nombre": "Rose Marie Rodríguez Pérez",
+    "documento": "34806639",
+    "fecha_emision": "2026-09-21",
+    "folio": "3805776"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_004",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_VEN_004.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Ibáñez Saint-Fleur",
+    "numero_pasaporte_declarado": "MN3848399"
+   },
+   "verdad": {
+    "numero": "MN3848399",
+    "apellidos": "Ibáñez Saint-Fleur",
+    "nombres": "Rose Marie",
+    "vencimiento": "2025-08-13",
+    "mrz1": "P<VENIBANEZ<SAINT<FLEUR<<ROSE<MARIE<<<<<<<<<",
+    "mrz2": "MN38483999VEN8909279F2508131291447394<<<<<14"
+   },
+   "esperados": [
+    "VENCIDO_CON_EXCEPCION"
+   ]
+  },
+  {
+   "id": "ant_VEN_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_VEN_004.png",
+   "ctx": {
+    "nombre_declarado": "María José Muñoz Louis"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Hernández González",
+    "documento": "65517499",
+    "fecha_emision": "2026-07-04",
+    "folio": "2643539"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_005",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_VEN_005.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Saint-Fleur Louis",
+    "numero_pasaporte_declarado": "Y55542190"
+   },
+   "verdad": {
+    "numero": "Y55542190",
+    "apellidos": "Saint-Fleur Louis",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2032-06-16",
+    "mrz1": "P<VENSAINT<FLEUR<LOUIS<<ANDRES<FELIPE<<<<<<<",
+    "mrz2": "Y555421901VEN7008072F3206168<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_VEN_005.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Muñoz Muñoz"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Muñoz Muñoz",
+    "documento": "45902906",
+    "fecha_emision": "2026-02-19",
+    "folio": "4261774"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_VEN_006",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_VEN_006.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Núñez Pierre",
+    "numero_pasaporte_declarado": "D29199824"
+   },
+   "verdad": {
+    "numero": "D29199824",
+    "apellidos": "Núñez Pierre",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2030-06-30",
+    "mrz1": "P<VENNUNEZ<PIERRE<<JUAN<CARLOS<<<<<<<<<<<<<<",
+    "mrz2": "D291998245VEN9602223F3006302<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_VEN_006.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Valdés Hernández"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Valdés Hernández",
+    "documento": "58460173",
+    "fecha_emision": "2026-08-28",
+    "folio": "3580588"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_007",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_VEN_007.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Mamani Martínez",
+    "numero_pasaporte_declarado": "079560430"
+   },
+   "verdad": {
+    "numero": "079560430",
+    "apellidos": "Mamani Martínez",
+    "nombres": "Wilson",
+    "vencimiento": "2034-08-12",
+    "mrz1": "P<VENMAMANI<MARTINEZ<<WILSON<<<<<<<<<<<<<<<<",
+    "mrz2": "0795604300VEN7910122M3408124<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_VEN_007.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Jean-Baptiste González"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Jean-Baptiste González",
+    "documento": "71004394",
+    "fecha_emision": "2026-09-08",
+    "folio": "5397192"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_008",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_VEN_008.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Castañeda Valdés",
+    "numero_pasaporte_declarado": "4K4370570"
+   },
+   "verdad": {
+    "numero": "4K4370570",
+    "apellidos": "Valdés Ibáñez",
+    "nombres": "Ñuflo",
+    "vencimiento": "2030-10-16",
+    "mrz1": "P<VENVALDES<IBANEZ<<NUFLO<<<<<<<<<<<<<<<<<<<",
+    "mrz2": "4K43705700VEN0212148F3010161<<<<<<<<<<<<<<<0"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_VEN_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_VEN_008.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Martínez Muñoz"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Martínez Muñoz",
+    "documento": "59644973",
+    "fecha_emision": "2026-08-12",
+    "folio": "1754405"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_009",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_VEN_009.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Valdés Pérez",
+    "numero_pasaporte_declarado": "2V1540870"
+   },
+   "verdad": {
+    "numero": "2V1540870",
+    "apellidos": "Valdés Pérez",
+    "nombres": "Rose Marie",
+    "vencimiento": "2033-06-06",
+    "mrz1": "P<VENVALDES<PEREZ<<ROSE<MARIE<<<<<<<<<<<<<<<",
+    "mrz2": "2V15408702VEN9510261F3306068<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_VEN_009.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Pérez Pérez"
+   },
+   "verdad": {
+    "nombre": "Kervens Pérez Pérez",
+    "documento": "17235025",
+    "fecha_emision": "2026-09-11",
+    "folio": "610053"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_010",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_VEN_010.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Martínez Castañeda",
+    "numero_pasaporte_declarado": "J23066931"
+   },
+   "verdad": {
+    "numero": "J23066931",
+    "apellidos": "Martínez Castañeda",
+    "nombres": "Fabiola",
+    "vencimiento": "2033-12-18",
+    "mrz1": "P<VENMARTINEZ<CASTANEDA<<FABIOLA<<<<<<<<<<<<",
+    "mrz2": "J230669319VEN0301235F3312186284503491<<<<<64"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_VEN_010.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Mamani Valdés"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Mamani Valdés",
+    "documento": "84862288",
+    "fecha_emision": "2026-08-29",
+    "folio": "9184996"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_011",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_VEN_011.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Jean-Baptiste Jean-Baptiste",
+    "numero_pasaporte_declarado": "WT2928649"
+   },
+   "verdad": {
+    "numero": "WT2928649",
+    "apellidos": "Saint-Fleur Valdés",
+    "nombres": "Rose Marie",
+    "vencimiento": "2024-06-30",
+    "mrz1": "P<VENSAINT<FLEUR<VALDES<<ROSE<MARIE<<<<<<<<<",
+    "mrz2": "WT29286493VEN7311039F2406307688709594<<<<<86"
+   },
+   "esperados": [
+    "VENCIDO_CON_EXCEPCION",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_VEN_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_VEN_011.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Núñez Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Wilson Muñoz Muñoz",
+    "documento": "86757973",
+    "fecha_emision": "2026-09-04",
+    "folio": "7797604"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_012",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_VEN_012.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Quispe Núñez",
+    "numero_pasaporte_declarado": "7W3465256"
+   },
+   "verdad": {
+    "numero": "7W3465256",
+    "apellidos": "Quispe Núñez",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2025-12-28",
+    "mrz1": "P<VENQUISPE<NUNEZ<<JUAN<CARLOS<<<<<<<<<<<<<<",
+    "mrz2": "7W34652564VEN7206236M2512288161939908<<<<<88"
+   },
+   "esperados": [
+    "VENCIDO_CON_EXCEPCION"
+   ]
+  },
+  {
+   "id": "ant_VEN_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_VEN_012.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Joseph Louis"
+   },
+   "verdad": {
+    "nombre": "Rose Marie Joseph Louis",
+    "documento": "25516204",
+    "fecha_emision": "2026-09-05",
+    "folio": "7077833"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_013",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_VEN_013.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Muñoz Joseph",
+    "numero_pasaporte_declarado": "DD1855013"
+   },
+   "verdad": {
+    "numero": "DD1855013",
+    "apellidos": "Louis Valdés",
+    "nombres": "Fabiola",
+    "vencimiento": "2024-08-12",
+    "mrz1": "P<VENLOUIS<VALDES<<FABIOLA<<<<<<<<<<<<<<<<<<",
+    "mrz2": "DD18550133VEN6404105F2408127612898725<<<<<88"
+   },
+   "esperados": [
+    "VENCIDO_CON_EXCEPCION",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_VEN_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_VEN_013.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Saint-Fleur Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Wilson Saint-Fleur Rodríguez",
+    "documento": "11439207",
+    "fecha_emision": "2026-09-19",
+    "folio": "7230696"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_014",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_VEN_014.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Jean-Baptiste Pierre",
+    "numero_pasaporte_declarado": "239435424"
+   },
+   "verdad": {
+    "numero": "239435424",
+    "apellidos": "Jean-Baptiste Pierre",
+    "nombres": "Kervens",
+    "vencimiento": "2029-05-22",
+    "mrz1": "P<VENJEAN<BAPTISTE<PIERRE<<KERVENS<<<<<<<<<<",
+    "mrz2": "2394354242VEN6905130M2905224593487910<<<<<04"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_VEN_014.png",
+   "ctx": {
+    "nombre_declarado": "María José Gutiérrez Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "María José Gutiérrez Saint-Fleur",
+    "documento": "72034553",
+    "fecha_emision": "2026-09-11",
+    "folio": "8101604"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_VEN_015",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_VEN_015.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Quispe Valdés",
+    "numero_pasaporte_declarado": "6Z2876206"
+   },
+   "verdad": {
+    "numero": "6Z2876206",
+    "apellidos": "Quispe Valdés",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2027-08-08",
+    "mrz1": "P<VENQUISPE<VALDES<<ANDRES<FELIPE<<<<<<<<<<<",
+    "mrz2": "6Z28762062VEN9704264F2708089876966410<<<<<12"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_VEN_015.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Quispe Louis"
+   },
+   "verdad": {
+    "nombre": "Yohana Quispe Louis",
+    "documento": "4800851",
+    "fecha_emision": "2026-09-16",
+    "folio": "1888409"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_016",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_VEN_016.png",
+   "ctx": {
+    "nombre_declarado": "María José Rodríguez González",
+    "numero_pasaporte_declarado": "9A8595741"
+   },
+   "verdad": {
+    "numero": "9A8595741",
+    "apellidos": "Rodríguez González",
+    "nombres": "María José",
+    "vencimiento": "2027-10-20",
+    "mrz1": "P<VENRODRIGUEZ<GONZALEZ<<MARIA<JOSE<<<<<<<<<",
+    "mrz2": "9A85957410VEN7512261F2710202<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_016",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_VEN_016.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Castañeda Muñoz"
+   },
+   "verdad": {
+    "nombre": "María José Hernández Jean-Baptiste",
+    "documento": "97642541",
+    "fecha_emision": "2026-08-14",
+    "folio": "2945516"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_VEN_017",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_VEN_017.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Valdés Quispe",
+    "numero_pasaporte_declarado": "HH5298579"
+   },
+   "verdad": {
+    "numero": "HH5298579",
+    "apellidos": "Valdés Quispe",
+    "nombres": "Kervens",
+    "vencimiento": "2025-04-01",
+    "mrz1": "P<VENVALDES<QUISPE<<KERVENS<<<<<<<<<<<<<<<<<",
+    "mrz2": "HH52985799VEN8707095M2504018252963386<<<<<66"
+   },
+   "esperados": [
+    "VENCIDO_CON_EXCEPCION"
+   ]
+  },
+  {
+   "id": "ant_VEN_017",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_VEN_017.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Muñoz Quispe"
+   },
+   "verdad": {
+    "nombre": "Kervens Muñoz Quispe",
+    "documento": "39394759",
+    "fecha_emision": "2026-09-15",
+    "folio": "3806306"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_018",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_VEN_018.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Hernández Núñez",
+    "numero_pasaporte_declarado": "XR7122736"
+   },
+   "verdad": {
+    "numero": "XR7122736",
+    "apellidos": "Hernández Núñez",
+    "nombres": "Kervens",
+    "vencimiento": "2031-10-23",
+    "mrz1": "P<VENHERNANDEZ<NUNEZ<<KERVENS<<<<<<<<<<<<<<<",
+    "mrz2": "XR71227368VEN7706275M3110234615336595<<<<<32"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_018",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_VEN_018.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Gutiérrez Ibáñez"
+   },
+   "verdad": {
+    "nombre": "Rose Marie Gutiérrez Ibáñez",
+    "documento": "46825061",
+    "fecha_emision": "2026-08-19",
+    "folio": "9993399"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_019",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_VEN_019.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Gutiérrez Saint-Fleur",
+    "numero_pasaporte_declarado": "VR2690353"
+   },
+   "verdad": {
+    "numero": "VR2690353",
+    "apellidos": "Gutiérrez Saint-Fleur",
+    "nombres": "Wilson",
+    "vencimiento": "2029-12-14",
+    "mrz1": "P<VENGUTIERREZ<SAINT<FLEUR<<WILSON<<<<<<<<<<",
+    "mrz2": "VR26903538VEN7603097F2912143<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_019",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_VEN_019.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Pierre Hernández"
+   },
+   "verdad": {
+    "nombre": "Wilson Pierre Hernández",
+    "documento": "41455317",
+    "fecha_emision": "2026-03-21",
+    "folio": "4399687"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_VEN_020",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_VEN_020.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Gutiérrez Rodríguez",
+    "numero_pasaporte_declarado": "S32266977"
+   },
+   "verdad": {
+    "numero": "S32266977",
+    "apellidos": "Gutiérrez Rodríguez",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2026-06-14",
+    "mrz1": "P<VENGUTIERREZ<RODRIGUEZ<<CARMEN<ROSA<<<<<<<",
+    "mrz2": "S322669776VEN7007260M2606141<<<<<<<<<<<<<<<4"
+   },
+   "esperados": [
+    "VENCIDO_CON_EXCEPCION"
+   ]
+  },
+  {
+   "id": "ant_VEN_020",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_VEN_020.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Louis Martínez"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Louis Martínez",
+    "documento": "91352146",
+    "fecha_emision": "2026-08-07",
+    "folio": "8046613"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_021",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_VEN_021.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Louis Muñoz",
+    "numero_pasaporte_declarado": "198423685"
+   },
+   "verdad": {
+    "numero": "198423685",
+    "apellidos": "Louis Muñoz",
+    "nombres": "Luis Alberto",
+    "vencimiento": "2028-10-22",
+    "mrz1": "P<VENLOUIS<MUNOZ<<LUIS<ALBERTO<<<<<<<<<<<<<<",
+    "mrz2": "1984236850VEN9802137F2810227529500947<<<<<76"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_021",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_VEN_021.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Quispe Pierre"
+   },
+   "verdad": {
+    "nombre": "Fabiola Quispe Pierre",
+    "documento": "79546967",
+    "fecha_emision": "2026-08-07",
+    "folio": "2701296"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_VEN_022",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_VEN_022.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Jean-Baptiste Núñez",
+    "numero_pasaporte_declarado": "T96920312"
+   },
+   "verdad": {
+    "numero": "T96920312",
+    "apellidos": "Jean-Baptiste Núñez",
+    "nombres": "Guerline",
+    "vencimiento": "2028-08-20",
+    "mrz1": "P<VENJEAN<BAPTISTE<NUNEZ<<GUERLINE<<<<<<<<<<",
+    "mrz2": "T969203121VEN6001098M2808200391152682<<<<<18"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_VEN_022",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_VEN_022.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Pérez Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Pérez Jean-Baptiste",
+    "documento": "95614502",
+    "fecha_emision": "2026-08-18",
+    "folio": "1988281"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_VEN_023",
+   "tipo": "pasaporte",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_VEN_023.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Rodríguez Muñoz",
+    "numero_pasaporte_declarado": "ND6458128"
+   },
+   "verdad": {
+    "numero": "ND6458128",
+    "apellidos": "Núñez Pierre",
+    "nombres": "José Ángel",
+    "vencimiento": "2032-01-23",
+    "mrz1": "P<VENNUNEZ<PIERRE<<JOSE<ANGEL<<<<<<<<<<<<<<<",
+    "mrz2": "ND64581288VEN6112251M3201233844990777<<<<<98"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_VEN_023",
+   "tipo": "antecedentes_extranjero",
+   "pais": "VEN",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_VEN_023.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Saint-Fleur Pierre"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Saint-Fleur Pierre",
+    "documento": "48675635",
+    "fecha_emision": "2026-07-13",
+    "folio": "7637477"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_PER_000",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_PER_000.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Rodríguez Gutiérrez",
+    "numero_pasaporte_declarado": "AF2114034"
+   },
+   "verdad": {
+    "numero": "AF2114034",
+    "apellidos": "Rodríguez Gutiérrez",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2027-07-28",
+    "mrz1": "P<PERRODRIGUEZ<GUTIERREZ<<ANDRES<FELIPE<<<<<",
+    "mrz2": "AF21140344PER8007201M2707288276949151<<<<<82"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_PER_000.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Ibáñez Pérez"
+   },
+   "verdad": {
+    "nombre": "José Ángel Ibáñez Pérez",
+    "documento": "98866878",
+    "fecha_emision": "2026-09-27",
+    "folio": "6304938"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_001",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_PER_001.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Hernández Jean-Baptiste",
+    "numero_pasaporte_declarado": "8B1243221"
+   },
+   "verdad": {
+    "numero": "8B1243221",
+    "apellidos": "Hernández Jean-Baptiste",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2025-07-12",
+    "mrz1": "P<PERHERNANDEZ<JEAN<BAPTISTE<<JUAN<CARLOS<<<",
+    "mrz2": "8B12432210PER8610175F2507123703338995<<<<<52"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_PER_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_PER_001.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Núñez Pérez"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Núñez Pérez",
+    "documento": "86283025",
+    "fecha_emision": "2026-09-14",
+    "folio": "8483626"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_002",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_PER_002.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Saint-Fleur Louis",
+    "numero_pasaporte_declarado": "5R9252107"
+   },
+   "verdad": {
+    "numero": "5R9252107",
+    "apellidos": "Saint-Fleur Louis",
+    "nombres": "Guerline",
+    "vencimiento": "2029-01-24",
+    "mrz1": "P<PERSAINT<FLEUR<LOUIS<<GUERLINE<<<<<<<<<<<<",
+    "mrz2": "5R92521070PER7112247F2901248<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_PER_002.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Núñez Martínez"
+   },
+   "verdad": {
+    "nombre": "Yohana Núñez Martínez",
+    "documento": "51693432",
+    "fecha_emision": "2026-08-10",
+    "folio": "1905499"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_003",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_PER_003.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Martínez Pierre",
+    "numero_pasaporte_declarado": "1P4913957"
+   },
+   "verdad": {
+    "numero": "1P4913957",
+    "apellidos": "Martínez Pierre",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2029-12-30",
+    "mrz1": "P<PERMARTINEZ<PIERRE<<ANDRES<FELIPE<<<<<<<<<",
+    "mrz2": "1P49139570PER0409201F2912305<<<<<<<<<<<<<<<2"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_PER_003.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Pérez Quispe"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Pérez Quispe",
+    "documento": "42718801",
+    "fecha_emision": "2026-05-29",
+    "folio": "2212978"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_PER_004",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_PER_004.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Quispe Valdés",
+    "numero_pasaporte_declarado": "F21856553"
+   },
+   "verdad": {
+    "numero": "F21856553",
+    "apellidos": "Quispe Valdés",
+    "nombres": "Guerline",
+    "vencimiento": "2030-05-30",
+    "mrz1": "P<PERQUISPE<VALDES<<GUERLINE<<<<<<<<<<<<<<<<",
+    "mrz2": "F218565532PER8712138F3005305448863403<<<<<62"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_PER_004.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Saint-Fleur Núñez"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Saint-Fleur Núñez",
+    "documento": "16203686",
+    "fecha_emision": "2026-08-18",
+    "folio": "9301883"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_005",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_PER_005.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Saint-Fleur Jean-Baptiste",
+    "numero_pasaporte_declarado": "NT1080209"
+   },
+   "verdad": {
+    "numero": "NT1080209",
+    "apellidos": "Saint-Fleur Jean-Baptiste",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2029-12-21",
+    "mrz1": "P<PERSAINT<FLEUR<JEAN<BAPTISTE<<JUAN<CARLOS<",
+    "mrz2": "NT10802096PER6302212F2912213221918284<<<<<74"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_PER_005.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Jean-Baptiste Joseph"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Jean-Baptiste Joseph",
+    "documento": "93683408",
+    "fecha_emision": "2026-09-17",
+    "folio": "5426165"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_006",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_PER_006.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Louis Hernández",
+    "numero_pasaporte_declarado": "NK2879273"
+   },
+   "verdad": {
+    "numero": "NK2879273",
+    "apellidos": "Louis Hernández",
+    "nombres": "Kervens",
+    "vencimiento": "2028-03-11",
+    "mrz1": "P<PERLOUIS<HERNANDEZ<<KERVENS<<<<<<<<<<<<<<<",
+    "mrz2": "NK28792737PER8508041M2803113247689210<<<<<54"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_PER_006.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Joseph Quispe"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Joseph Quispe",
+    "documento": "64833856",
+    "fecha_emision": "2026-08-13",
+    "folio": "4830873"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_PER_007",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_PER_007.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Saint-Fleur Ibáñez",
+    "numero_pasaporte_declarado": "2D3757066"
+   },
+   "verdad": {
+    "numero": "2D3757066",
+    "apellidos": "Saint-Fleur Ibáñez",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2030-06-22",
+    "mrz1": "P<PERSAINT<FLEUR<IBANEZ<<ANDRES<FELIPE<<<<<<",
+    "mrz2": "2D37570661PER9210169M3006221<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_PER_007.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie González González"
+   },
+   "verdad": {
+    "nombre": "Rose Marie González González",
+    "documento": "81023677",
+    "fecha_emision": "2026-08-20",
+    "folio": "8674447"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_008",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_PER_008.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Pierre Rodríguez",
+    "numero_pasaporte_declarado": "PF9265586"
+   },
+   "verdad": {
+    "numero": "PF9265586",
+    "apellidos": "Pierre Rodríguez",
+    "nombres": "Daniela",
+    "vencimiento": "2024-09-10",
+    "mrz1": "P<PERPIERRE<RODRIGUEZ<<DANIELA<<<<<<<<<<<<<<",
+    "mrz2": "PF92655861PER6703174M2409102998978059<<<<<40"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_PER_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_PER_008.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Valdés Gutiérrez"
+   },
+   "verdad": {
+    "nombre": "José Ángel Valdés Gutiérrez",
+    "documento": "91404046",
+    "fecha_emision": "2026-08-29",
+    "folio": "7629168"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_009",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_PER_009.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Jean-Baptiste Gutiérrez",
+    "numero_pasaporte_declarado": "BP6652036"
+   },
+   "verdad": {
+    "numero": "BP6652036",
+    "apellidos": "Jean-Baptiste Gutiérrez",
+    "nombres": "Rose Marie",
+    "vencimiento": "2029-05-01",
+    "mrz1": "P<PERJEAN<BAPTISTE<GUTIERREZ<<ROSE<MARIE<<<<",
+    "mrz2": "BP66520362PER7101087F2905017624339599<<<<<22"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_PER_009.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Louis Louis"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Rodríguez Mamani",
+    "documento": "27957345",
+    "fecha_emision": "2026-09-23",
+    "folio": "1021295"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_PER_010",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_PER_010.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto González Jean-Baptiste",
+    "numero_pasaporte_declarado": "GK9087902"
+   },
+   "verdad": {
+    "numero": "GK9087902",
+    "apellidos": "González Jean-Baptiste",
+    "nombres": "Luis Alberto",
+    "vencimiento": "2030-01-25",
+    "mrz1": "P<PERGONZALEZ<JEAN<BAPTISTE<<LUIS<ALBERTO<<<",
+    "mrz2": "GK90879027PER7412039F3001259651912577<<<<<92"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_PER_010.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Mamani Valdés"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Mamani Valdés",
+    "documento": "71089990",
+    "fecha_emision": "2026-08-28",
+    "folio": "1112067"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_011",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_PER_011.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Pérez Ibáñez",
+    "numero_pasaporte_declarado": "4Y8453476"
+   },
+   "verdad": {
+    "numero": "4Y8453476",
+    "apellidos": "Gutiérrez Quispe",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2034-06-18",
+    "mrz1": "P<PERGUTIERREZ<QUISPE<<CARMEN<ROSA<<<<<<<<<<",
+    "mrz2": "4Y84534769PER9501212F3406186<<<<<<<<<<<<<<<6"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_PER_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_PER_011.png",
+   "ctx": {
+    "nombre_declarado": "María José Mamani Hernández"
+   },
+   "verdad": {
+    "nombre": "María José Mamani Hernández",
+    "documento": "29304434",
+    "fecha_emision": "2026-09-17",
+    "folio": "3380132"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_012",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_PER_012.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Hernández González",
+    "numero_pasaporte_declarado": "6F8498539"
+   },
+   "verdad": {
+    "numero": "6F8498539",
+    "apellidos": "Hernández González",
+    "nombres": "Ñuflo",
+    "vencimiento": "2031-04-07",
+    "mrz1": "P<PERHERNANDEZ<GONZALEZ<<NUFLO<<<<<<<<<<<<<<",
+    "mrz2": "6F84985391PER9403202M3104079929099369<<<<<24"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_PER_012.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Pérez Mamani"
+   },
+   "verdad": {
+    "nombre": "Daniela Pérez Mamani",
+    "documento": "85868754",
+    "fecha_emision": "2026-09-23",
+    "folio": "2993641"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_013",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_PER_013.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Castañeda González",
+    "numero_pasaporte_declarado": "HN1179405"
+   },
+   "verdad": {
+    "numero": "HN1179405",
+    "apellidos": "Castañeda González",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2031-02-04",
+    "mrz1": "P<PERCASTANEDA<GONZALEZ<<ANDRES<FELIPE<<<<<<",
+    "mrz2": "HN11794059PER9410095F3102042566334788<<<<<42"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_PER_013.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Martínez Quispe"
+   },
+   "verdad": {
+    "nombre": "Guerline Martínez Quispe",
+    "documento": "11342778",
+    "fecha_emision": "2026-01-13",
+    "folio": "4502402"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_PER_014",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_PER_014.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Quispe Valdés",
+    "numero_pasaporte_declarado": "BW4717735"
+   },
+   "verdad": {
+    "numero": "BW4717735",
+    "apellidos": "Quispe Valdés",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2032-11-26",
+    "mrz1": "P<PERQUISPE<VALDES<<ANDRES<FELIPE<<<<<<<<<<<",
+    "mrz2": "BW47177359PER9402261F3211267<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_PER_014.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Hernández Castañeda"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Hernández Castañeda",
+    "documento": "3131231",
+    "fecha_emision": "2026-09-25",
+    "folio": "1723736"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_015",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_PER_015.png",
+   "ctx": {
+    "nombre_declarado": "Daniela González Muñoz",
+    "numero_pasaporte_declarado": "ZW1847201"
+   },
+   "verdad": {
+    "numero": "ZW1847201",
+    "apellidos": "González Muñoz",
+    "nombres": "Daniela",
+    "vencimiento": "2031-05-05",
+    "mrz1": "P<PERGONZALEZ<MUNOZ<<DANIELA<<<<<<<<<<<<<<<<",
+    "mrz2": "ZW18472012PER9904145M3105054307575541<<<<<76"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_PER_015.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Martínez Núñez"
+   },
+   "verdad": {
+    "nombre": "Fabiola Pierre Joseph",
+    "documento": "23302191",
+    "fecha_emision": "2026-08-11",
+    "folio": "7720424"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_PER_016",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_PER_016.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Rodríguez Mamani",
+    "numero_pasaporte_declarado": "2Y7764305"
+   },
+   "verdad": {
+    "numero": "2Y7764305",
+    "apellidos": "Rodríguez Mamani",
+    "nombres": "Wilson",
+    "vencimiento": "2024-07-13",
+    "mrz1": "P<PERRODRIGUEZ<MAMANI<<WILSON<<<<<<<<<<<<<<<",
+    "mrz2": "2Y77643050PER9205060F2407131<<<<<<<<<<<<<<<0"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_PER_016",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_PER_016.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Pierre Joseph"
+   },
+   "verdad": {
+    "nombre": "Kervens Pierre Joseph",
+    "documento": "53136652",
+    "fecha_emision": "2026-09-22",
+    "folio": "6885922"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_017",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_PER_017.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Pérez Mamani",
+    "numero_pasaporte_declarado": "CE8335966"
+   },
+   "verdad": {
+    "numero": "CE8335966",
+    "apellidos": "Pérez Mamani",
+    "nombres": "Wilson",
+    "vencimiento": "2028-10-02",
+    "mrz1": "P<PERPEREZ<MAMANI<<WILSON<<<<<<<<<<<<<<<<<<<",
+    "mrz2": "CE83359666PER8704027M2810021<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_017",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_PER_017.png",
+   "ctx": {
+    "nombre_declarado": "María José Núñez Gutiérrez"
+   },
+   "verdad": {
+    "nombre": "María José Núñez Gutiérrez",
+    "documento": "62614253",
+    "fecha_emision": "2026-09-15",
+    "folio": "8804366"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_018",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_PER_018.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Núñez Muñoz",
+    "numero_pasaporte_declarado": "BC1937571"
+   },
+   "verdad": {
+    "numero": "BC1937571",
+    "apellidos": "Núñez Muñoz",
+    "nombres": "Yohana",
+    "vencimiento": "2027-12-18",
+    "mrz1": "P<PERNUNEZ<MUNOZ<<YOHANA<<<<<<<<<<<<<<<<<<<<",
+    "mrz2": "BC19375710PER7007167M2712181435250643<<<<<80"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_018",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_PER_018.png",
+   "ctx": {
+    "nombre_declarado": "María José Jean-Baptiste González"
+   },
+   "verdad": {
+    "nombre": "María José Jean-Baptiste González",
+    "documento": "22746268",
+    "fecha_emision": "2026-07-16",
+    "folio": "836062"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_PER_019",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_PER_019.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Saint-Fleur Hernández",
+    "numero_pasaporte_declarado": "2M3489986"
+   },
+   "verdad": {
+    "numero": "2M3489986",
+    "apellidos": "Saint-Fleur Hernández",
+    "nombres": "José Ángel",
+    "vencimiento": "2024-07-12",
+    "mrz1": "P<PERSAINT<FLEUR<HERNANDEZ<<JOSE<ANGEL<<<<<<",
+    "mrz2": "2M34899867PER9305270F2407120<<<<<<<<<<<<<<<2"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_PER_019",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_PER_019.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Valdés Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Wilson Valdés Rodríguez",
+    "documento": "49729118",
+    "fecha_emision": "2026-09-13",
+    "folio": "8361555"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_020",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_PER_020.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Castañeda Pierre",
+    "numero_pasaporte_declarado": "VU7394488"
+   },
+   "verdad": {
+    "numero": "VU7394488",
+    "apellidos": "Castañeda Pierre",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2033-08-07",
+    "mrz1": "P<PERCASTANEDA<PIERRE<<CARMEN<ROSA<<<<<<<<<<",
+    "mrz2": "VU73944886PER9403017M3308073<<<<<<<<<<<<<<<2"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_020",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_PER_020.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Castañeda Pierre"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Castañeda Pierre",
+    "documento": "67441254",
+    "fecha_emision": "2026-08-18",
+    "folio": "1353563"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_021",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_PER_021.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Saint-Fleur Pérez",
+    "numero_pasaporte_declarado": "GW1526828"
+   },
+   "verdad": {
+    "numero": "GW1526828",
+    "apellidos": "Saint-Fleur Pérez",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2033-04-06",
+    "mrz1": "P<PERSAINT<FLEUR<PEREZ<<JUAN<CARLOS<<<<<<<<<",
+    "mrz2": "GW15268286PER9502253F3304064<<<<<<<<<<<<<<<2"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_021",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_PER_021.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Valdés Ibáñez"
+   },
+   "verdad": {
+    "nombre": "Fabiola Valdés Ibáñez",
+    "documento": "85932202",
+    "fecha_emision": "2026-09-15",
+    "folio": "1595086"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_022",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_PER_022.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Muñoz Mamani",
+    "numero_pasaporte_declarado": "EF2694467"
+   },
+   "verdad": {
+    "numero": "EF2694467",
+    "apellidos": "Muñoz Mamani",
+    "nombres": "Daniela",
+    "vencimiento": "2027-04-26",
+    "mrz1": "P<PERMUNOZ<MAMANI<<DANIELA<<<<<<<<<<<<<<<<<<",
+    "mrz2": "EF26944671PER9907238M2704265<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_022",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_PER_022.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Hernández Muñoz"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Hernández Muñoz",
+    "documento": "30336427",
+    "fecha_emision": "2026-08-30",
+    "folio": "152568"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_PER_023",
+   "tipo": "pasaporte",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_PER_023.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Muñoz Hernández",
+    "numero_pasaporte_declarado": "MA8163731"
+   },
+   "verdad": {
+    "numero": "MA8163731",
+    "apellidos": "Muñoz Hernández",
+    "nombres": "Yohana",
+    "vencimiento": "2028-04-29",
+    "mrz1": "P<PERMUNOZ<HERNANDEZ<<YOHANA<<<<<<<<<<<<<<<<",
+    "mrz2": "MA81637319PER7808168F2804291531715620<<<<<06"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_PER_023",
+   "tipo": "antecedentes_extranjero",
+   "pais": "PER",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_PER_023.png",
+   "ctx": {
+    "nombre_declarado": "María José Jean-Baptiste Pierre"
+   },
+   "verdad": {
+    "nombre": "María José Jean-Baptiste Pierre",
+    "documento": "16930876",
+    "fecha_emision": "2026-08-21",
+    "folio": "9856623"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_000",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_COL_000.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Ibáñez Muñoz",
+    "numero_pasaporte_declarado": "BX5998970"
+   },
+   "verdad": {
+    "numero": "BX5998970",
+    "apellidos": "Ibáñez Muñoz",
+    "nombres": "Luis Alberto",
+    "vencimiento": "2024-11-30",
+    "mrz1": "P<COLIBANEZ<MUNOZ<<LUIS<ALBERTO<<<<<<<<<<<<<",
+    "mrz2": "BX59989703COL8610212M2411303<<<<<<<<<<<<<<<4"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_COL_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_COL_000.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Pérez Gutiérrez"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Pérez Gutiérrez",
+    "documento": "70707813",
+    "fecha_emision": "2026-09-28",
+    "folio": "8475971"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_001",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_COL_001.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Castañeda Pérez",
+    "numero_pasaporte_declarado": "B83221790"
+   },
+   "verdad": {
+    "numero": "B83221790",
+    "apellidos": "Castañeda Pérez",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2031-07-23",
+    "mrz1": "P<COLCASTANEDA<PEREZ<<CARMEN<ROSA<<<<<<<<<<<",
+    "mrz2": "B832217901COL9710049M3107232<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_COL_001.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Gutiérrez Muñoz"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Gutiérrez Muñoz",
+    "documento": "28107248",
+    "fecha_emision": "2026-09-27",
+    "folio": "7136625"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_002",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_COL_002.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Hernández Quispe",
+    "numero_pasaporte_declarado": "S06696621"
+   },
+   "verdad": {
+    "numero": "S06696621",
+    "apellidos": "Hernández Quispe",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2034-09-12",
+    "mrz1": "P<COLHERNANDEZ<QUISPE<<JUAN<CARLOS<<<<<<<<<<",
+    "mrz2": "S066966216COL6102250F3409121<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_COL_002.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Gutiérrez González"
+   },
+   "verdad": {
+    "nombre": "Daniela Gutiérrez González",
+    "documento": "53410610",
+    "fecha_emision": "2026-08-10",
+    "folio": "7862141"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_003",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_COL_003.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Saint-Fleur Valdés",
+    "numero_pasaporte_declarado": "582058895"
+   },
+   "verdad": {
+    "numero": "582058895",
+    "apellidos": "Saint-Fleur Valdés",
+    "nombres": "Fabiola",
+    "vencimiento": "2026-03-03",
+    "mrz1": "P<COLSAINT<FLEUR<VALDES<<FABIOLA<<<<<<<<<<<<",
+    "mrz2": "5820588952COL9506077M2603036<<<<<<<<<<<<<<<8"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_COL_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_COL_003.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Quispe Valdés"
+   },
+   "verdad": {
+    "nombre": "Kervens Muñoz Gutiérrez",
+    "documento": "98263551",
+    "fecha_emision": "2026-09-07",
+    "folio": "6810860"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_COL_004",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_COL_004.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Pierre Castañeda",
+    "numero_pasaporte_declarado": "AH1883668"
+   },
+   "verdad": {
+    "numero": "AH1883668",
+    "apellidos": "Pierre Castañeda",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2026-04-28",
+    "mrz1": "P<COLPIERRE<CASTANEDA<<CARMEN<ROSA<<<<<<<<<<",
+    "mrz2": "AH18836683COL7301083M2604284<<<<<<<<<<<<<<<6"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_COL_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_COL_004.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Rodríguez Muñoz"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Rodríguez Muñoz",
+    "documento": "74823811",
+    "fecha_emision": "2026-09-27",
+    "folio": "1946387"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_005",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_COL_005.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola González Hernández",
+    "numero_pasaporte_declarado": "3K4651853"
+   },
+   "verdad": {
+    "numero": "3K4651853",
+    "apellidos": "González Hernández",
+    "nombres": "Fabiola",
+    "vencimiento": "2032-09-11",
+    "mrz1": "P<COLGONZALEZ<HERNANDEZ<<FABIOLA<<<<<<<<<<<<",
+    "mrz2": "3K46518537COL9803101F3209114500097453<<<<<54"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_COL_005.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Castañeda Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Castañeda Saint-Fleur",
+    "documento": "98476432",
+    "fecha_emision": "2026-09-07",
+    "folio": "1926194"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_006",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_COL_006.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Rodríguez Quispe",
+    "numero_pasaporte_declarado": "7Y9931449"
+   },
+   "verdad": {
+    "numero": "7Y9931449",
+    "apellidos": "Rodríguez Quispe",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2032-09-13",
+    "mrz1": "P<COLRODRIGUEZ<QUISPE<<ANDRES<FELIPE<<<<<<<<",
+    "mrz2": "7Y99314492COL8511216M3209136287437455<<<<<74"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_COL_006.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Louis Castañeda"
+   },
+   "verdad": {
+    "nombre": "Guerline Louis Castañeda",
+    "documento": "21193821",
+    "fecha_emision": "2026-08-30",
+    "folio": "471520"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_007",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_COL_007.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Louis Valdés",
+    "numero_pasaporte_declarado": "5K3843923"
+   },
+   "verdad": {
+    "numero": "5K3843923",
+    "apellidos": "Louis Valdés",
+    "nombres": "José Ángel",
+    "vencimiento": "2034-08-12",
+    "mrz1": "P<COLLOUIS<VALDES<<JOSE<ANGEL<<<<<<<<<<<<<<<",
+    "mrz2": "5K38439231COL6410120F3408124<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_COL_007.png",
+   "ctx": {
+    "nombre_declarado": "María José Valdés Louis"
+   },
+   "verdad": {
+    "nombre": "María José Valdés Louis",
+    "documento": "12267471",
+    "fecha_emision": "2026-08-10",
+    "folio": "834159"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_008",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_COL_008.png",
+   "ctx": {
+    "nombre_declarado": "María José Rodríguez Castañeda",
+    "numero_pasaporte_declarado": "ZG7806024"
+   },
+   "verdad": {
+    "numero": "ZG7806024",
+    "apellidos": "Rodríguez Castañeda",
+    "nombres": "María José",
+    "vencimiento": "2029-12-16",
+    "mrz1": "P<COLRODRIGUEZ<CASTANEDA<<MARIA<JOSE<<<<<<<<",
+    "mrz2": "ZG78060242COL8703086F2912165257783484<<<<<86"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_COL_008.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Pierre Louis"
+   },
+   "verdad": {
+    "nombre": "Fabiola Pierre Louis",
+    "documento": "79855729",
+    "fecha_emision": "2026-08-31",
+    "folio": "4925894"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_009",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_COL_009.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Pierre Martínez",
+    "numero_pasaporte_declarado": "MC2792712"
+   },
+   "verdad": {
+    "numero": "MC2792712",
+    "apellidos": "Pierre Martínez",
+    "nombres": "Rose Marie",
+    "vencimiento": "2030-04-25",
+    "mrz1": "P<COLPIERRE<MARTINEZ<<ROSE<MARIE<<<<<<<<<<<<",
+    "mrz2": "MC27927124COL7706194M3004250<<<<<<<<<<<<<<<0"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_COL_009.png",
+   "ctx": {
+    "nombre_declarado": "María José Hernández Louis"
+   },
+   "verdad": {
+    "nombre": "María José Hernández Louis",
+    "documento": "4599427",
+    "fecha_emision": "2026-05-31",
+    "folio": "5907956"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_COL_010",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_COL_010.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Muñoz Jean-Baptiste",
+    "numero_pasaporte_declarado": "7X6302902"
+   },
+   "verdad": {
+    "numero": "7X6302902",
+    "apellidos": "Muñoz Jean-Baptiste",
+    "nombres": "Wilson",
+    "vencimiento": "2033-06-30",
+    "mrz1": "P<COLMUNOZ<JEAN<BAPTISTE<<WILSON<<<<<<<<<<<<",
+    "mrz2": "7X63029022COL9809088M3306301<<<<<<<<<<<<<<<0"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_COL_010.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Mamani Valdés"
+   },
+   "verdad": {
+    "nombre": "Kervens Mamani Valdés",
+    "documento": "71338247",
+    "fecha_emision": "2026-09-26",
+    "folio": "6165554"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_011",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_COL_011.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Ibáñez Pierre",
+    "numero_pasaporte_declarado": "7M4585547"
+   },
+   "verdad": {
+    "numero": "7M4585547",
+    "apellidos": "Ibáñez Pierre",
+    "nombres": "Kervens",
+    "vencimiento": "2034-05-28",
+    "mrz1": "P<COLIBANEZ<PIERRE<<KERVENS<<<<<<<<<<<<<<<<<",
+    "mrz2": "7M45855477COL0011259F3405282340633313<<<<<44"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_COL_011.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Castañeda Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Castañeda Jean-Baptiste",
+    "documento": "33520322",
+    "fecha_emision": "2026-09-08",
+    "folio": "4627650"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_012",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_COL_012.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Joseph González",
+    "numero_pasaporte_declarado": "W34201688"
+   },
+   "verdad": {
+    "numero": "W34201688",
+    "apellidos": "Joseph González",
+    "nombres": "José Ángel",
+    "vencimiento": "2031-12-11",
+    "mrz1": "P<COLJOSEPH<GONZALEZ<<JOSE<ANGEL<<<<<<<<<<<<",
+    "mrz2": "W342016886COL8107101F3112113<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_COL_012.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Rodríguez Núñez"
+   },
+   "verdad": {
+    "nombre": "Guerline Gutiérrez Martínez",
+    "documento": "93527141",
+    "fecha_emision": "2026-03-01",
+    "folio": "1849453"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO",
+    "SIN_APOSTILLA",
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_COL_013",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_COL_013.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Pierre Gutiérrez",
+    "numero_pasaporte_declarado": "VV7064219"
+   },
+   "verdad": {
+    "numero": "VV7064219",
+    "apellidos": "Pierre Gutiérrez",
+    "nombres": "Fabiola",
+    "vencimiento": "2028-11-30",
+    "mrz1": "P<COLPIERRE<GUTIERREZ<<FABIOLA<<<<<<<<<<<<<<",
+    "mrz2": "VV70642195COL8805153M2811305648088582<<<<<50"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_COL_013.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Quispe Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Rose Marie Quispe Saint-Fleur",
+    "documento": "95933864",
+    "fecha_emision": "2026-09-03",
+    "folio": "951256"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_014",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_COL_014.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Quispe Valdés",
+    "numero_pasaporte_declarado": "ER9418597"
+   },
+   "verdad": {
+    "numero": "ER9418597",
+    "apellidos": "Quispe Valdés",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2032-09-16",
+    "mrz1": "P<COLQUISPE<VALDES<<CARMEN<ROSA<<<<<<<<<<<<<",
+    "mrz2": "ER94185976COL7203268F3209169545189293<<<<<60"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_COL_014.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Pérez Núñez"
+   },
+   "verdad": {
+    "nombre": "Kervens Pérez Núñez",
+    "documento": "43127426",
+    "fecha_emision": "2026-09-12",
+    "folio": "687262"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_015",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_COL_015.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Jean-Baptiste Jean-Baptiste",
+    "numero_pasaporte_declarado": "XS6635801"
+   },
+   "verdad": {
+    "numero": "XS6635801",
+    "apellidos": "Jean-Baptiste Jean-Baptiste",
+    "nombres": "Yohana",
+    "vencimiento": "2031-07-16",
+    "mrz1": "P<COLJEAN<BAPTISTE<JEAN<BAPTISTE<<YOHANA<<<<",
+    "mrz2": "XS66358014COL7510223F3107162<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_COL_015.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Pérez Castañeda"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Pérez Castañeda",
+    "documento": "88043122",
+    "fecha_emision": "2026-08-31",
+    "folio": "6196103"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_COL_016",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_COL_016.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Muñoz Castañeda",
+    "numero_pasaporte_declarado": "2F2260433"
+   },
+   "verdad": {
+    "numero": "2F2260433",
+    "apellidos": "Muñoz Castañeda",
+    "nombres": "Jean Pierre",
+    "vencimiento": "2028-01-11",
+    "mrz1": "P<COLMUNOZ<CASTANEDA<<JEAN<PIERRE<<<<<<<<<<<",
+    "mrz2": "2F22604333COL7607202M2801119845981143<<<<<34"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_016",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_COL_016.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Rodríguez Pierre"
+   },
+   "verdad": {
+    "nombre": "Guerline Rodríguez Pierre",
+    "documento": "73900842",
+    "fecha_emision": "2026-08-11",
+    "folio": "4528030"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_017",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_COL_017.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Louis Louis",
+    "numero_pasaporte_declarado": "LM7938213"
+   },
+   "verdad": {
+    "numero": "LM7938213",
+    "apellidos": "Louis Mamani",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2034-01-17",
+    "mrz1": "P<COLLOUIS<MAMANI<<CARMEN<ROSA<<<<<<<<<<<<<<",
+    "mrz2": "LM79382130COL6202105M3401170596190085<<<<<14"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_COL_017",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_COL_017.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Gutiérrez Louis"
+   },
+   "verdad": {
+    "nombre": "Fabiola Gutiérrez Louis",
+    "documento": "92613289",
+    "fecha_emision": "2025-12-21",
+    "folio": "4478093"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_COL_018",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_COL_018.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Muñoz Saint-Fleur",
+    "numero_pasaporte_declarado": "N33597278"
+   },
+   "verdad": {
+    "numero": "N33597278",
+    "apellidos": "Muñoz Saint-Fleur",
+    "nombres": "Daniela",
+    "vencimiento": "2027-08-27",
+    "mrz1": "P<COLMUNOZ<SAINT<FLEUR<<DANIELA<<<<<<<<<<<<<",
+    "mrz2": "N335972785COL9404070M2708274367248526<<<<<74"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_018",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_COL_018.png",
+   "ctx": {
+    "nombre_declarado": "María José Pérez Rodríguez"
+   },
+   "verdad": {
+    "nombre": "María José Pérez Rodríguez",
+    "documento": "57345638",
+    "fecha_emision": "2026-06-05",
+    "folio": "7130255"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_COL_019",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_COL_019.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Jean-Baptiste Pérez",
+    "numero_pasaporte_declarado": "1W7229635"
+   },
+   "verdad": {
+    "numero": "1W7229635",
+    "apellidos": "Jean-Baptiste Pérez",
+    "nombres": "Kervens",
+    "vencimiento": "2032-10-19",
+    "mrz1": "P<COLJEAN<BAPTISTE<PEREZ<<KERVENS<<<<<<<<<<<",
+    "mrz2": "1W72296355COL9101047F3210190<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_019",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_COL_019.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Muñoz Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Rose Marie Muñoz Saint-Fleur",
+    "documento": "35885887",
+    "fecha_emision": "2026-04-06",
+    "folio": "8048060"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_COL_020",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_COL_020.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Hernández Rodríguez",
+    "numero_pasaporte_declarado": "LP1100456"
+   },
+   "verdad": {
+    "numero": "LP1100456",
+    "apellidos": "Quispe Mamani",
+    "nombres": "Wilson",
+    "vencimiento": "2030-09-22",
+    "mrz1": "P<COLQUISPE<MAMANI<<WILSON<<<<<<<<<<<<<<<<<<",
+    "mrz2": "LP11004569COL0103026M3009222635069179<<<<<08"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_COL_020",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_COL_020.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Saint-Fleur Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Kervens Saint-Fleur Jean-Baptiste",
+    "documento": "50459842",
+    "fecha_emision": "2026-08-22",
+    "folio": "8370748"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_COL_021",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_COL_021.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel González Ibáñez",
+    "numero_pasaporte_declarado": "KJ6575423"
+   },
+   "verdad": {
+    "numero": "KJ6575423",
+    "apellidos": "González Ibáñez",
+    "nombres": "José Ángel",
+    "vencimiento": "2033-10-15",
+    "mrz1": "P<COLGONZALEZ<IBANEZ<<JOSE<ANGEL<<<<<<<<<<<<",
+    "mrz2": "KJ65754231COL6003221F3310159<<<<<<<<<<<<<<<2"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_021",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_COL_021.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Jean-Baptiste Núñez"
+   },
+   "verdad": {
+    "nombre": "Kervens Jean-Baptiste Núñez",
+    "documento": "39069500",
+    "fecha_emision": "2025-12-16",
+    "folio": "1002394"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_COL_022",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_COL_022.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Gutiérrez Rodríguez",
+    "numero_pasaporte_declarado": "5B2062277"
+   },
+   "verdad": {
+    "numero": "5B2062277",
+    "apellidos": "Valdés Pierre",
+    "nombres": "Wilson",
+    "vencimiento": "2032-08-06",
+    "mrz1": "P<COLVALDES<PIERRE<<WILSON<<<<<<<<<<<<<<<<<<",
+    "mrz2": "5B20622772COL0101217F3208069550729770<<<<<40"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_COL_022",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_COL_022.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Saint-Fleur Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Saint-Fleur Saint-Fleur",
+    "documento": "4118753",
+    "fecha_emision": "2026-08-26",
+    "folio": "1545202"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_COL_023",
+   "tipo": "pasaporte",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_COL_023.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Jean-Baptiste Pierre",
+    "numero_pasaporte_declarado": "SE8523171"
+   },
+   "verdad": {
+    "numero": "SE8523171",
+    "apellidos": "Jean-Baptiste Pierre",
+    "nombres": "José Ángel",
+    "vencimiento": "2034-01-17",
+    "mrz1": "P<COLJEAN<BAPTISTE<PIERRE<<JOSE<ANGEL<<<<<<<",
+    "mrz2": "SE85231719COL9208245M3401170257250183<<<<<98"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_COL_023",
+   "tipo": "antecedentes_extranjero",
+   "pais": "COL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_COL_023.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Jean-Baptiste Pierre"
+   },
+   "verdad": {
+    "nombre": "Wilson Jean-Baptiste Pierre",
+    "documento": "69430329",
+    "fecha_emision": "2026-08-21",
+    "folio": "3215368"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_000",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_BOL_000.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Pérez Ibáñez",
+    "numero_pasaporte_declarado": "L08122590"
+   },
+   "verdad": {
+    "numero": "L08122590",
+    "apellidos": "Pérez Ibáñez",
+    "nombres": "Guerline",
+    "vencimiento": "2026-08-19",
+    "mrz1": "P<BOLPEREZ<IBANEZ<<GUERLINE<<<<<<<<<<<<<<<<<",
+    "mrz2": "L081225902BOL6206088M2608190<<<<<<<<<<<<<<<0"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_BOL_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_BOL_000.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Castañeda Ibáñez"
+   },
+   "verdad": {
+    "nombre": "Guerline Castañeda Ibáñez",
+    "documento": "93381450",
+    "fecha_emision": "2026-09-10",
+    "folio": "3128523"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_001",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_BOL_001.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Saint-Fleur Quispe",
+    "numero_pasaporte_declarado": "3J3804123"
+   },
+   "verdad": {
+    "numero": "3J3804123",
+    "apellidos": "Saint-Fleur Quispe",
+    "nombres": "Daniela",
+    "vencimiento": "2025-11-05",
+    "mrz1": "P<BOLSAINT<FLEUR<QUISPE<<DANIELA<<<<<<<<<<<<",
+    "mrz2": "3J38041237BOL7111158F2511052470048988<<<<<44"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_BOL_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_BOL_001.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Rodríguez Núñez"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Rodríguez Núñez",
+    "documento": "4006064",
+    "fecha_emision": "2026-09-07",
+    "folio": "8670001"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_002",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_BOL_002.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Jean-Baptiste Pierre",
+    "numero_pasaporte_declarado": "JF1352432"
+   },
+   "verdad": {
+    "numero": "JF1352432",
+    "apellidos": "Jean-Baptiste Pierre",
+    "nombres": "Luis Alberto",
+    "vencimiento": "2030-07-06",
+    "mrz1": "P<BOLJEAN<BAPTISTE<PIERRE<<LUIS<ALBERTO<<<<<",
+    "mrz2": "JF13524326BOL8812212M3007066<<<<<<<<<<<<<<<2"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_BOL_002.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Pierre Valdés"
+   },
+   "verdad": {
+    "nombre": "José Ángel Pierre Valdés",
+    "documento": "78420192",
+    "fecha_emision": "2026-06-28",
+    "folio": "4591580"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_BOL_003",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_BOL_003.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Castañeda Gutiérrez",
+    "numero_pasaporte_declarado": "KT9772421"
+   },
+   "verdad": {
+    "numero": "KT9772421",
+    "apellidos": "Castañeda Gutiérrez",
+    "nombres": "Ñuflo",
+    "vencimiento": "2027-10-06",
+    "mrz1": "P<BOLCASTANEDA<GUTIERREZ<<NUFLO<<<<<<<<<<<<<",
+    "mrz2": "KT97724213BOL6502104F2710062<<<<<<<<<<<<<<<0"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_BOL_003.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Castañeda Martínez"
+   },
+   "verdad": {
+    "nombre": "Wilson Castañeda Martínez",
+    "documento": "61974106",
+    "fecha_emision": "2026-08-08",
+    "folio": "9095326"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_004",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_BOL_004.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Ibáñez Pierre",
+    "numero_pasaporte_declarado": "EY8810212"
+   },
+   "verdad": {
+    "numero": "EY8810212",
+    "apellidos": "Ibáñez Pierre",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2031-01-31",
+    "mrz1": "P<BOLIBANEZ<PIERRE<<CARMEN<ROSA<<<<<<<<<<<<<",
+    "mrz2": "EY88102126BOL9104082F3101311<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_BOL_004.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Castañeda Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Fabiola Castañeda Saint-Fleur",
+    "documento": "91140760",
+    "fecha_emision": "2026-08-23",
+    "folio": "6004857"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_005",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_BOL_005.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Jean-Baptiste Louis",
+    "numero_pasaporte_declarado": "645531806"
+   },
+   "verdad": {
+    "numero": "645531806",
+    "apellidos": "Jean-Baptiste Louis",
+    "nombres": "Ñuflo",
+    "vencimiento": "2032-02-21",
+    "mrz1": "P<BOLJEAN<BAPTISTE<LOUIS<<NUFLO<<<<<<<<<<<<<",
+    "mrz2": "6455318066BOL6501118F3202218246347293<<<<<62"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_BOL_005.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Núñez Joseph"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Núñez Joseph",
+    "documento": "98006667",
+    "fecha_emision": "2026-04-18",
+    "folio": "5974633"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_BOL_006",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_BOL_006.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Valdés Muñoz",
+    "numero_pasaporte_declarado": "336881202"
+   },
+   "verdad": {
+    "numero": "336881202",
+    "apellidos": "Núñez Castañeda",
+    "nombres": "Ana Lucía",
+    "vencimiento": "2033-01-17",
+    "mrz1": "P<BOLNUNEZ<CASTANEDA<<ANA<LUCIA<<<<<<<<<<<<<",
+    "mrz2": "3368812023BOL6407014F3301177273451112<<<<<44"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_BOL_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_BOL_006.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Jean-Baptiste Muñoz"
+   },
+   "verdad": {
+    "nombre": "José Ángel Jean-Baptiste Muñoz",
+    "documento": "96122614",
+    "fecha_emision": "2026-08-07",
+    "folio": "5998136"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_007",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_BOL_007.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Jean-Baptiste Castañeda",
+    "numero_pasaporte_declarado": "5L5465723"
+   },
+   "verdad": {
+    "numero": "5L5465723",
+    "apellidos": "Jean-Baptiste Castañeda",
+    "nombres": "Fabiola",
+    "vencimiento": "2029-03-20",
+    "mrz1": "P<BOLJEAN<BAPTISTE<CASTANEDA<<FABIOLA<<<<<<<",
+    "mrz2": "5L54657232BOL9208223M2903208832743842<<<<<16"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_BOL_007.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Quispe Mamani"
+   },
+   "verdad": {
+    "nombre": "Daniela Quispe Mamani",
+    "documento": "46916765",
+    "fecha_emision": "2026-09-12",
+    "folio": "4035098"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_008",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_BOL_008.png",
+   "ctx": {
+    "nombre_declarado": "María José Hernández Quispe",
+    "numero_pasaporte_declarado": "5C8214997"
+   },
+   "verdad": {
+    "numero": "5C8214997",
+    "apellidos": "Hernández Quispe",
+    "nombres": "María José",
+    "vencimiento": "2030-03-09",
+    "mrz1": "P<BOLHERNANDEZ<QUISPE<<MARIA<JOSE<<<<<<<<<<<",
+    "mrz2": "5C82149977BOL6110246F3003091748830042<<<<<80"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_BOL_008.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Jean-Baptiste Castañeda"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Jean-Baptiste Castañeda",
+    "documento": "1943187",
+    "fecha_emision": "2026-09-16",
+    "folio": "6323633"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_BOL_009",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_BOL_009.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Pierre Louis",
+    "numero_pasaporte_declarado": "6K5870700"
+   },
+   "verdad": {
+    "numero": "6K5870700",
+    "apellidos": "Pierre Louis",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2029-03-29",
+    "mrz1": "P<BOLPIERRE<LOUIS<<ANDRES<FELIPE<<<<<<<<<<<<",
+    "mrz2": "6K58707003BOL8007142M2903297<<<<<<<<<<<<<<<0"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_BOL_009.png",
+   "ctx": {
+    "nombre_declarado": "María José Valdés Ibáñez"
+   },
+   "verdad": {
+    "nombre": "María José Valdés Ibáñez",
+    "documento": "58403654",
+    "fecha_emision": "2026-02-23",
+    "folio": "6224343"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO",
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_BOL_010",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_BOL_010.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Gutiérrez Muñoz",
+    "numero_pasaporte_declarado": "YP8087879"
+   },
+   "verdad": {
+    "numero": "YP8087879",
+    "apellidos": "Gutiérrez Muñoz",
+    "nombres": "Yohana",
+    "vencimiento": "2032-06-03",
+    "mrz1": "P<BOLGUTIERREZ<MUNOZ<<YOHANA<<<<<<<<<<<<<<<<",
+    "mrz2": "YP80878798BOL6010254F3206032<<<<<<<<<<<<<<<2"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_BOL_010.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Mamani Valdés"
+   },
+   "verdad": {
+    "nombre": "Daniela Mamani Valdés",
+    "documento": "3227365",
+    "fecha_emision": "2026-09-20",
+    "folio": "2417852"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_011",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_BOL_011.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Pierre González",
+    "numero_pasaporte_declarado": "C65951926"
+   },
+   "verdad": {
+    "numero": "C65951926",
+    "apellidos": "Pierre González",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2032-05-10",
+    "mrz1": "P<BOLPIERRE<GONZALEZ<<CARMEN<ROSA<<<<<<<<<<<",
+    "mrz2": "C659519261BOL9410062M3205105<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_BOL_011.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Martínez González"
+   },
+   "verdad": {
+    "nombre": "Wilson Martínez González",
+    "documento": "23930434",
+    "fecha_emision": "2026-09-12",
+    "folio": "763224"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_012",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_BOL_012.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Pérez Rodríguez",
+    "numero_pasaporte_declarado": "MX1337451"
+   },
+   "verdad": {
+    "numero": "MX1337451",
+    "apellidos": "Pérez Rodríguez",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2028-12-10",
+    "mrz1": "P<BOLPEREZ<RODRIGUEZ<<JUAN<CARLOS<<<<<<<<<<<",
+    "mrz2": "MX13374515BOL8603234M2812106160134156<<<<<36"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_BOL_012.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Martínez Muñoz"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Martínez Muñoz",
+    "documento": "36233025",
+    "fecha_emision": "2026-08-13",
+    "folio": "238980"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_013",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_BOL_013.png",
+   "ctx": {
+    "nombre_declarado": "Daniela González Ibáñez",
+    "numero_pasaporte_declarado": "NG2454010"
+   },
+   "verdad": {
+    "numero": "NG2454010",
+    "apellidos": "González Ibáñez",
+    "nombres": "Daniela",
+    "vencimiento": "2034-04-16",
+    "mrz1": "P<BOLGONZALEZ<IBANEZ<<DANIELA<<<<<<<<<<<<<<<",
+    "mrz2": "NG24540101BOL9607284M3404160587702134<<<<<76"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_BOL_013.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Joseph Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Joseph Jean-Baptiste",
+    "documento": "86716793",
+    "fecha_emision": "2026-08-31",
+    "folio": "9598755"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_014",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_BOL_014.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa González Muñoz",
+    "numero_pasaporte_declarado": "VU5154922"
+   },
+   "verdad": {
+    "numero": "VU5154922",
+    "apellidos": "González Muñoz",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2031-08-11",
+    "mrz1": "P<BOLGONZALEZ<MUNOZ<<CARMEN<ROSA<<<<<<<<<<<<",
+    "mrz2": "VU51549229BOL9307159F3108114<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_BOL_014.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Núñez Muñoz"
+   },
+   "verdad": {
+    "nombre": "José Ángel Martínez Saint-Fleur",
+    "documento": "99797612",
+    "fecha_emision": "2026-09-05",
+    "folio": "3889916"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_BOL_015",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_BOL_015.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Hernández Jean-Baptiste",
+    "numero_pasaporte_declarado": "V74994794"
+   },
+   "verdad": {
+    "numero": "V74994794",
+    "apellidos": "Hernández Jean-Baptiste",
+    "nombres": "Rose Marie",
+    "vencimiento": "2032-02-13",
+    "mrz1": "P<BOLHERNANDEZ<JEAN<BAPTISTE<<ROSE<MARIE<<<<",
+    "mrz2": "V749947946BOL6411105F3202137<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_BOL_015.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Pérez Mamani"
+   },
+   "verdad": {
+    "nombre": "Rose Marie Pérez Mamani",
+    "documento": "32498162",
+    "fecha_emision": "2026-08-18",
+    "folio": "7477420"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_016",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_BOL_016.png",
+   "ctx": {
+    "nombre_declarado": "Daniela González Pérez",
+    "numero_pasaporte_declarado": "569336334"
+   },
+   "verdad": {
+    "numero": "569336334",
+    "apellidos": "González Pérez",
+    "nombres": "Daniela",
+    "vencimiento": "2032-09-27",
+    "mrz1": "P<BOLGONZALEZ<PEREZ<<DANIELA<<<<<<<<<<<<<<<<",
+    "mrz2": "5693363342BOL8611091F3209273520796720<<<<<82"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_016",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_BOL_016.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Ibáñez Hernández"
+   },
+   "verdad": {
+    "nombre": "Guerline Ibáñez Hernández",
+    "documento": "50406826",
+    "fecha_emision": "2026-05-04",
+    "folio": "3729581"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_BOL_017",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_BOL_017.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Quispe Mamani",
+    "numero_pasaporte_declarado": "ZX9984835"
+   },
+   "verdad": {
+    "numero": "ZX9984835",
+    "apellidos": "Quispe Mamani",
+    "nombres": "Ñuflo",
+    "vencimiento": "2030-12-09",
+    "mrz1": "P<BOLQUISPE<MAMANI<<NUFLO<<<<<<<<<<<<<<<<<<<",
+    "mrz2": "ZX99848354BOL6711090M3012095<<<<<<<<<<<<<<<0"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_017",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_BOL_017.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Castañeda Castañeda"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Castañeda Castañeda",
+    "documento": "22713128",
+    "fecha_emision": "2026-09-15",
+    "folio": "6234477"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_BOL_018",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_BOL_018.png",
+   "ctx": {
+    "nombre_declarado": "María José Jean-Baptiste Pierre",
+    "numero_pasaporte_declarado": "T49910052"
+   },
+   "verdad": {
+    "numero": "T49910052",
+    "apellidos": "Jean-Baptiste Pierre",
+    "nombres": "María José",
+    "vencimiento": "2025-11-01",
+    "mrz1": "P<BOLJEAN<BAPTISTE<PIERRE<<MARIA<JOSE<<<<<<<",
+    "mrz2": "T499100527BOL8102069F2511018562237310<<<<<96"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_BOL_018",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_BOL_018.png",
+   "ctx": {
+    "nombre_declarado": "Wilson Pierre Martínez"
+   },
+   "verdad": {
+    "nombre": "Wilson Pierre Martínez",
+    "documento": "84243399",
+    "fecha_emision": "2026-09-23",
+    "folio": "279029"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_019",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_BOL_019.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Gutiérrez Gutiérrez",
+    "numero_pasaporte_declarado": "FF2155969"
+   },
+   "verdad": {
+    "numero": "FF2155969",
+    "apellidos": "Gutiérrez Gutiérrez",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2032-09-30",
+    "mrz1": "P<BOLGUTIERREZ<GUTIERREZ<<JUAN<CARLOS<<<<<<<",
+    "mrz2": "FF21559699BOL9407118F3209309808627990<<<<<90"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_019",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_BOL_019.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Saint-Fleur Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Guerline Saint-Fleur Rodríguez",
+    "documento": "68180386",
+    "fecha_emision": "2026-09-19",
+    "folio": "785834"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_BOL_020",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_BOL_020.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Rodríguez Muñoz",
+    "numero_pasaporte_declarado": "033093616"
+   },
+   "verdad": {
+    "numero": "033093616",
+    "apellidos": "Rodríguez Muñoz",
+    "nombres": "Kervens",
+    "vencimiento": "2026-07-21",
+    "mrz1": "P<BOLRODRIGUEZ<MUNOZ<<KERVENS<<<<<<<<<<<<<<<",
+    "mrz2": "0330936163BOL9401150M2607218<<<<<<<<<<<<<<<0"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_BOL_020",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_BOL_020.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Louis Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Daniela Louis Jean-Baptiste",
+    "documento": "35325922",
+    "fecha_emision": "2026-09-01",
+    "folio": "9133085"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_021",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_BOL_021.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Rodríguez Hernández",
+    "numero_pasaporte_declarado": "6M9184550"
+   },
+   "verdad": {
+    "numero": "6M9184550",
+    "apellidos": "Rodríguez Hernández",
+    "nombres": "Guerline",
+    "vencimiento": "2025-01-24",
+    "mrz1": "P<BOLRODRIGUEZ<HERNANDEZ<<GUERLINE<<<<<<<<<<",
+    "mrz2": "6M91845502BOL7804159F2501246757455313<<<<<62"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_BOL_021",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_BOL_021.png",
+   "ctx": {
+    "nombre_declarado": "María José Pérez González"
+   },
+   "verdad": {
+    "nombre": "María José Pérez González",
+    "documento": "59343711",
+    "fecha_emision": "2026-09-19",
+    "folio": "3856066"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_022",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_BOL_022.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Núñez Rodríguez",
+    "numero_pasaporte_declarado": "FK2591686"
+   },
+   "verdad": {
+    "numero": "FK2591686",
+    "apellidos": "Núñez Rodríguez",
+    "nombres": "Kervens",
+    "vencimiento": "2032-09-16",
+    "mrz1": "P<BOLNUNEZ<RODRIGUEZ<<KERVENS<<<<<<<<<<<<<<<",
+    "mrz2": "FK25916862BOL6310220M3209169123909302<<<<<12"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_022",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_BOL_022.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Rodríguez Joseph"
+   },
+   "verdad": {
+    "nombre": "Guerline Rodríguez Joseph",
+    "documento": "42738457",
+    "fecha_emision": "2026-09-02",
+    "folio": "9940121"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_BOL_023",
+   "tipo": "pasaporte",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_BOL_023.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre González Rodríguez",
+    "numero_pasaporte_declarado": "GT1948327"
+   },
+   "verdad": {
+    "numero": "GT1948327",
+    "apellidos": "González Rodríguez",
+    "nombres": "Jean Pierre",
+    "vencimiento": "2028-07-15",
+    "mrz1": "P<BOLGONZALEZ<RODRIGUEZ<<JEAN<PIERRE<<<<<<<<",
+    "mrz2": "GT19483277BOL6304076F2807155716029318<<<<<58"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_BOL_023",
+   "tipo": "antecedentes_extranjero",
+   "pais": "BOL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_BOL_023.png",
+   "ctx": {
+    "nombre_declarado": "Yohana González Núñez"
+   },
+   "verdad": {
+    "nombre": "Yohana González Núñez",
+    "documento": "94318577",
+    "fecha_emision": "2026-09-12",
+    "folio": "2750195"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_000",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_HTI_000.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Valdés Louis",
+    "numero_pasaporte_declarado": "ZS8669542"
+   },
+   "verdad": {
+    "numero": "ZS8669542",
+    "apellidos": "Valdés Louis",
+    "nombres": "Kervens",
+    "vencimiento": "2034-10-15",
+    "mrz1": "P<HTIVALDES<LOUIS<<KERVENS<<<<<<<<<<<<<<<<<<",
+    "mrz2": "ZS86695425HTI8212085F3410152808623505<<<<<58"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_HTI_000.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Pierre Quispe"
+   },
+   "verdad": {
+    "nombre": "Fabiola Pierre Quispe",
+    "documento": "26963630",
+    "fecha_emision": "2026-01-12",
+    "folio": "5903133"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_HTI_001",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_HTI_001.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Pierre Gutiérrez",
+    "numero_pasaporte_declarado": "993186044"
+   },
+   "verdad": {
+    "numero": "993186044",
+    "apellidos": "Pierre Gutiérrez",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2031-10-13",
+    "mrz1": "P<HTIPIERRE<GUTIERREZ<<CARMEN<ROSA<<<<<<<<<<",
+    "mrz2": "9931860446HTI6512105M3110131536110476<<<<<50"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_HTI_001.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Joseph Louis"
+   },
+   "verdad": {
+    "nombre": "Fabiola Joseph Louis",
+    "documento": "59646310",
+    "fecha_emision": "2026-08-14",
+    "folio": "7148224"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_002",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_HTI_002.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Mamani Pierre",
+    "numero_pasaporte_declarado": "K92745508"
+   },
+   "verdad": {
+    "numero": "K92745508",
+    "apellidos": "Mamani Pierre",
+    "nombres": "Guerline",
+    "vencimiento": "2033-10-20",
+    "mrz1": "P<HTIMAMANI<PIERRE<<GUERLINE<<<<<<<<<<<<<<<<",
+    "mrz2": "K927455088HTI7508103F3310207208780509<<<<<90"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_HTI_002.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Hernández Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Rose Marie Hernández Saint-Fleur",
+    "documento": "95625457",
+    "fecha_emision": "2026-09-16",
+    "folio": "8657909"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_003",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_HTI_003.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Gutiérrez Castañeda",
+    "numero_pasaporte_declarado": "371651275"
+   },
+   "verdad": {
+    "numero": "371651275",
+    "apellidos": "Gutiérrez Castañeda",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2034-02-01",
+    "mrz1": "P<HTIGUTIERREZ<CASTANEDA<<ANDRES<FELIPE<<<<<",
+    "mrz2": "3716512751HTI6810100M3402018<<<<<<<<<<<<<<<6"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_HTI_003.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Castañeda Joseph"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Castañeda Joseph",
+    "documento": "20077578",
+    "fecha_emision": "2026-08-28",
+    "folio": "5229151"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_004",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_HTI_004.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Joseph Valdés",
+    "numero_pasaporte_declarado": "5H2568389"
+   },
+   "verdad": {
+    "numero": "5H2568389",
+    "apellidos": "Joseph Valdés",
+    "nombres": "Fabiola",
+    "vencimiento": "2026-03-21",
+    "mrz1": "P<HTIJOSEPH<VALDES<<FABIOLA<<<<<<<<<<<<<<<<<",
+    "mrz2": "5H25683893HTI7807035F2603210<<<<<<<<<<<<<<<4"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_HTI_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_HTI_004.png",
+   "ctx": {
+    "nombre_declarado": "María José Mamani Martínez"
+   },
+   "verdad": {
+    "nombre": "María José Mamani Martínez",
+    "documento": "49070826",
+    "fecha_emision": "2026-08-21",
+    "folio": "1291253"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_005",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_HTI_005.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Ibáñez González",
+    "numero_pasaporte_declarado": "FD2947802"
+   },
+   "verdad": {
+    "numero": "FD2947802",
+    "apellidos": "Núñez Gutiérrez",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2027-09-17",
+    "mrz1": "P<HTINUNEZ<GUTIERREZ<<JUAN<CARLOS<<<<<<<<<<<",
+    "mrz2": "FD29478026HTI9508130M2709178<<<<<<<<<<<<<<<2"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "ant_HTI_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_HTI_005.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Jean-Baptiste Núñez"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Jean-Baptiste Núñez",
+    "documento": "40364452",
+    "fecha_emision": "2026-05-22",
+    "folio": "4652269"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_HTI_006",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_HTI_006.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Hernández Núñez",
+    "numero_pasaporte_declarado": "GJ7365127"
+   },
+   "verdad": {
+    "numero": "GJ7365127",
+    "apellidos": "Hernández Núñez",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2031-04-06",
+    "mrz1": "P<HTIHERNANDEZ<NUNEZ<<ANDRES<FELIPE<<<<<<<<<",
+    "mrz2": "GJ73651270HTI0105226M3104068748090970<<<<<00"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_HTI_006.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Ibáñez Louis"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Ibáñez Louis",
+    "documento": "74617168",
+    "fecha_emision": "2026-09-05",
+    "folio": "4931829"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_007",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_HTI_007.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Muñoz Muñoz",
+    "numero_pasaporte_declarado": "9Z2891729"
+   },
+   "verdad": {
+    "numero": "9Z2891729",
+    "apellidos": "Muñoz Muñoz",
+    "nombres": "Fabiola",
+    "vencimiento": "2028-09-22",
+    "mrz1": "P<HTIMUNOZ<MUNOZ<<FABIOLA<<<<<<<<<<<<<<<<<<<",
+    "mrz2": "9Z28917298HTI0408145F2809229966076308<<<<<38"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_HTI_007.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Saint-Fleur Muñoz"
+   },
+   "verdad": {
+    "nombre": "Yohana Saint-Fleur Muñoz",
+    "documento": "66663384",
+    "fecha_emision": "2026-02-25",
+    "folio": "4536146"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_HTI_008",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_HTI_008.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Pérez Joseph",
+    "numero_pasaporte_declarado": "A55477110"
+   },
+   "verdad": {
+    "numero": "A55477110",
+    "apellidos": "Pérez Joseph",
+    "nombres": "Kervens",
+    "vencimiento": "2026-05-31",
+    "mrz1": "P<HTIPEREZ<JOSEPH<<KERVENS<<<<<<<<<<<<<<<<<<",
+    "mrz2": "A554771106HTI7302275M2605317381334296<<<<<78"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_HTI_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_HTI_008.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Joseph Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Fabiola Joseph Saint-Fleur",
+    "documento": "81788517",
+    "fecha_emision": "2026-03-22",
+    "folio": "2467673"
+   },
+   "esperados": [
+    "ANTECEDENTES_ANTIGUO"
+   ]
+  },
+  {
+   "id": "pas_HTI_009",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_HTI_009.png",
+   "ctx": {
+    "nombre_declarado": "María José González Rodríguez",
+    "numero_pasaporte_declarado": "FC6204196"
+   },
+   "verdad": {
+    "numero": "FC6204196",
+    "apellidos": "González Rodríguez",
+    "nombres": "María José",
+    "vencimiento": "2026-08-21",
+    "mrz1": "P<HTIGONZALEZ<RODRIGUEZ<<MARIA<JOSE<<<<<<<<<",
+    "mrz2": "FC62041965HTI8707224F2608215<<<<<<<<<<<<<<<4"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_HTI_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_HTI_009.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Castañeda Hernández"
+   },
+   "verdad": {
+    "nombre": "Guerline Castañeda Hernández",
+    "documento": "72448287",
+    "fecha_emision": "2026-09-08",
+    "folio": "1850819"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_HTI_010",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_HTI_010.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Joseph Castañeda",
+    "numero_pasaporte_declarado": "WX2849025"
+   },
+   "verdad": {
+    "numero": "WX2849025",
+    "apellidos": "Joseph Castañeda",
+    "nombres": "Andrés Felipe",
+    "vencimiento": "2025-11-24",
+    "mrz1": "P<HTIJOSEPH<CASTANEDA<<ANDRES<FELIPE<<<<<<<<",
+    "mrz2": "WX28490253HTI9608281M2511247<<<<<<<<<<<<<<<6"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_HTI_010",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_HTI_010.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Núñez Quispe"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Núñez Quispe",
+    "documento": "4084370",
+    "fecha_emision": "2026-08-08",
+    "folio": "2085095"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_011",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_HTI_011.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Joseph Rodríguez",
+    "numero_pasaporte_declarado": "Z78623357"
+   },
+   "verdad": {
+    "numero": "Z78623357",
+    "apellidos": "Joseph Rodríguez",
+    "nombres": "Ana Lucía",
+    "vencimiento": "2031-07-29",
+    "mrz1": "P<HTIJOSEPH<RODRIGUEZ<<ANA<LUCIA<<<<<<<<<<<<",
+    "mrz2": "Z786233578HTI9811119F3107298433008577<<<<<12"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_011",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_HTI_011.png",
+   "ctx": {
+    "nombre_declarado": "María José Núñez Pierre"
+   },
+   "verdad": {
+    "nombre": "María José Núñez Pierre",
+    "documento": "65409158",
+    "fecha_emision": "2026-08-22",
+    "folio": "549328"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_012",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_HTI_012.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola González Hernández",
+    "numero_pasaporte_declarado": "W47090509"
+   },
+   "verdad": {
+    "numero": "W47090509",
+    "apellidos": "González Hernández",
+    "nombres": "Fabiola",
+    "vencimiento": "2030-12-10",
+    "mrz1": "P<HTIGONZALEZ<HERNANDEZ<<FABIOLA<<<<<<<<<<<<",
+    "mrz2": "W470905094HTI0003115F3012109425982242<<<<<60"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_012",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_HTI_012.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Castañeda Louis"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Castañeda Louis",
+    "documento": "33909881",
+    "fecha_emision": "2026-08-23",
+    "folio": "231923"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_013",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_HTI_013.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Quispe Mamani",
+    "numero_pasaporte_declarado": "R65196653"
+   },
+   "verdad": {
+    "numero": "R65196653",
+    "apellidos": "Quispe Mamani",
+    "nombres": "Fabiola",
+    "vencimiento": "2029-03-07",
+    "mrz1": "P<HTIQUISPE<MAMANI<<FABIOLA<<<<<<<<<<<<<<<<<",
+    "mrz2": "R651966532HTI9411070F2903079526920922<<<<<78"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_013",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_HTI_013.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Mamani Hernández"
+   },
+   "verdad": {
+    "nombre": "Yohana Gutiérrez Mamani",
+    "documento": "18217629",
+    "fecha_emision": "2026-09-07",
+    "folio": "4192952"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_014",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_HTI_014.png",
+   "ctx": {
+    "nombre_declarado": "Rose Marie Saint-Fleur Pérez",
+    "numero_pasaporte_declarado": "PH3935935"
+   },
+   "verdad": {
+    "numero": "PH3935935",
+    "apellidos": "Saint-Fleur Pérez",
+    "nombres": "Rose Marie",
+    "vencimiento": "2031-08-03",
+    "mrz1": "P<HTISAINT<FLEUR<PEREZ<<ROSE<MARIE<<<<<<<<<<",
+    "mrz2": "PH39359353HTI9412239M3108033<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_014",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_HTI_014.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Mamani Pierre"
+   },
+   "verdad": {
+    "nombre": "Yohana Mamani Pierre",
+    "documento": "73718083",
+    "fecha_emision": "2026-09-26",
+    "folio": "1240715"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_HTI_015",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_HTI_015.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Gutiérrez Quispe",
+    "numero_pasaporte_declarado": "XA3497219"
+   },
+   "verdad": {
+    "numero": "XA3497219",
+    "apellidos": "Gutiérrez Quispe",
+    "nombres": "José Ángel",
+    "vencimiento": "2030-03-24",
+    "mrz1": "P<HTIGUTIERREZ<QUISPE<<JOSE<ANGEL<<<<<<<<<<<",
+    "mrz2": "XA34972192HTI9812149M3003242<<<<<<<<<<<<<<<4"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_015",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_HTI_015.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Martínez Gutiérrez"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Rodríguez Gutiérrez",
+    "documento": "8274551",
+    "fecha_emision": "2026-09-08",
+    "folio": "4846637"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_016",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_HTI_016.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel González González",
+    "numero_pasaporte_declarado": "A86190028"
+   },
+   "verdad": {
+    "numero": "A86190028",
+    "apellidos": "González González",
+    "nombres": "José Ángel",
+    "vencimiento": "2026-06-05",
+    "mrz1": "P<HTIGONZALEZ<GONZALEZ<<JOSE<ANGEL<<<<<<<<<<",
+    "mrz2": "A861900288HTI9809192F2606059<<<<<<<<<<<<<<<0"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_HTI_016",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_HTI_016.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Pierre Louis"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Pierre Louis",
+    "documento": "82351631",
+    "fecha_emision": "2026-09-25",
+    "folio": "7456304"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_017",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_HTI_017.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Muñoz Joseph",
+    "numero_pasaporte_declarado": "Z04673616"
+   },
+   "verdad": {
+    "numero": "Z04673616",
+    "apellidos": "Muñoz Joseph",
+    "nombres": "Kervens",
+    "vencimiento": "2025-02-02",
+    "mrz1": "P<HTIMUNOZ<JOSEPH<<KERVENS<<<<<<<<<<<<<<<<<<",
+    "mrz2": "Z046736166HTI7001143F2502025319268643<<<<<00"
+   },
+   "esperados": [
+    "PASAPORTE_VENCIDO"
+   ]
+  },
+  {
+   "id": "ant_HTI_017",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_HTI_017.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Mamani Martínez"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Mamani Martínez",
+    "documento": "95902433",
+    "fecha_emision": "2026-09-09",
+    "folio": "9492364"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_018",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_HTI_018.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Ibáñez Mamani",
+    "numero_pasaporte_declarado": "V71625392"
+   },
+   "verdad": {
+    "numero": "V71625392",
+    "apellidos": "Ibáñez Mamani",
+    "nombres": "Kervens",
+    "vencimiento": "2028-07-03",
+    "mrz1": "P<HTIIBANEZ<MAMANI<<KERVENS<<<<<<<<<<<<<<<<<",
+    "mrz2": "V716253922HTI6911096F2807030<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_018",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_HTI_018.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Gutiérrez Martínez"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Gutiérrez Martínez",
+    "documento": "80267485",
+    "fecha_emision": "2026-08-08",
+    "folio": "4177036"
+   },
+   "esperados": [
+    "SIN_APOSTILLA"
+   ]
+  },
+  {
+   "id": "pas_HTI_019",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_HTI_019.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Jean-Baptiste Pierre",
+    "numero_pasaporte_declarado": "D96065386"
+   },
+   "verdad": {
+    "numero": "D96065386",
+    "apellidos": "Jean-Baptiste Pierre",
+    "nombres": "Carmen Rosa",
+    "vencimiento": "2033-12-28",
+    "mrz1": "P<HTIJEAN<BAPTISTE<PIERRE<<CARMEN<ROSA<<<<<<",
+    "mrz2": "D960653868HTI8207023F3312289979261171<<<<<50"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_019",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_HTI_019.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Ibáñez Joseph"
+   },
+   "verdad": {
+    "nombre": "Daniela Ibáñez Joseph",
+    "documento": "21068496",
+    "fecha_emision": "2026-09-09",
+    "folio": "8016355"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_020",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/pas_HTI_020.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Gutiérrez Ibáñez",
+    "numero_pasaporte_declarado": "CA4030898"
+   },
+   "verdad": {
+    "numero": "CA4030898",
+    "apellidos": "Gutiérrez Ibáñez",
+    "nombres": "Luis Alberto",
+    "vencimiento": "2032-11-27",
+    "mrz1": "P<HTIGUTIERREZ<IBANEZ<<LUIS<ALBERTO<<<<<<<<<",
+    "mrz2": "CA40308988HTI6504119M3211278<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_020",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ant_HTI_020.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Joseph Louis"
+   },
+   "verdad": {
+    "nombre": "Guerline Hernández Pérez",
+    "documento": "72733014",
+    "fecha_emision": "2026-08-26",
+    "folio": "3713889"
+   },
+   "esperados": [
+    "NOMBRE_NO_COINCIDE"
+   ]
+  },
+  {
+   "id": "pas_HTI_021",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/pas_HTI_021.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Gutiérrez Hernández",
+    "numero_pasaporte_declarado": "H19816818"
+   },
+   "verdad": {
+    "numero": "H19816818",
+    "apellidos": "Gutiérrez Hernández",
+    "nombres": "Juan Carlos",
+    "vencimiento": "2033-08-25",
+    "mrz1": "P<HTIGUTIERREZ<HERNANDEZ<<JUAN<CARLOS<<<<<<<",
+    "mrz2": "H198168183HTI9102022M3308257678227985<<<<<06"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_021",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "escaner",
+   "imagen": "imagenes/ant_HTI_021.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Louis Martínez"
+   },
+   "verdad": {
+    "nombre": "Fabiola Louis Martínez",
+    "documento": "88480471",
+    "fecha_emision": "2026-09-23",
+    "folio": "5640213"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_022",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/pas_HTI_022.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Núñez Martínez",
+    "numero_pasaporte_declarado": "FR1408792"
+   },
+   "verdad": {
+    "numero": "FR1408792",
+    "apellidos": "Núñez Martínez",
+    "nombres": "Kervens",
+    "vencimiento": "2028-07-19",
+    "mrz1": "P<HTINUNEZ<MARTINEZ<<KERVENS<<<<<<<<<<<<<<<<",
+    "mrz2": "FR14087921HTI7807035F2807199<<<<<<<<<<<<<<<2"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_022",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "celular",
+   "imagen": "imagenes/ant_HTI_022.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Pérez Pérez"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Pérez Pérez",
+    "documento": "53791977",
+    "fecha_emision": "2026-08-14",
+    "folio": "2156590"
+   },
+   "esperados": []
+  },
+  {
+   "id": "pas_HTI_023",
+   "tipo": "pasaporte",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/pas_HTI_023.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Gutiérrez Gutiérrez",
+    "numero_pasaporte_declarado": "KL2239666"
+   },
+   "verdad": {
+    "numero": "KL2239666",
+    "apellidos": "Gutiérrez Gutiérrez",
+    "nombres": "Ana Lucía",
+    "vencimiento": "2033-01-04",
+    "mrz1": "P<HTIGUTIERREZ<GUTIERREZ<<ANA<LUCIA<<<<<<<<<",
+    "mrz2": "KL22396663HTI6808150F3301041<<<<<<<<<<<<<<<8"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ant_HTI_023",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "fr",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/ant_HTI_023.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Valdés Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Valdés Saint-Fleur",
+    "documento": "36011317",
+    "fecha_emision": "2026-09-21",
+    "folio": "5246448"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_000",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_000.png",
+   "pdf": "pdf/liq_000.pdf",
+   "ctx": {
+    "nombre_declarado": "Fabiola Pierre Joseph"
+   },
+   "verdad": {
+    "nombre": "Fabiola Pierre Joseph",
+    "fecha_emision": "2026-09-12",
+    "rut_empleador": "97.486.117-6",
+    "liquido": "$ 1513.542",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_000",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_000.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Pierre Ibáñez"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Pierre Ibáñez",
+    "fecha_emision": "2026-05-26",
+    "folio": "500000"
+   },
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "liq_001",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_001.png",
+   "pdf": "pdf/liq_001.pdf",
+   "ctx": {
+    "nombre_declarado": "Kervens Hernández Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Kervens Hernández Rodríguez",
+    "fecha_emision": "2026-09-19",
+    "rut_empleador": "85.359.550-1",
+    "liquido": "$ 2094.772",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_001",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_001.png",
+   "ctx": {
+    "nombre_declarado": "Daniela Mamani Martínez"
+   },
+   "verdad": {
+    "nombre": "Daniela Mamani Martínez",
+    "fecha_emision": "2026-09-14",
+    "folio": "500001"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_002",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_002.png",
+   "pdf": "pdf/liq_002.pdf",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Núñez Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Núñez Saint-Fleur",
+    "fecha_emision": "2026-09-21",
+    "rut_empleador": "83.941.712-5",
+    "liquido": "$ 2476.380",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "cl_002",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_002.png",
+   "ctx": {
+    "nombre_declarado": "María José Muñoz Louis"
+   },
+   "verdad": {
+    "nombre": "María José Muñoz Louis",
+    "fecha_emision": "2026-04-17",
+    "folio": "500002"
+   },
+   "esperados": [
+    "CODIGO_INEXISTENTE"
+   ]
+  },
+  {
+   "id": "liq_003",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_003.png",
+   "pdf": "pdf/liq_003.pdf",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Jean-Baptiste Joseph"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Jean-Baptiste Joseph",
+    "fecha_emision": "2026-09-15",
+    "rut_empleador": "80.364.508-K",
+    "liquido": "$ 2405.487",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_003",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_003.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Muñoz Valdés"
+   },
+   "verdad": {
+    "nombre": "José Ángel Muñoz Valdés",
+    "fecha_emision": "2026-09-01",
+    "folio": "500003"
+   },
+   "esperados": [
+    "CODIGO_INEXISTENTE"
+   ]
+  },
+  {
+   "id": "liq_004",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_004.png",
+   "pdf": "pdf/liq_004.pdf",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Mamani Joseph"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Mamani Joseph",
+    "fecha_emision": "2026-09-21",
+    "rut_empleador": "98.137.803-9",
+    "liquido": "$ 1506.425",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_004",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_004.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Muñoz González"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Muñoz González",
+    "fecha_emision": "2026-08-12",
+    "folio": "500004"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_005",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_005.png",
+   "pdf": "pdf/liq_005.pdf",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Pérez Pierre"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Pérez Pierre",
+    "fecha_emision": "2026-09-11",
+    "rut_empleador": "79.876.148-2",
+    "liquido": "$ 2014.904",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_005",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_005.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Castañeda Quispe"
+   },
+   "verdad": {
+    "nombre": "José Ángel Castañeda Quispe",
+    "fecha_emision": "2026-09-19",
+    "folio": "500005"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_006",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_006.png",
+   "pdf": "pdf/liq_006.pdf",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Rodríguez Valdés"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Rodríguez Valdés",
+    "fecha_emision": "2026-09-27",
+    "rut_empleador": "96.285.104-9",
+    "liquido": "$ 1159.422",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "cl_006",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_006.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Valdés González"
+   },
+   "verdad": {
+    "nombre": "Yohana Valdés González",
+    "fecha_emision": "2026-09-17",
+    "folio": "500006"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_007",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_007.png",
+   "pdf": "pdf/liq_007.pdf",
+   "ctx": {
+    "nombre_declarado": "Wilson Castañeda Núñez"
+   },
+   "verdad": {
+    "nombre": "Wilson Castañeda Núñez",
+    "fecha_emision": "2026-09-23",
+    "rut_empleador": "76.547.113-2",
+    "liquido": "$ 1097.891",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_007",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_007.png",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Saint-Fleur Núñez"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Saint-Fleur Núñez",
+    "fecha_emision": "2026-08-28",
+    "folio": "500007"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_008",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_008.png",
+   "pdf": "pdf/liq_008.pdf",
+   "ctx": {
+    "nombre_declarado": "Fabiola Gutiérrez Núñez"
+   },
+   "verdad": {
+    "nombre": "Fabiola Gutiérrez Núñez",
+    "fecha_emision": "2026-09-29",
+    "rut_empleador": "92.765.438-5",
+    "liquido": "$ 1548.929",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_008",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_008.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Quispe Pérez"
+   },
+   "verdad": {
+    "nombre": "José Ángel Quispe Pérez",
+    "fecha_emision": "2026-09-15",
+    "folio": "500008"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_009",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_009.png",
+   "pdf": "pdf/liq_009.pdf",
+   "ctx": {
+    "nombre_declarado": "Fabiola Pierre Núñez"
+   },
+   "verdad": {
+    "nombre": "Fabiola Pierre Núñez",
+    "fecha_emision": "2026-09-27",
+    "rut_empleador": "86.344.842-0",
+    "liquido": "$ 1669.352",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_009",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_009.png",
+   "ctx": {
+    "nombre_declarado": "Yohana Hernández Ibáñez"
+   },
+   "verdad": {
+    "nombre": "Yohana Hernández Ibáñez",
+    "fecha_emision": "2026-09-23",
+    "folio": "500009"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_010",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_010.png",
+   "pdf": "pdf/liq_010.pdf",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Mamani Núñez"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Mamani Núñez",
+    "fecha_emision": "2026-09-25",
+    "rut_empleador": "92.923.489-6",
+    "liquido": "$ 1144.883",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "cl_010",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_010.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel González Valdés"
+   },
+   "verdad": {
+    "nombre": "José Ángel González Valdés",
+    "fecha_emision": "2026-09-15",
+    "folio": "500010"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_011",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_011.png",
+   "pdf": "pdf/liq_011.pdf",
+   "ctx": {
+    "nombre_declarado": "María José Pierre Louis"
+   },
+   "verdad": {
+    "nombre": "María José Pierre Louis",
+    "fecha_emision": "2026-09-23",
+    "rut_empleador": "77.637.103-3",
+    "liquido": "$ 1967.932",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_011",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_011.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Gutiérrez Joseph"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Gutiérrez Joseph",
+    "fecha_emision": "2026-09-03",
+    "folio": "500011"
+   },
+   "esperados": [
+    "CODIGO_INEXISTENTE"
+   ]
+  },
+  {
+   "id": "liq_012",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_012.png",
+   "pdf": "pdf/liq_012.pdf",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Joseph Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Joseph Rodríguez",
+    "fecha_emision": "2026-09-11",
+    "rut_empleador": "85.295.339-2",
+    "liquido": "$ 1588.486",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_012",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_012.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Valdés González"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Valdés González",
+    "fecha_emision": "2026-09-24",
+    "folio": "500012"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_013",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_013.png",
+   "pdf": "pdf/liq_013.pdf",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Hernández Castañeda"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Hernández Castañeda",
+    "fecha_emision": "2026-09-28",
+    "rut_empleador": "78.947.998-6",
+    "liquido": "$ 1785.161",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_013",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_013.png",
+   "ctx": {
+    "nombre_declarado": "José Ángel Joseph Castañeda"
+   },
+   "verdad": {
+    "nombre": "José Ángel Joseph Castañeda",
+    "fecha_emision": "2026-05-27",
+    "folio": "500013"
+   },
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "liq_014",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_014.png",
+   "pdf": "pdf/liq_014.pdf",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Ibáñez Muñoz"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Ibáñez Muñoz",
+    "fecha_emision": "2026-07-25",
+    "rut_empleador": "77.409.976-3",
+    "liquido": "$ 1751.981",
+    "periodo": "06/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO",
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "cl_014",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_014.png",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Saint-Fleur Valdés"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Saint-Fleur Valdés",
+    "fecha_emision": "2026-08-28",
+    "folio": "500014"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_015",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_015.png",
+   "pdf": "pdf/liq_015.pdf",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Muñoz Ibáñez"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Muñoz Ibáñez",
+    "fecha_emision": "2026-09-19",
+    "rut_empleador": "83.947.969-4",
+    "liquido": "$ 1082.288",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_015",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_015.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Gutiérrez Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Guerline Gutiérrez Saint-Fleur",
+    "fecha_emision": "2026-08-20",
+    "folio": "500015"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_016",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_016.png",
+   "pdf": "pdf/liq_016.pdf",
+   "ctx": {
+    "nombre_declarado": "Guerline Núñez Núñez"
+   },
+   "verdad": {
+    "nombre": "Guerline Núñez Núñez",
+    "fecha_emision": "2026-09-06",
+    "rut_empleador": "92.952.912-5",
+    "liquido": "$ 2453.358",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_016",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_016.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Martínez Joseph"
+   },
+   "verdad": {
+    "nombre": "Fabiola Martínez Joseph",
+    "fecha_emision": "2026-08-24",
+    "folio": "500016"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_017",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_017.png",
+   "pdf": "pdf/liq_017.pdf",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Jean-Baptiste Núñez"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Jean-Baptiste Núñez",
+    "fecha_emision": "2026-09-12",
+    "rut_empleador": "98.887.866-8",
+    "liquido": "$ 1486.582",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_017",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_017.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Muñoz Joseph"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Muñoz Joseph",
+    "fecha_emision": "2026-09-21",
+    "folio": "500017"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_018",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_018.png",
+   "pdf": "pdf/liq_018.pdf",
+   "ctx": {
+    "nombre_declarado": "Daniela Hernández Joseph"
+   },
+   "verdad": {
+    "nombre": "Daniela Hernández Joseph",
+    "fecha_emision": "2026-09-10",
+    "rut_empleador": "76.669.345-0",
+    "liquido": "$ 2160.670",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "cl_018",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_018.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Louis Gutiérrez"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Louis Gutiérrez",
+    "fecha_emision": "2026-08-31",
+    "folio": "500018"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_019",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_019.png",
+   "pdf": "pdf/liq_019.pdf",
+   "ctx": {
+    "nombre_declarado": "Daniela Rodríguez Martínez"
+   },
+   "verdad": {
+    "nombre": "Daniela Rodríguez Martínez",
+    "fecha_emision": "2026-09-14",
+    "rut_empleador": "95.774.235-3",
+    "liquido": "$ 1673.229",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_019",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_019.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Pérez Hernández"
+   },
+   "verdad": {
+    "nombre": "Fabiola Pérez Hernández",
+    "fecha_emision": "2026-08-16",
+    "folio": "500019"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_020",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_020.png",
+   "pdf": "pdf/liq_020.pdf",
+   "ctx": {
+    "nombre_declarado": "Juan Carlos Rodríguez Quispe"
+   },
+   "verdad": {
+    "nombre": "Juan Carlos Rodríguez Quispe",
+    "fecha_emision": "2026-09-13",
+    "rut_empleador": "94.527.582-8",
+    "liquido": "$ 2017.269",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_020",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_020.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Pierre Gutiérrez"
+   },
+   "verdad": {
+    "nombre": "Guerline Pierre Gutiérrez",
+    "fecha_emision": "2026-08-24",
+    "folio": "500020"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_021",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_021.png",
+   "pdf": "pdf/liq_021.pdf",
+   "ctx": {
+    "nombre_declarado": "Fabiola Hernández Pierre"
+   },
+   "verdad": {
+    "nombre": "Fabiola Hernández Pierre",
+    "fecha_emision": "2026-09-10",
+    "rut_empleador": "83.614.482-3",
+    "liquido": "$ 1042.814",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_021",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_021.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Pierre Núñez"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Pierre Núñez",
+    "fecha_emision": "2026-06-30",
+    "folio": "500021"
+   },
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "liq_022",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_022.png",
+   "pdf": "pdf/liq_022.pdf",
+   "ctx": {
+    "nombre_declarado": "José Ángel Castañeda Rodríguez"
+   },
+   "verdad": {
+    "nombre": "José Ángel Castañeda Rodríguez",
+    "fecha_emision": "2026-09-24",
+    "rut_empleador": "91.517.434-5",
+    "liquido": "$ 1599.285",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "cl_022",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_022.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola González Hernández"
+   },
+   "verdad": {
+    "nombre": "Fabiola González Hernández",
+    "fecha_emision": "2026-04-27",
+    "folio": "500022"
+   },
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "liq_023",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_023.png",
+   "pdf": "pdf/liq_023.pdf",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Quispe González"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Quispe González",
+    "fecha_emision": "2026-09-11",
+    "rut_empleador": "99.165.212-5",
+    "liquido": "$ 1700.808",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_023",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_023.png",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Louis Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Louis Saint-Fleur",
+    "fecha_emision": "2026-08-22",
+    "folio": "500023"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_024",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_024.png",
+   "pdf": "pdf/liq_024.pdf",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Rodríguez Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Rodríguez Saint-Fleur",
+    "fecha_emision": "2026-09-29",
+    "rut_empleador": "94.974.446-1",
+    "liquido": "$ 2239.185",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_024",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_024.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Jean-Baptiste Pérez"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Jean-Baptiste Pérez",
+    "fecha_emision": "2026-09-07",
+    "folio": "500024"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_025",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_025.png",
+   "pdf": "pdf/liq_025.pdf",
+   "ctx": {
+    "nombre_declarado": "Daniela Pierre Louis"
+   },
+   "verdad": {
+    "nombre": "Daniela Pierre Louis",
+    "fecha_emision": "2026-09-11",
+    "rut_empleador": "93.664.879-K",
+    "liquido": "$ 1630.366",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_025",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_025.png",
+   "ctx": {
+    "nombre_declarado": "Daniela González Pierre"
+   },
+   "verdad": {
+    "nombre": "Daniela González Pierre",
+    "fecha_emision": "2026-08-31",
+    "folio": "500025"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_026",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_026.png",
+   "pdf": "pdf/liq_026.pdf",
+   "ctx": {
+    "nombre_declarado": "Yohana Rodríguez Pérez"
+   },
+   "verdad": {
+    "nombre": "Yohana Rodríguez Pérez",
+    "fecha_emision": "2026-09-13",
+    "rut_empleador": "83.459.635-5",
+    "liquido": "$ 2485.679",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "cl_026",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_026.png",
+   "ctx": {
+    "nombre_declarado": "Kervens Mamani González"
+   },
+   "verdad": {
+    "nombre": "Kervens Mamani González",
+    "fecha_emision": "2026-08-23",
+    "folio": "500026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_027",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_027.png",
+   "pdf": "pdf/liq_027.pdf",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Jean-Baptiste Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Jean-Baptiste Jean-Baptiste",
+    "fecha_emision": "2026-09-18",
+    "rut_empleador": "86.379.259-2",
+    "liquido": "$ 1612.304",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_027",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_027.png",
+   "ctx": {
+    "nombre_declarado": "Guerline Rodríguez Valdés"
+   },
+   "verdad": {
+    "nombre": "Guerline Rodríguez Valdés",
+    "fecha_emision": "2026-04-10",
+    "folio": "500027"
+   },
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "liq_028",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_028.png",
+   "pdf": "pdf/liq_028.pdf",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Joseph Mamani"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Joseph Mamani",
+    "fecha_emision": "2026-09-14",
+    "rut_empleador": "90.453.848-8",
+    "liquido": "$ 1055.101",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_028",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_028.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Hernández Louis"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Hernández Louis",
+    "fecha_emision": "2026-08-24",
+    "folio": "500028"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_029",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_029.png",
+   "pdf": "pdf/liq_029.pdf",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Mamani Pierre"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Mamani Pierre",
+    "fecha_emision": "2026-08-11",
+    "rut_empleador": "85.411.367-K",
+    "liquido": "$ 1314.303",
+    "periodo": "07/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA",
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "cl_029",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_029.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía González Joseph"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía González Joseph",
+    "fecha_emision": "2026-09-01",
+    "folio": "500029"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_030",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_030.png",
+   "pdf": "pdf/liq_030.pdf",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Muñoz Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Muñoz Jean-Baptiste",
+    "fecha_emision": "2026-09-26",
+    "rut_empleador": "94.445.738-7",
+    "liquido": "$ 1225.252",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO"
+   ]
+  },
+  {
+   "id": "cl_030",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_030.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Pérez Quispe"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Pérez Quispe",
+    "fecha_emision": "2026-09-07",
+    "folio": "500030"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_031",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_031.png",
+   "pdf": "pdf/liq_031.pdf",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto Pierre Castañeda"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto Pierre Castañeda",
+    "fecha_emision": "2026-09-07",
+    "rut_empleador": "91.749.982-2",
+    "liquido": "$ 2155.384",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_031",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_031.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Pérez Martínez"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Pérez Martínez",
+    "fecha_emision": "2026-08-15",
+    "folio": "500031"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_032",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_032.png",
+   "pdf": "pdf/liq_032.pdf",
+   "ctx": {
+    "nombre_declarado": "Andrés Felipe Castañeda Quispe"
+   },
+   "verdad": {
+    "nombre": "Andrés Felipe Castañeda Quispe",
+    "fecha_emision": "2026-09-16",
+    "rut_empleador": "80.680.465-5",
+    "liquido": "$ 1341.759",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_032",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_032.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Hernández Muñoz"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Hernández Muñoz",
+    "fecha_emision": "2026-09-16",
+    "folio": "500032"
+   },
+   "esperados": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ]
+  },
+  {
+   "id": "liq_033",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_033.png",
+   "pdf": "pdf/liq_033.pdf",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Núñez Gutiérrez"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Núñez Gutiérrez",
+    "fecha_emision": "2026-09-18",
+    "rut_empleador": "79.577.615-K",
+    "liquido": "$ 1356.437",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_033",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_033.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Rodríguez Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Rodríguez Saint-Fleur",
+    "fecha_emision": "2026-08-26",
+    "folio": "500033"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_034",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_034.png",
+   "pdf": "pdf/liq_034.pdf",
+   "ctx": {
+    "nombre_declarado": "Guerline Saint-Fleur Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Guerline Saint-Fleur Saint-Fleur",
+    "fecha_emision": "2026-07-15",
+    "rut_empleador": "92.737.872-K",
+    "liquido": "$ 972.937",
+    "periodo": "06/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO",
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "cl_034",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_034.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Gutiérrez Pierre"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Gutiérrez Pierre",
+    "fecha_emision": "2026-09-10",
+    "folio": "500034"
+   },
+   "esperados": [
+    "CODIGO_DE_OTRA_PERSONA"
+   ]
+  },
+  {
+   "id": "liq_035",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_035.png",
+   "pdf": "pdf/liq_035.pdf",
+   "ctx": {
+    "nombre_declarado": "Wilson Gutiérrez Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Wilson Gutiérrez Rodríguez",
+    "fecha_emision": "2026-06-25",
+    "rut_empleador": "99.905.156-5",
+    "liquido": "$ 2057.628",
+    "periodo": "05/2026"
+   },
+   "esperados": [
+    "SIN_FEA",
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "cl_035",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_035.png",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Hernández Jean-Baptiste"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Hernández Jean-Baptiste",
+    "fecha_emision": "2026-03-16",
+    "folio": "500035"
+   },
+   "esperados": [
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "liq_036",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/liq_036.png",
+   "pdf": "pdf/liq_036.pdf",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Saint-Fleur Ibáñez"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Saint-Fleur Ibáñez",
+    "fecha_emision": "2026-09-24",
+    "rut_empleador": "90.327.446-8",
+    "liquido": "$ 544.639",
+    "periodo": "08/2026"
+   },
+   "esperados": []
+  },
+  {
+   "id": "cl_036",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "limpio",
+   "imagen": "imagenes/cl_036.png",
+   "ctx": {
+    "nombre_declarado": "Carmen Rosa Núñez Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Carmen Rosa Núñez Rodríguez",
+    "fecha_emision": "2026-09-07",
+    "folio": "500036"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_037",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/liq_037.png",
+   "pdf": "pdf/liq_037.pdf",
+   "ctx": {
+    "nombre_declarado": "Guerline Hernández Louis"
+   },
+   "verdad": {
+    "nombre": "Guerline Hernández Louis",
+    "fecha_emision": "2026-09-08",
+    "rut_empleador": "97.378.132-K",
+    "liquido": "$ 2394.483",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "FIRMA_INVALIDA"
+   ]
+  },
+  {
+   "id": "cl_037",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "escaner",
+   "imagen": "imagenes/cl_037.png",
+   "ctx": {
+    "nombre_declarado": "Fabiola Jean-Baptiste Muñoz"
+   },
+   "verdad": {
+    "nombre": "Fabiola Jean-Baptiste Muñoz",
+    "fecha_emision": "2026-08-24",
+    "folio": "500037"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_038",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/liq_038.png",
+   "pdf": "pdf/liq_038.pdf",
+   "ctx": {
+    "nombre_declarado": "Jean Pierre Martínez Muñoz"
+   },
+   "verdad": {
+    "nombre": "Jean Pierre Martínez Muñoz",
+    "fecha_emision": "2026-08-07",
+    "rut_empleador": "94.799.221-2",
+    "liquido": "$ 1880.730",
+    "periodo": "07/2026"
+   },
+   "esperados": [
+    "FIRMANTE_NO_ACREDITADO",
+    "DOCUMENTO_ANTIGUO"
+   ]
+  },
+  {
+   "id": "cl_038",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "celular",
+   "imagen": "imagenes/cl_038.png",
+   "ctx": {
+    "nombre_declarado": "Luis Alberto González Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Luis Alberto González Rodríguez",
+    "fecha_emision": "2026-09-14",
+    "folio": "500038"
+   },
+   "esperados": []
+  },
+  {
+   "id": "liq_039",
+   "tipo": "liquidacion",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/liq_039.png",
+   "pdf": "pdf/liq_039.pdf",
+   "ctx": {
+    "nombre_declarado": "Ñuflo Saint-Fleur Rodríguez"
+   },
+   "verdad": {
+    "nombre": "Ñuflo Saint-Fleur Rodríguez",
+    "fecha_emision": "2026-09-27",
+    "rut_empleador": "79.221.975-7",
+    "liquido": "$ 777.585",
+    "periodo": "08/2026"
+   },
+   "esperados": [
+    "SIN_FEA"
+   ]
+  },
+  {
+   "id": "cl_039",
+   "tipo": "certificado_publico_cl",
+   "pais": "CHL",
+   "idioma": "es",
+   "degradacion": "baja_res",
+   "imagen": "imagenes/cl_039.png",
+   "ctx": {
+    "nombre_declarado": "Ana Lucía Mamani Saint-Fleur"
+   },
+   "verdad": {
+    "nombre": "Ana Lucía Mamani Saint-Fleur",
+    "fecha_emision": "2026-09-12",
+    "folio": "500039"
+   },
+   "esperados": []
+  },
+  {
+   "id": "ht_000",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_000.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_001",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_001.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_002",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_002.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_003",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_003.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_004",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_004.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_005",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_005.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_006",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_006.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_007",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_007.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_008",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_008.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  },
+  {
+   "id": "ht_009",
+   "tipo": "antecedentes_extranjero",
+   "pais": "HTI",
+   "idioma": "ht",
+   "degradacion": "limpio",
+   "imagen": "imagenes/ht_009.png",
+   "ctx": {
+    "nombre_declarado": "Persona Ficticia"
+   },
+   "verdad": {},
+   "esperados": [
+    "IDIOMA_NO_SOPORTADO"
+   ]
+  }
+ ]
+}

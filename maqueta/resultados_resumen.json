@@ -1,0 +1,1270 @@
+{
+ "D (it. 4)": {
+  "documentos": 176,
+  "esperados": 108,
+  "detectados": 108,
+  "omisiones_silenciosas": 0,
+  "omisiones_con_derivacion": 0,
+  "docs_alerta_injustificada": 0,
+  "ic95_docs_alerta_injustificada": [
+   0.0,
+   0.02074141773384391
+  ],
+  "alertas": 85,
+  "alertas_injustificadas": 0,
+  "derivados": 24,
+  "prevalidados": 84,
+  "mrz_validas": 60,
+  "mrz_exactas": 60,
+  "pasaportes": 60,
+  "qr": {
+   "n": 20,
+   "leido": 19
+  },
+  "firma": {
+   "alterada": [
+    5,
+    5
+   ],
+   "incremental": [
+    6,
+    6
+   ],
+   "no_acreditada": [
+    6,
+    6
+   ],
+   "otro_firmante": [
+    3,
+    3
+   ],
+   "sin_firma": [
+    5,
+    5
+   ],
+   "valida": [
+    5,
+    5
+   ]
+  },
+  "campos": {
+   "es": {
+    "campos": 186,
+    "aceptados": 186,
+    "correctos_aceptados_estricto": 186,
+    "correctos_aceptados_funcional": 186,
+    "precision": 1.0,
+    "precision_funcional": 1.0,
+    "ic95_cp": [
+     0.980362688736023,
+     1.0
+    ],
+    "lim_inf_unilateral": 0.9840229219936318,
+    "ic95_bootstrap_documentos": [
+     1.0,
+     1.0
+    ],
+    "cobertura": 1.0
+   },
+   "fr": {
+    "campos": 28,
+    "aceptados": 28,
+    "correctos_aceptados_estricto": 28,
+    "correctos_aceptados_funcional": 28,
+    "precision": 1.0,
+    "precision_funcional": 1.0,
+    "ic95_cp": [
+     0.8765638814997362,
+     1.0
+    ],
+    "lim_inf_unilateral": 0.8985342644272752,
+    "ic95_bootstrap_documentos": [
+     1.0,
+     1.0
+    ],
+    "cobertura": 1.0
+   }
+  },
+  "umbrales_calibrados": {
+   "es": 0.0,
+   "fr": 0.0
+  },
+  "latencia": {
+   "n": 145,
+   "mediana": 1.379482461999487,
+   "p95": 1.7309488060000149
+  },
+  "por_pais": {
+   "VEN": {
+    "documentos": 27,
+    "derivados": 3,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.12770286761543234
+    ],
+    "alerta_injustificada": 0
+   },
+   "PER": {
+    "documentos": 23,
+    "derivados": 1,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.14818512891522437
+    ],
+    "alerta_injustificada": 0
+   },
+   "COL": {
+    "documentos": 22,
+    "derivados": 3,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.15437251281557457
+    ],
+    "alerta_injustificada": 0
+   },
+   "BOL": {
+    "documentos": 24,
+    "derivados": 1,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.14247359772252563
+    ],
+    "alerta_injustificada": 0
+   },
+   "HTI": {
+    "documentos": 26,
+    "derivados": 5,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.1322746044977541
+    ],
+    "alerta_injustificada": 0
+   }
+  },
+  "deteccion": {
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 7,
+    "detectados": 7,
+    "razon_correcta": 7
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 9,
+    "detectados": 9,
+    "razon_correcta": 9
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 11,
+    "detectados": 11,
+    "razon_correcta": 11
+   },
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 6,
+    "detectados": 6,
+    "razon_correcta": 6
+   },
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10,
+    "razon_correcta": 10
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 3,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 1,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 3,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 6,
+    "detectados": 6,
+    "razon_correcta": 6
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10,
+    "razon_correcta": 10
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 6,
+    "detectados": 6,
+    "razon_correcta": 6
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 4,
+    "detectados": 4,
+    "razon_correcta": 4
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 1,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "antecedentes_extranjero|IDIOMA_NO_SOPORTADO": {
+    "n": 3,
+    "detectados": 3,
+    "razon_correcta": 3
+   }
+  },
+  "bitacora": {
+   "integra_con_ancla": true,
+   "truncamiento_detectado": true
+  },
+  "razon_correcta": 108
+ },
+ "D (it. 5)": {
+  "documentos": 176,
+  "esperados": 108,
+  "detectados": 108,
+  "omisiones_silenciosas": 0,
+  "omisiones_con_derivacion": 0,
+  "docs_alerta_injustificada": 0,
+  "ic95_docs_alerta_injustificada": [
+   0.0,
+   0.02074141773384391
+  ],
+  "alertas": 85,
+  "alertas_injustificadas": 0,
+  "derivados": 24,
+  "prevalidados": 84,
+  "mrz_validas": 60,
+  "mrz_exactas": 60,
+  "pasaportes": 60,
+  "qr": {
+   "n": 20,
+   "leido": 19
+  },
+  "firma": {
+   "alterada": [
+    5,
+    5
+   ],
+   "incremental": [
+    6,
+    6
+   ],
+   "no_acreditada": [
+    6,
+    6
+   ],
+   "otro_firmante": [
+    3,
+    3
+   ],
+   "sin_firma": [
+    5,
+    5
+   ],
+   "valida": [
+    5,
+    5
+   ]
+  },
+  "campos": {
+   "es": {
+    "campos": 186,
+    "aceptados": 186,
+    "correctos_aceptados_estricto": 186,
+    "correctos_aceptados_funcional": 186,
+    "precision": 1.0,
+    "precision_funcional": 1.0,
+    "ic95_cp": [
+     0.980362688736023,
+     1.0
+    ],
+    "lim_inf_unilateral": 0.9840229219936318,
+    "ic95_bootstrap_documentos": [
+     1.0,
+     1.0
+    ],
+    "cobertura": 1.0
+   },
+   "fr": {
+    "campos": 28,
+    "aceptados": 28,
+    "correctos_aceptados_estricto": 28,
+    "correctos_aceptados_funcional": 28,
+    "precision": 1.0,
+    "precision_funcional": 1.0,
+    "ic95_cp": [
+     0.8765638814997362,
+     1.0
+    ],
+    "lim_inf_unilateral": 0.8985342644272752,
+    "ic95_bootstrap_documentos": [
+     1.0,
+     1.0
+    ],
+    "cobertura": 1.0
+   }
+  },
+  "umbrales_calibrados": {
+   "es": 0.0,
+   "fr": 0.0
+  },
+  "latencia": {
+   "n": 145,
+   "mediana": 1.3686398459994962,
+   "p95": 1.881522385999233
+  },
+  "por_pais": {
+   "VEN": {
+    "documentos": 27,
+    "derivados": 3,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.12770286761543234
+    ],
+    "alerta_injustificada": 0
+   },
+   "PER": {
+    "documentos": 23,
+    "derivados": 1,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.14818512891522437
+    ],
+    "alerta_injustificada": 0
+   },
+   "COL": {
+    "documentos": 22,
+    "derivados": 3,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.15437251281557457
+    ],
+    "alerta_injustificada": 0
+   },
+   "BOL": {
+    "documentos": 24,
+    "derivados": 1,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.14247359772252563
+    ],
+    "alerta_injustificada": 0
+   },
+   "HTI": {
+    "documentos": 26,
+    "derivados": 5,
+    "derivados_incertidumbre": 0,
+    "ic95_incertidumbre": [
+     0.0,
+     0.1322746044977541
+    ],
+    "alerta_injustificada": 0
+   }
+  },
+  "deteccion": {
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 7,
+    "detectados": 7,
+    "razon_correcta": 7
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 9,
+    "detectados": 9,
+    "razon_correcta": 9
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 11,
+    "detectados": 11,
+    "razon_correcta": 11
+   },
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 6,
+    "detectados": 6,
+    "razon_correcta": 6
+   },
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10,
+    "razon_correcta": 10
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 3,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 1,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 3,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 6,
+    "detectados": 6,
+    "razon_correcta": 6
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 10,
+    "detectados": 10,
+    "razon_correcta": 10
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 6,
+    "detectados": 6,
+    "razon_correcta": 6
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 5,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 4,
+    "detectados": 4,
+    "razon_correcta": 4
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 1,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "antecedentes_extranjero|IDIOMA_NO_SOPORTADO": {
+    "n": 3,
+    "detectados": 3,
+    "razon_correcta": 3
+   }
+  },
+  "bitacora": {
+   "integra_con_ancla": true,
+   "truncamiento_detectado": true
+  },
+  "razon_correcta": 108
+ },
+ "ADV (it. 4)": {
+  "documentos": 246,
+  "esperados": 143,
+  "detectados": 96,
+  "omisiones_silenciosas": 0,
+  "omisiones_con_derivacion": 42,
+  "docs_alerta_injustificada": 37,
+  "ic95_docs_alerta_injustificada": [
+   0.10816353833868052,
+   0.2013064471252846
+  ],
+  "alertas": 118,
+  "alertas_injustificadas": 43,
+  "derivados": 159,
+  "prevalidados": 55,
+  "mrz_validas": 49,
+  "mrz_exactas": 44,
+  "pasaportes": 80,
+  "qr": {
+   "n": 30,
+   "leido": 27
+  },
+  "firma": {
+   "alterada": [
+    8,
+    8
+   ],
+   "incremental": [
+    8,
+    8
+   ],
+   "no_acreditada": [
+    8,
+    8
+   ],
+   "otro_firmante": [
+    8,
+    8
+   ],
+   "sin_firma": [
+    8,
+    8
+   ],
+   "valida": [
+    0,
+    8
+   ]
+  },
+  "campos": {
+   "es": {
+    "campos": 272,
+    "aceptados": 107,
+    "correctos_aceptados_estricto": 82,
+    "correctos_aceptados_funcional": 84,
+    "precision": 0.7663551401869159,
+    "precision_funcional": 0.7850467289719626,
+    "ic95_cp": [
+     0.6747068327129246,
+     0.8427331314992081
+    ],
+    "lim_inf_unilateral": 0.6892271035896482,
+    "ic95_bootstrap_documentos": [
+     0.6826923076923077,
+     0.8461538461538461
+    ],
+    "cobertura": 0.39338235294117646
+   },
+   "fr": {
+    "campos": 32,
+    "aceptados": 21,
+    "correctos_aceptados_estricto": 10,
+    "correctos_aceptados_funcional": 10,
+    "precision": 0.47619047619047616,
+    "precision_funcional": 0.47619047619047616,
+    "ic95_cp": [
+     0.25713062640640744,
+     0.7021931612163559
+    ],
+    "lim_inf_unilateral": 0.2858004780871762,
+    "ic95_bootstrap_documentos": [
+     0.2631578947368421,
+     0.68
+    ],
+    "cobertura": 0.65625
+   }
+  },
+  "umbrales_calibrados": {
+   "es": 1.01,
+   "fr": 1.01
+  },
+  "latencia": {
+   "n": 200,
+   "mediana": 1.2649495875002685,
+   "p95": 1.9976454659999945
+  },
+  "por_pais": {
+   "VEN": {
+    "documentos": 32,
+    "derivados": 25,
+    "derivados_incertidumbre": 23,
+    "ic95_incertidumbre": [
+     0.5325289003570655,
+     0.8625430967044982
+    ],
+    "alerta_injustificada": 5
+   },
+   "PER": {
+    "documentos": 32,
+    "derivados": 18,
+    "derivados_incertidumbre": 17,
+    "ic95_incertidumbre": [
+     0.3474368092863928,
+     0.7090601770939847
+    ],
+    "alerta_injustificada": 5
+   },
+   "COL": {
+    "documentos": 32,
+    "derivados": 25,
+    "derivados_incertidumbre": 24,
+    "ic95_incertidumbre": [
+     0.5659506250777572,
+     0.8853839948974118
+    ],
+    "alerta_injustificada": 3
+   },
+   "BOL": {
+    "documentos": 32,
+    "derivados": 21,
+    "derivados_incertidumbre": 21,
+    "ic95_incertidumbre": [
+     0.4680689637197313,
+     0.8142809082834338
+    ],
+    "alerta_injustificada": 6
+   },
+   "HTI": {
+    "documentos": 32,
+    "derivados": 18,
+    "derivados_incertidumbre": 18,
+    "ic95_incertidumbre": [
+     0.37662573159009394,
+     0.7363618755890153
+    ],
+    "alerta_injustificada": 6
+   }
+  },
+  "deteccion": {
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 19,
+    "detectados": 3,
+    "razon_correcta": 2
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 12,
+    "detectados": 6,
+    "razon_correcta": 6
+   },
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 11,
+    "detectados": 10,
+    "razon_correcta": 3
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 12,
+    "detectados": 7,
+    "razon_correcta": 7
+   },
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 5,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 5,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 3,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 12,
+    "detectados": 3,
+    "razon_correcta": 3
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 0
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 4,
+    "detectados": 2,
+    "razon_correcta": 2
+   },
+   "certificado_publico_cl|NOMBRE_CASI_COINCIDE": {
+    "n": 1,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 4,
+    "detectados": 4,
+    "razon_correcta": 4
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 2,
+    "detectados": 2,
+    "razon_correcta": 2
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   }
+  },
+  "bitacora": {
+   "integra_con_ancla": true,
+   "truncamiento_detectado": true
+  },
+  "razon_correcta": 80,
+  "por_condicion": {
+   "pas:(ninguna)": {
+    "n": 53,
+    "derivados": 13,
+    "alerta_injustificada": 0,
+    "omision": 3
+   },
+   "ant:titular_expedido": {
+    "n": 14,
+    "derivados": 14,
+    "alerta_injustificada": 0,
+    "omision": 6
+   },
+   "fecha:dd/mm/aaaa": {
+    "n": 24,
+    "derivados": 15,
+    "alerta_injustificada": 6,
+    "omision": 5
+   },
+   "pas:con_margen": {
+    "n": 21,
+    "derivados": 21,
+    "alerta_injustificada": 0,
+    "omision": 6
+   },
+   "ant:trampa_padre": {
+    "n": 12,
+    "derivados": 7,
+    "alerta_injustificada": 9,
+    "omision": 4
+   },
+   "fecha:mes_primero": {
+    "n": 23,
+    "derivados": 23,
+    "alerta_injustificada": 7,
+    "omision": 8
+   },
+   "pas:nombre_truncado": {
+    "n": 7,
+    "derivados": 1,
+    "alerta_injustificada": 1,
+    "omision": 1
+   },
+   "ant:lugar_y_fecha": {
+    "n": 18,
+    "derivados": 18,
+    "alerta_injustificada": 0,
+    "omision": 3
+   },
+   "fecha:coma": {
+    "n": 27,
+    "derivados": 27,
+    "alerta_injustificada": 9,
+    "omision": 5
+   },
+   "ant:etiqueta_misma_linea": {
+    "n": 13,
+    "derivados": 11,
+    "alerta_injustificada": 0,
+    "omision": 0
+   },
+   "fecha:anio_2": {
+    "n": 29,
+    "derivados": 29,
+    "alerta_injustificada": 9,
+    "omision": 9
+   },
+   "fecha:aaaa/mm/dd": {
+    "n": 20,
+    "derivados": 15,
+    "alerta_injustificada": 3,
+    "omision": 3
+   },
+   "ant:etiqueta_linea_aparte": {
+    "n": 17,
+    "derivados": 17,
+    "alerta_injustificada": 14,
+    "omision": 8
+   },
+   "ant:nom_prenom_separados": {
+    "n": 5,
+    "derivados": 5,
+    "alerta_injustificada": 1,
+    "omision": 1
+   },
+   "fecha:fr_textual": {
+    "n": 5,
+    "derivados": 4,
+    "alerta_injustificada": 2,
+    "omision": 1
+   },
+   "ant:fait_a": {
+    "n": 1,
+    "derivados": 1,
+    "alerta_injustificada": 0,
+    "omision": 0
+   },
+   "liq:plantilla_conocida": {
+    "n": 24,
+    "derivados": 16,
+    "alerta_injustificada": 9,
+    "omision": 3
+   },
+   "liq:plantilla_nueva": {
+    "n": 24,
+    "derivados": 24,
+    "alerta_injustificada": 3,
+    "omision": 6
+   },
+   "cer:qr_140px": {
+    "n": 9,
+    "derivados": 2,
+    "alerta_injustificada": 0,
+    "omision": 1
+   },
+   "cer:qr_200px": {
+    "n": 12,
+    "derivados": 0,
+    "alerta_injustificada": 0,
+    "omision": 0
+   },
+   "cer:qr_110px": {
+    "n": 9,
+    "derivados": 2,
+    "alerta_injustificada": 0,
+    "omision": 1
+   },
+   "ant:criollo_declarado_fr": {
+    "n": 8,
+    "derivados": 8,
+    "alerta_injustificada": 0,
+    "omision": 0
+   }
+  }
+ },
+ "ADV2 (it. 5)": {
+  "documentos": 246,
+  "esperados": 142,
+  "detectados": 110,
+  "omisiones_silenciosas": 0,
+  "omisiones_con_derivacion": 30,
+  "docs_alerta_injustificada": 1,
+  "ic95_docs_alerta_injustificada": [
+   0.00010291262276801803,
+   0.02243962036574274
+  ],
+  "alertas": 88,
+  "alertas_injustificadas": 1,
+  "derivados": 117,
+  "prevalidados": 77,
+  "mrz_validas": 66,
+  "mrz_exactas": 60,
+  "pasaportes": 80,
+  "qr": {
+   "n": 30,
+   "leido": 25
+  },
+  "firma": {
+   "alterada": [
+    8,
+    8
+   ],
+   "incremental": [
+    8,
+    8
+   ],
+   "no_acreditada": [
+    8,
+    8
+   ],
+   "otro_firmante": [
+    4,
+    8
+   ],
+   "sin_firma": [
+    8,
+    8
+   ],
+   "valida": [
+    8,
+    8
+   ]
+  },
+  "campos": {
+   "es": {
+    "campos": 272,
+    "aceptados": 142,
+    "correctos_aceptados_estricto": 139,
+    "correctos_aceptados_funcional": 141,
+    "precision": 0.9788732394366197,
+    "precision_funcional": 0.9929577464788732,
+    "ic95_cp": [
+     0.9395014087494357,
+     0.9956217819630457
+    ],
+    "lim_inf_unilateral": 0.9463047416323989,
+    "ic95_bootstrap_documentos": [
+     0.9541984732824428,
+     1.0
+    ],
+    "cobertura": 0.5220588235294118
+   },
+   "fr": {
+    "campos": 32,
+    "aceptados": 21,
+    "correctos_aceptados_estricto": 20,
+    "correctos_aceptados_funcional": 20,
+    "precision": 0.9523809523809523,
+    "precision_funcional": 0.9523809523809523,
+    "ic95_cp": [
+     0.761840090063179,
+     0.9987951165516364
+    ],
+    "lim_inf_unilateral": 0.79327462099193,
+    "ic95_bootstrap_documentos": [
+     0.85,
+     1.0
+    ],
+    "cobertura": 0.65625
+   }
+  },
+  "umbrales_calibrados": {
+   "es": 0.96,
+   "fr": 0.91
+  },
+  "latencia": {
+   "n": 200,
+   "mediana": 1.3606446345002041,
+   "p95": 5.822394071999497
+  },
+  "por_pais": {
+   "VEN": {
+    "documentos": 32,
+    "derivados": 18,
+    "derivados_incertidumbre": 17,
+    "ic95_incertidumbre": [
+     0.3474368092863928,
+     0.7090601770939847
+    ],
+    "alerta_injustificada": 0
+   },
+   "PER": {
+    "documentos": 32,
+    "derivados": 12,
+    "derivados_incertidumbre": 11,
+    "ic95_incertidumbre": [
+     0.18571909171656614,
+     0.5319310362802687
+    ],
+    "alerta_injustificada": 0
+   },
+   "COL": {
+    "documentos": 32,
+    "derivados": 16,
+    "derivados_incertidumbre": 13,
+    "ic95_incertidumbre": [
+     0.23698410055174315,
+     0.5935507534235236
+    ],
+    "alerta_injustificada": 0
+   },
+   "BOL": {
+    "documentos": 32,
+    "derivados": 10,
+    "derivados_incertidumbre": 10,
+    "ic95_incertidumbre": [
+     0.16118472408820053,
+     0.5000775816321696
+    ],
+    "alerta_injustificada": 1
+   },
+   "HTI": {
+    "documentos": 32,
+    "derivados": 16,
+    "derivados_incertidumbre": 15,
+    "ic95_incertidumbre": [
+     0.2909398229060153,
+     0.6525631907136071
+    ],
+    "alerta_injustificada": 0
+   }
+  },
+  "deteccion": {
+   "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+    "n": 11,
+    "detectados": 10,
+    "razon_correcta": 10
+   },
+   "antecedentes_extranjero|SIN_APOSTILLA": {
+    "n": 10,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+    "n": 16,
+    "detectados": 10,
+    "razon_correcta": 10
+   },
+   "pasaporte|PASAPORTE_VENCIDO": {
+    "n": 14,
+    "detectados": 10,
+    "razon_correcta": 10
+   },
+   "pasaporte|NOMBRE_NO_COINCIDE": {
+    "n": 8,
+    "detectados": 7,
+    "razon_correcta": 7
+   },
+   "pasaporte|NOMBRE_CASI_COINCIDE": {
+    "n": 6,
+    "detectados": 5,
+    "razon_correcta": 5
+   },
+   "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+    "n": 2,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "antecedentes_extranjero|SIN_LEGALIZACION": {
+    "n": 2,
+    "detectados": 2,
+    "razon_correcta": 2
+   },
+   "liquidacion|MODIFICADO_TRAS_FIRMA": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "liquidacion|FIRMANTE_NO_COINCIDE": {
+    "n": 8,
+    "detectados": 4,
+    "razon_correcta": 4
+   },
+   "liquidacion|DOCUMENTO_ANTIGUO": {
+    "n": 12,
+    "detectados": 7,
+    "razon_correcta": 7
+   },
+   "liquidacion|SIN_FEA": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "liquidacion|FIRMA_INVALIDA": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "liquidacion|FIRMANTE_NO_ACREDITADO": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   },
+   "certificado_publico_cl|DOCUMENTO_ANTIGUO": {
+    "n": 4,
+    "detectados": 2,
+    "razon_correcta": 2
+   },
+   "certificado_publico_cl|CODIGO_DE_OTRA_PERSONA": {
+    "n": 5,
+    "detectados": 4,
+    "razon_correcta": 4
+   },
+   "certificado_publico_cl|NOMBRE_CASI_COINCIDE": {
+    "n": 1,
+    "detectados": 1,
+    "razon_correcta": 1
+   },
+   "certificado_publico_cl|CODIGO_INEXISTENTE": {
+    "n": 3,
+    "detectados": 2,
+    "razon_correcta": 2
+   },
+   "antecedentes_extranjero|DOCUMENTO_NO_RECONOCIDO": {
+    "n": 8,
+    "detectados": 8,
+    "razon_correcta": 8
+   }
+  },
+  "bitacora": {
+   "integra_con_ancla": true,
+   "truncamiento_detectado": true
+  },
+  "razon_correcta": 110,
+  "por_condicion": {
+   "pas:(ninguna)": {
+    "n": 59,
+    "derivados": 12,
+    "alerta_injustificada": 0,
+    "omision": 4
+   },
+   "ant:titular_expedido": {
+    "n": 14,
+    "derivados": 14,
+    "alerta_injustificada": 0,
+    "omision": 8
+   },
+   "fecha:coma": {
+    "n": 24,
+    "derivados": 15,
+    "alerta_injustificada": 0,
+    "omision": 6
+   },
+   "ant:etiqueta_linea_aparte": {
+    "n": 21,
+    "derivados": 8,
+    "alerta_injustificada": 1,
+    "omision": 0
+   },
+   "fecha:anio_2": {
+    "n": 25,
+    "derivados": 25,
+    "alerta_injustificada": 0,
+    "omision": 7
+   },
+   "fecha:mes_primero": {
+    "n": 26,
+    "derivados": 15,
+    "alerta_injustificada": 0,
+    "omision": 4
+   },
+   "ant:lugar_y_fecha": {
+    "n": 11,
+    "derivados": 11,
+    "alerta_injustificada": 0,
+    "omision": 1
+   },
+   "pas:con_margen": {
+    "n": 18,
+    "derivados": 9,
+    "alerta_injustificada": 0,
+    "omision": 2
+   },
+   "ant:etiqueta_misma_linea": {
+    "n": 16,
+    "derivados": 7,
+    "alerta_injustificada": 0,
+    "omision": 1
+   },
+   "ant:trampa_padre": {
+    "n": 12,
+    "derivados": 4,
+    "alerta_injustificada": 0,
+    "omision": 0
+   },
+   "fecha:aaaa/mm/dd": {
+    "n": 23,
+    "derivados": 11,
+    "alerta_injustificada": 1,
+    "omision": 0
+   },
+   "fecha:dd/mm/aaaa": {
+    "n": 28,
+    "derivados": 14,
+    "alerta_injustificada": 0,
+    "omision": 3
+   },
+   "pas:nombre_truncado": {
+    "n": 4,
+    "derivados": 1,
+    "alerta_injustificada": 0,
+    "omision": 0
+   },
+   "fecha:fr_textual": {
+    "n": 2,
+    "derivados": 1,
+    "alerta_injustificada": 0,
+    "omision": 1
+   },
+   "ant:fait_a": {
+    "n": 5,
+    "derivados": 5,
+    "alerta_injustificada": 0,
+    "omision": 3
+   },
+   "ant:nom_prenom_separados": {
+    "n": 1,
+    "derivados": 1,
+    "alerta_injustificada": 0,
+    "omision": 0
+   },
+   "liq:plantilla_conocida": {
+    "n": 24,
+    "derivados": 7,
+    "alerta_injustificada": 0,
+    "omision": 2
+   },
+   "liq:plantilla_nueva": {
+    "n": 24,
+    "derivados": 24,
+    "alerta_injustificada": 0,
+    "omision": 6
+   },
+   "cer:qr_140px": {
+    "n": 8,
+    "derivados": 2,
+    "alerta_injustificada": 0,
+    "omision": 1
+   },
+   "cer:qr_200px": {
+    "n": 12,
+    "derivados": 1,
+    "alerta_injustificada": 0,
+    "omision": 0
+   },
+   "cer:qr_110px": {
+    "n": 10,
+    "derivados": 3,
+    "alerta_injustificada": 0,
+    "omision": 2
+   },
+   "ant:criollo_declarado_fr": {
+    "n": 8,
+    "derivados": 8,
+    "alerta_injustificada": 0,
+    "omision": 0
+   }
+  }
+ }
+}

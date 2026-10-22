@@ -1,0 +1,27 @@
+{
+ "corpus": "corpus_D",
+ "muestra": "calibracion",
+ "pasaportes": 60,
+ "eng": {
+  "validas": 34,
+  "exactas": 9,
+  "por_pais": {
+   "BOL": 4,
+   "COL": 8,
+   "HTI": 6,
+   "PER": 9,
+   "VEN": 7
+  }
+ },
+ "mrz": {
+  "validas": 60,
+  "exactas": 60,
+  "por_pais": {
+   "BOL": 11,
+   "COL": 13,
+   "HTI": 12,
+   "PER": 14,
+   "VEN": 10
+  }
+ }
+}

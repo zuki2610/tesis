@@ -1,0 +1,65 @@
+{
+ "codigo": "/home/claude/prevalida",
+ "corpus": "corpus_P",
+ "esperados": 251,
+ "detectados": 246,
+ "razon_correcta": 246,
+ "por_tipo_y_codigo": {
+  "antecedentes_extranjero|DOCUMENTO_ANTIGUO": {
+   "n": 73,
+   "detectados": 69,
+   "razon_correcta": 69
+  },
+  "antecedentes_extranjero|NOMBRE_CASI_COINCIDE": {
+   "n": 24,
+   "detectados": 23,
+   "razon_correcta": 23
+  },
+  "antecedentes_extranjero|NOMBRE_NO_COINCIDE": {
+   "n": 35,
+   "detectados": 35,
+   "razon_correcta": 35
+  },
+  "antecedentes_extranjero|SIN_APOSTILLA": {
+   "n": 24,
+   "detectados": 24,
+   "razon_correcta": 24
+  },
+  "antecedentes_extranjero|SIN_LEGALIZACION": {
+   "n": 26,
+   "detectados": 26,
+   "razon_correcta": 26
+  },
+  "liquidacion|DOCUMENTO_ANTIGUO": {
+   "n": 19,
+   "detectados": 19,
+   "razon_correcta": 19
+  },
+  "liquidacion|FIRMANTE_NO_ACREDITADO": {
+   "n": 10,
+   "detectados": 10,
+   "razon_correcta": 10
+  },
+  "liquidacion|FIRMANTE_NO_COINCIDE": {
+   "n": 10,
+   "detectados": 10,
+   "razon_correcta": 10
+  },
+  "liquidacion|FIRMA_INVALIDA": {
+   "n": 10,
+   "detectados": 10,
+   "razon_correcta": 10
+  },
+  "liquidacion|MODIFICADO_TRAS_FIRMA": {
+   "n": 10,
+   "detectados": 10,
+   "razon_correcta": 10
+  },
+  "liquidacion|SIN_FEA": {
+   "n": 10,
+   "detectados": 10,
+   "razon_correcta": 10
+  }
+ },
+ "detecciones_con_evidencia_incorrecta": []
+}
